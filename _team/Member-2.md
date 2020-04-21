@@ -1,5 +1,5 @@
 ---
-title: 'Sage Kirk'
+title: 'Test 2'
 image: '/images/team/sage-kirk-485982-unsplash.jpg'
 jobtitle: 'Accountant'
 email: 'sage@test.com'
