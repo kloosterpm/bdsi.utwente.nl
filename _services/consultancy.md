@@ -1,5 +1,5 @@
 ---
-title: 'Business Advisory'
+title: 'Consultancy'
 image: '/services/default.png'
 ---
 
