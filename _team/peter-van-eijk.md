@@ -1,5 +1,5 @@
 ---
-title: 'Peter Van Eijk'
+title: 'Test 1'
 image: '/images/team/peter-van-eijk-711986-unsplash.jpg'
 jobtitle: 'Director'
 email: 'peter@test.com'
