@@ -1,4 +1,4 @@
-vbaseurl: '/utwente-bdsi/'
+vbaseurl: '/httpdocs/'
 exclude: ['README.md']
 permalink: pretty
 title: 'Behavioural Data Science Incubator'
