@@ -1,7 +1,7 @@
-baseurl: '/utwente-bdsi/'
+vbaseurl: '/utwente-bdsi/'
 exclude: ['README.md']
 permalink: pretty
-title: 'Jekyll Serif'
+title: 'Behavioural Data Science Incubator'
 
 collections:
   services:
@@ -10,9 +10,9 @@ collections:
   team:
     output: true
     permalink: /team/:path/
-  testimonials:
-    output: true
-    permalink: /testimonials/:path/
+  #testimonials:
+    #output: true
+    #permalink: /testimonials/:path/
 
 defaults:
   - scope:
