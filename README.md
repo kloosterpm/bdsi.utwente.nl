@@ -1,4 +1,4 @@
-#Website for behavioural data science incubator which is part of BMS faculty at University of Twente in the Netherlands.
+# Website for behavioural data science incubator which is part of BMS faculty at University of Twente in the Netherlands.
 
 ## We use Jekyll Serif Theme
 
