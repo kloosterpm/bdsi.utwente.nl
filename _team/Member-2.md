@@ -1,7 +1,7 @@
 ---
 title: 'Test 2'
 image: '/images/team/sage-kirk-485982-unsplash.jpg'
-jobtitle: 'Accountant'
+jobtitle: 'xyz'
 email: 'sage@test.com'
 linkedinurl: ''
 ---
