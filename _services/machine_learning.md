@@ -1,5 +1,5 @@
 ---
-title: "Mergers"
+title: "Machine Learning"
 image: "/services/default.png"
 ---
 
