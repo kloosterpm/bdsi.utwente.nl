@@ -1,5 +1,5 @@
 ---
-title: 'Accounting'
+title: 'Data Analysis'
 image: '/services/noun_591323.png'
 ---
 
