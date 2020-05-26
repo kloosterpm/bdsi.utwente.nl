@@ -1,5 +1,5 @@
 ---
-title: 'Data Analysis'
+title: 'Data Visualisation'
 image: '/services/noun_591323.png'
 ---
 
