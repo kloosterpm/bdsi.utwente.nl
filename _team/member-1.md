@@ -2,10 +2,8 @@
 title: 'Stéphanie van den Berg'
 image: '/images/team/stephnie.jpeg'
 jobtitle: 'Team Leader'
-<!---
-email: 'peter@test.com'
-linkedinurl: 'https://www.linkedin.com/'
--->
+email: 'stephanie.vandenberg@utwente.nl'
+linkedinurl: 'https://www.linkedin.com/in/stéphanie-van-den-berg-3038765/'
 ---
 
 WHO: I am Stéphanie van den Berg and I am an associate professor in the area of research methodology and data analytics. I have a PhD in psychology. My research interests are in the field of machine learning, psychometrics, Bayesian statistics and modelling time-intensive data. I teach courses in data science and statistics at the University of Twente.
