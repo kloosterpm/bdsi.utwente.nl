@@ -22,8 +22,8 @@ bodyClass: page-services-list
     {% for blog in site.blogs %}
     <div class="col-12 col-md-4 mb-1">
       <div class="service service-summary">
-        <div class="blog-content">
-          <h2 class="blog-title">
+        <div class="service-content">
+          <h2 class="service-title">
             <a href="{{site.baseurl}}{{ blog.url }}">{{ blog.title }}</a>
           </h2>
           {{ blog.content | markdownify | strip_html | truncate: 100 }}
