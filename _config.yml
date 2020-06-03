@@ -13,6 +13,9 @@ collections:
   testimonials:
     output: true
     permalink: /testimonials/:path/
+  blogs:
+    output: true
+    permalink: /blogs/:path/
 
 defaults:
   - scope:
@@ -20,6 +23,11 @@ defaults:
     values:
       layout: service
       bodyClass: page-services-single
+  - scope:
+      type: blogs
+    values:
+      layout: blog
+      bodyClass: page-blogs-single
   - scope:
       path: 'images'
     values:
