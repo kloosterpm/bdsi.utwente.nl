@@ -21,12 +21,12 @@ bodyClass: page-projects-list
   <div class="row">
     {% for project in site.projects %}
     <div class="col-12 col-md-4 mb-1">
-      <div class="project project-summary">
-        <div class="project-content">
-          <h2 class="project-title">
-            <a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a>
+      <div class="blog blog-summary">
+        <div class="blog-content">
+          <h2 class="blog-title">
+            <a href="{{site.baseurl}}{{ blog.url }}">{{ blog.title }}</a>
           </h2>
-          {{ project.content | markdownify | strip_html | truncate: 100 }}
+          {{ blog.content | markdownify | strip_html | truncate: 100 }}
         </div>
       </div>
     </div>
