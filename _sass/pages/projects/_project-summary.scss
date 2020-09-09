@@ -1,4 +1,4 @@
-.blog-summary {
+.project-summary {
   display: flex;
   align-items: flex-start;
   .blog-image {
@@ -9,7 +9,7 @@
       height: auto;
     }
   }
-  .blog-content {
+  .project-content {
     flex: 1;
     .blog-title {
       font-family: $font-family-heading;
