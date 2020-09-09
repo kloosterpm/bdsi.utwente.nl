@@ -1,0 +1,35 @@
+---
+title: Projects
+layout: default
+bodyClass: page-projects-list
+---
+
+<div class="intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1>What are we up to?</h1>
+        <p>
+          This page provides an overview of all the ongoing and past projects.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-6">
+  <div class="row">
+    {% for project in site.projects %}
+    <div class="col-12 col-md-4 mb-1">
+      <div class="project project-summary">
+        <div class="project-content">
+          <h2 class="project-title">
+            <a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a>
+          </h2>
+          {{ project.content | markdownify | strip_html | truncate: 100 }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
