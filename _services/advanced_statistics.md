@@ -1,8 +1,10 @@
 ---
 title: "Advanced Statistics"
 image: "/services/default.png"
-introduction: "A lot of modern research in the behavioural sciences involves time-intensive and/or multivariate data, think of sensor data, combined with wifi tracking, eye-tracking, and self-reports. Analysing such data sets requires knowledge and expertise in methods that are suitable for such complicated data sets. We can help you extract meaningful insights from your data sets using sophisticated methods."
+introduction: "<strong>A lot of modern research in the behavioural sciences involves time-intensive and/or multivariate data, think of sensor data, combined with wifi tracking, eye-tracking, and self-reports.</strong> Analysing such data sets requires knowledge and expertise in methods that are suitable for such complicated data sets. We can help you extract meaningful insights from your data sets using sophisticated methods."
 ---
+
+A lot of modern research in the behavioural sciences involves time-intensive and/or multivariate data, think of sensor data, combined with wifi tracking, eye-tracking, and self-reports. Analysing such data sets requires knowledge and expertise in methods that are suitable for such complicated data sets. We can help you extract meaningful insights from your data sets using sophisticated methods.
 
 ## What we can offer:
 
