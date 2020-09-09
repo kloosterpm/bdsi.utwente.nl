@@ -65,7 +65,7 @@ bodyClass: page-home
           <h2 class="service-title">
             <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
           </h2>
-          {{ service.content | markdownify }}
+          {{ service.introduction | markdownify }}
         </div>
       </div>
     </div>
