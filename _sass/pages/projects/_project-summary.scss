@@ -1,7 +1,7 @@
 .project-summary {
   display: flex;
   align-items: flex-start;
-  .blog-image {
+  .project-image {
     flex: 0 0 100px;
     margin-right: 10px;
     img {
@@ -11,7 +11,7 @@
   }
   .project-content {
     flex: 1;
-    .blog-title {
+    .project-title {
       font-family: $font-family-heading;
       font-size: 1.6rem;
     }
