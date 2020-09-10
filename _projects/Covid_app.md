@@ -1,7 +1,7 @@
 ---
 title: 'The Corona app – no, thanks? Citizens’ perspectives on individual freedom, governmental control and civic solidarity in times of a global pandemic'
 image: '/services/default.png'
-author: 'Giedo Jansen, Peter de Vries, Dominika Proszowska, Stéphanie van den Berg and Robert Muster'
+author: 'Giedo Jansen, Peter de Vries, Dominika Proszowska, Stéphanie van den Berg, Anna Machens, and Robert Muster'
 ---
 ## Project description
 
