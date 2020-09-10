@@ -1,7 +1,7 @@
 ---
 title: 'Legitimacy and public sentiment regarding the Covid-19 vaccine(s)'
 image: '/services/default.png'
-author: 'Sikke R. Jansma, Jordy F. Gosselt and Stéphanie van den Berg'
+author: 'Sikke R. Jansma, Jordy F. Gosselt, Stéphanie van den Berg, Anna Machens and Robert Muster'
 ---
 ## Project description
 
