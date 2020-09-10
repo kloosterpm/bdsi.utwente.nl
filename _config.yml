@@ -16,6 +16,9 @@ collections:
   blogs:
     output: true
     permalink: /blogs/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 defaults:
   - scope:
@@ -28,6 +31,11 @@ defaults:
     values:
       layout: blog
       bodyClass: page-blogs-single
+  - scope:
+      type: projects
+    values:
+      layout: project
+      bodyClass: page-projects-single
   - scope:
       path: 'images'
     values:

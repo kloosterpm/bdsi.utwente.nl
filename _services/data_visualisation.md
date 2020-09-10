@@ -1,6 +1,7 @@
 ---
 title: 'Data Visualisation'
 image: '/services/noun_591323.png'
+introduction: '<strong> We help you use abstract, non-representational pictures to illustrate data to demonstrate your findings to a wider audience.</strong>'
 ---
 
 
@@ -15,8 +16,5 @@ What we can offer:
 3.	Workshops in basic principles of visualisations, fundamentals of communicating with data, visual and statistical thinking, tools and techniques for building visualisations
 4.	Interactive data visualisation systems - escaping the flatland of paper (adding interactivity to your data)
 5.	Building dashboards (e.g., R  shiny apps, dash apps, web apps)
-6.	Visualisation theories for decision making 
+6.	Visualisation theories for decision making
 7.	Fundamentals for displaying quantitative and qualitative information
-
-
-

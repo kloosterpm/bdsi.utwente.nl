@@ -1,41 +1,6 @@
 ---
-title: Projects
+title: projects
 layout: default
-bodyClass: page-testimonials-list
----
-
-<div class="intro {{page.bodyClass}}">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Testimonials</h1>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container pb-6">
-  <div class="row">
-    {% for testimonial in site.testimonials %}
-    <div class="col-12 col-md-6 mb-2 ">
-      <div class="testimonials testimonials-summary">
-        <div class="testimonials-meta">
-          <h2 class="testimonials-title">{{ testimonial.title }}
-          <a href="{{site.baseurl}}{{ testimonial.url }}">{{ testimonial.title }}</a></h2>
-          <p class="testimonials-name">{{ testimonial.name }}</p>
-          <p class="testimonials-jobtitle">{{ testimonial.jobtitle }}</p>
-        </div>
-        <div class="testimonials-content">{{ testimonial.content }}</div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
-<!--
----
-title: Projects
-layout: project
 bodyClass: page-projects-list
 ---
 
@@ -43,9 +8,9 @@ bodyClass: page-projects-list
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1>What are we up to?</h1>
+        <h1>What are we upto?</h1>
         <p>
-          This page provides an overview of all the ongoing and past projects.
+          This page provides an overview of all the ongoing and past activities.
         </p>
       </div>
     </div>
@@ -55,17 +20,17 @@ bodyClass: page-projects-list
 <div class="container pb-6">
   <div class="row">
     {% for project in site.projects %}
-    <div class="col-12 col-md-4 mb-1">
+    <div class="col-12 col-md-6 mb-2">
       <div class="project project-summary">
         <div class="project-content">
           <h2 class="project-title">
             <a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a>
           </h2>
-          {{ project.content | markdownify | strip_html | truncate: 100 }}
+            <h4>{{project.author}}</h4>
+          {{ project.content | markdownify | strip_html | truncate: 500 }}
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
--->
