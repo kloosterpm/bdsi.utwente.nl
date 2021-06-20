@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Explanation of the code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/images/favicon.png">
+  <link href="/assets/css/style.css" rel="stylesheet">
+<style>
+.header-extra{height: 70px; background-color: #f8f9fa; box-shadow: none; padding-bottom: 5px;}
+.logo{width: 170px;padding: 5px;}
+</style>
+</head>
+<body class='page page-blogs-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    <li><a href="/" class="">Home</a></li>
+    <li><a href="/services/" class="">Services</a></li>
+    <li><a href="/projects/" class="">Projects</a></li>
+    <li><a href="/team/" class="">Team</a></li>
+    <!--
+    <li><a href="/testimonials/" class="">Testimonials</a></li>
+    -->
+    <li><a href="/contact/" class="">Contact</a></li>
+  </ul>
+</div>
+
+  <div id="wrapper" class="wrapper">
+    <div class='header header-extra'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img alt="Figurit Homepage" src="/assets/images/logo-bdsi.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img alt="Figurit Homepage" src="/assets/images/logo-bdsi.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    <li><a href="/" class="">Home</a></li>
+    <li><a href="/services/" class="">Services</a></li>
+    <li><a href="/projects/" class="">Projects</a></li>
+    <li><a href="/team/" class="">Team</a></li>
+    <!--
+    <li><a href="/testimonials/" class="">Testimonials</a></li>
+    <li><a href="/blogs/" class="current">Blogs</a></li>
+    -->
+    <li><a href="/contact/" class="">Contact</a></li>
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    <div class="strip strip-white strip-diagonal">
+  <div class="container pt-4 pt-md-10">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-8">
+        <div class="blog blog-single">
+          <h1 class="title">Explanation of the code</h1>
+          <div class="content"><h2 id="packages-needed-to-use-this-code-use-with-python-3x">Packages needed to use this code (use with Python 3.x)</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+</code></pre></div></div>
+
+<h2 id="draws-function-takes-simulation-parameters-as-input-and-returns-number-of-occurances-for-the-cutoff-value"><code class="language-plaintext highlighter-rouge">draws</code> function takes simulation parameters as input and returns number of occurances for the cutoff value.</h2>
+
+<h3 id="simulation-parameters">Simulation parameters</h3>
+
+<p><em>runs</em> : number of montecarlo draws.<br />
+<em>N</em> : total population.<br />
+<em>p</em> : probability that a person has antibodies.<br />
+<em>ts</em> : probability that if a person realy has antibodies then the test gives a positive result.<br />
+<em>tr</em> : probability that if the person has no antibodies then the test gives a positive result.<br />
+<em>rv</em> : number of occurences of cutoff value in resulting distribution.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">draws</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">ts</span><span class="p">,</span><span class="n">tr</span><span class="p">,</span><span class="n">cutoff</span><span class="p">):</span>
+    <span class="n">draw_1</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">runs</span><span class="p">)</span>
+    <span class="n">draw_false_1</span> <span class="o">=</span> <span class="n">N</span> <span class="o">-</span> <span class="n">draw_1</span>
+
+    <span class="n">realised_p</span> <span class="o">=</span> <span class="n">draw_1</span><span class="o">/</span><span class="n">N</span>
+
+    <span class="n">draw_2_1</span><span class="o">=</span><span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">d_1</span> <span class="ow">in</span> <span class="n">draw_1</span><span class="p">:</span>
+        <span class="n">new_dist</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">d_1</span><span class="p">,</span><span class="n">ts</span><span class="p">,</span><span class="n">runs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">new_dist</span><span class="p">:</span>
+            <span class="n">draw_2_1</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span>
+            <span class="c1">#progress.update(1)
+</span>
+    <span class="n">draw_2_false</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">d_false_1</span> <span class="ow">in</span> <span class="n">draw_false_1</span><span class="p">:</span>
+        <span class="n">new_dist</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">binomial</span><span class="p">(</span><span class="n">d_false_1</span><span class="p">,</span><span class="n">tr</span><span class="p">,</span><span class="n">runs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ele</span> <span class="ow">in</span> <span class="n">new_dist</span><span class="p">:</span>
+            <span class="n">draw_2_false</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ele</span><span class="p">)</span>
+            <span class="c1">#progress.update(1)
+</span>
+    <span class="n">final_positive</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">draw_2_false</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">draw_2_1</span><span class="p">)</span>
+
+    <span class="n">w</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#parameter to change class width
+</span>    <span class="n">n</span> <span class="o">=</span> <span class="n">math</span><span class="p">.</span><span class="n">ceil</span><span class="p">((</span><span class="nb">max</span><span class="p">(</span><span class="n">final_positive</span><span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">final_positive</span><span class="p">))</span><span class="o">/</span><span class="n">w</span><span class="p">)</span>
+
+    <span class="n">hist</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">final_positive</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">cutoff</span><span class="o">-</span><span class="mf">0.05</span><span class="o">*</span><span class="n">cutoff</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">cutoff</span><span class="o">+</span><span class="mf">0.05</span><span class="o">*</span><span class="n">cutoff</span>
+    <span class="n">s</span><span class="o">=</span><span class="mi">0</span>
+    <span class="n">rv</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hist</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+        <span class="k">if</span> <span class="n">hist</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="n">start</span> <span class="ow">and</span> <span class="n">hist</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;=</span><span class="n">end</span><span class="p">:</span>
+            <span class="n">s</span><span class="o">+=</span><span class="n">hist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">hist</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">cutoff</span><span class="p">:</span>
+                <span class="n">rv</span><span class="o">=</span><span class="n">hist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+                <span class="c1">#print(hist[0][i])
+</span>    <span class="c1">#print("Probability that Antibody positive people is between %f and %f: %f"%(start,end,s/len(final_positive)))
+</span>
+    <span class="k">return</span> <span class="n">rv</span>
+</code></pre></div></div>
+
+<h2 id="plot_boundary-function-plots-the-number-of-occurances-of-cutoff-value-for-each-base-rate-and-calculates-upper-and-lower-boundaries-on-the-basis-of-values-provided"><code class="language-plaintext highlighter-rouge">plot_boundary</code> function plots the number of occurances of cutoff value for each base rate and calculates upper and lower boundaries on the basis of values provided.</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_boundary</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span><span class="n">ps</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">hits</span><span class="p">,</span><span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">,</span><span class="n">cutoff</span><span class="p">):</span>
+    <span class="n">boundry_left</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">hits</span><span class="p">)):</span>
+        <span class="n">boundry_left</span><span class="o">+=</span><span class="n">hits</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">boundry_left</span><span class="o">&gt;=</span><span class="n">left</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">hits</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Left Boundary: %f'</span><span class="o">%</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="n">boundry_left</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="n">boundry_right</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">hits</span><span class="p">)):</span>
+        <span class="n">boundry_right</span><span class="o">+=</span><span class="n">hits</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">boundry_right</span><span class="o">&gt;=</span><span class="n">right</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">hits</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Right Boundary: %f'</span><span class="o">%</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+    <span class="n">boundry_right</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+    <span class="n">med</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">hits</span><span class="p">)):</span>
+        <span class="n">med</span><span class="o">+=</span><span class="n">hits</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">med</span><span class="o">&gt;=</span><span class="mf">0.5</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">hits</span><span class="p">):</span>
+            <span class="k">break</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Median: %f'</span><span class="o">%</span><span class="p">(</span><span class="n">ps</span><span class="p">[</span><span class="n">k</span><span class="p">]))</span>
+
+    <span class="n">med</span><span class="o">=</span><span class="n">ps</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+
+    <span class="n">z</span> <span class="o">=</span> <span class="n">hits</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">hits</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ps</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Value of $p$'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Probability of %ds'</span><span class="o">%</span><span class="p">(</span><span class="n">cutoff</span><span class="p">))</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">med</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s">'r'</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s">'--'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">'Median'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">boundry_left</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s">'--'</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s">"1"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">'$L_{0.025}$'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">boundry_right</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s">':'</span><span class="p">,</span><span class="n">marker</span> <span class="o">=</span> <span class="s">"x"</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">'$U_{0.975}$'</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'N = %d'</span><span class="o">%</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">'Values of p runs_%d N_%d cutoff_%d.png'</span><span class="o">%</span><span class="p">(</span><span class="n">runs</span><span class="p">,</span><span class="n">N</span><span class="p">,</span><span class="n">cutoff</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">plt</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">boundry_left</span><span class="p">,</span><span class="n">boundry_right</span><span class="p">,</span><span class="n">med</span>
+</code></pre></div></div>
+
+<h2 id="main-function-accepts-all-parameter-values-and-can-be-used-to-execute-the-analysis"><code class="language-plaintext highlighter-rouge">main</code> function accepts all parameter values and can be used to execute the analysis.</h2>
+<p><strong>You may change the simulation parameters here</strong><br />
+<em>runs_pass</em> : number of montecarlo draws.<br />
+<em>N_pass</em> : total population.<br />
+<em>p_pass</em> : probability that a person has antibodies.<br />
+<em>ts_pass</em> : probability that if a person realy has antibodies then the test gives a positive result.<br />
+<em>tr_pass</em> : probability that if the person has no antibodies then the test gives a positive result.<br />
+<em>cutoff_pass</em> : number of people who are expected to have antibodies based on base rate.<br />
+<em>p_pass</em> : staring base rate.<br />
+<em>p_step</em> : change in base rate for the next simulation.<br />
+<em>p_limit</em> : ending base rate.<br />
+<em>left_pass</em> : left boundary setting.<br />
+<em>right_pass</em> : right boundary setting.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">runs_pass</span> <span class="o">=</span><span class="mi">1000</span>
+    <span class="n">N_pass</span> <span class="o">=</span> <span class="mi">10000</span>
+    <span class="n">ts_pass</span> <span class="o">=</span> <span class="mf">0.75</span> <span class="c1">#probability of test success
+</span>    <span class="n">tr_pass</span> <span class="o">=</span> <span class="mf">0.05</span>
+    <span class="n">cutoff_pass</span> <span class="o">=</span> <span class="mi">640</span>
+    <span class="n">hits_pass</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">p_pass</span> <span class="o">=</span> <span class="mf">0.00</span>
+    <span class="n">p_limit</span> <span class="o">=</span> <span class="mf">0.04</span>
+    <span class="n">p_step</span> <span class="o">=</span> <span class="mf">0.001</span>
+    <span class="n">ps_pass</span><span class="o">=</span><span class="nb">list</span><span class="p">()</span>
+    <span class="n">left_pass</span> <span class="o">=</span> <span class="mf">0.025</span>
+    <span class="n">right_pass</span> <span class="o">=</span> <span class="mf">0.975</span>
+    <span class="n">progress</span> <span class="o">=</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="p">((</span><span class="n">p_limit</span><span class="o">-</span><span class="n">p_pass</span><span class="p">)</span><span class="o">/</span><span class="n">p_step</span><span class="p">))</span>
+    <span class="k">while</span> <span class="n">p_pass</span><span class="o">&lt;=</span><span class="n">p_limit</span><span class="p">:</span>
+        <span class="n">p_pass</span> <span class="o">=</span> <span class="n">p_pass</span> <span class="o">+</span> <span class="n">p_step</span>
+        <span class="n">hits_pass</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">draws</span><span class="p">(</span><span class="n">runs_pass</span><span class="p">,</span><span class="n">N_pass</span><span class="p">,</span><span class="n">p_pass</span><span class="p">,</span><span class="n">ts_pass</span><span class="p">,</span><span class="n">tr_pass</span><span class="p">,</span><span class="n">cutoff_pass</span><span class="p">))</span>
+        <span class="n">ps_pass</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">p_pass</span><span class="p">)</span>
+        <span class="n">progress</span><span class="p">.</span><span class="n">update</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">left_boundary</span><span class="p">,</span><span class="n">right_boundary</span><span class="p">,</span><span class="n">median</span> <span class="o">=</span> <span class="n">plot_boundary</span><span class="p">(</span><span class="n">runs_pass</span><span class="p">,</span><span class="n">ps_pass</span><span class="p">,</span><span class="n">N_pass</span><span class="p">,</span><span class="n">hits_pass</span><span class="p">,</span><span class="n">left_pass</span><span class="p">,</span><span class="n">right_pass</span><span class="p">,</span><span class="n">cutoff_pass</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100%|██████████| 40/40.0 [00:29&lt;00:00,  1.39it/s]
+
+Left Boundary: 0.013000
+Right Boundary: 0.027000
+Median: 0.020000
+</code></pre></div></div>
+
+<h2 id="example-plot-for-default-simulation-parameters">Example plot for default simulation parameters.</h2>
+
+<p><img src="output_7_2.png" alt="png" /></p>
+
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="footer-strip">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer">
+          <h3 class="footer-title">BDSi</h3>
+          <ul class="footer-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="copyright">© Behavioural Data Science incubator 2021</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="sub-footer-strip">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer">
+          <ul>
+            <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
+                bdsi@utwente.nl</a></li>
+          </ul>
+          <!--
+          <ul>
+            <li><strong>Phone: </strong></li>
+            <li><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+  
+</body>
+</html>
