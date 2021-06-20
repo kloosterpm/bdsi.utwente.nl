@@ -1,25 +1,47 @@
 name: Build & Deploy Jekyll
 
 on:
-  push
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  jekyll:
+  build:
+
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout updated source
+        uses: actions/checkout@v2
+        with: 
+          path: source
+      
+      - name: Checkout compiled www
+        uses: actions/checkout@v2
+        with:
+          path: www
+          ref: www
+          
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.6
+          bundler-cache: true
+          working-directory: source
 
-    # Use GitHub Actions' cache to shorten build times and decrease load on servers
-    - uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-
-    # Standard usage
-    - uses:  helaili/jekyll-action@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        target_branch: www
-        jekyll_src: .
+      - name: Build static files
+        run: | 
+          cd source
+          bundle exec jekyll build
+    
+      - name: Push to [www] branch
+        run: |
+          cd
+          rm -rf www/*
+          cp source/_site www
+          cd www
+          git config --local user.name jekyll-bot
+          git config --local user.email bdsi@utwente.nl
+          git commit -am "rebuild for $(${{GITHUB_SHA}} | cut -c1-8)"
+          git push remote www
