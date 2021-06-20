@@ -38,10 +38,10 @@ jobs:
       - name: Push to [www] branch
         run: |
           rm -rf www/*
-          ls -a www
-          cp -rf source/_site www
+          cp -rf source/_site/* www
           cd www
           git config --local user.name jekyll-bot
           git config --local user.email bdsi@utwente.nl
-          git commit -am "rebuild for $($GITHUB_SHA | cut -c1-8)"
-          git push remote www
+          git commit -am "rebuild for $(echo $GITHUB_SHA | cut -c1-8)"
+          git remote -v
+          git push origin www
