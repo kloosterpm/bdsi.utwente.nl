@@ -37,7 +37,7 @@ jobs:
     
       - name: Push to [www] branch
         run: |
-          cd
+          ls
           rm -rf www/*
           cp source/_site www
           cd www
