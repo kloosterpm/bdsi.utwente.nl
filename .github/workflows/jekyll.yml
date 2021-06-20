@@ -37,9 +37,9 @@ jobs:
     
       - name: Push to [www] branch
         run: |
-          ls
           rm -rf www/*
-          cp source/_site www
+          ls -a www
+          cp -rf source/_site www
           cd www
           git config --local user.name jekyll-bot
           git config --local user.email bdsi@utwente.nl
