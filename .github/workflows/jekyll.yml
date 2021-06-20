@@ -43,5 +43,5 @@ jobs:
           cd www
           git config --local user.name jekyll-bot
           git config --local user.email bdsi@utwente.nl
-          git commit -am "rebuild for $(${{GITHUB_SHA}} | cut -c1-8)"
+          git commit -am "rebuild for $($GITHUB_SHA | cut -c1-8)"
           git push remote www
