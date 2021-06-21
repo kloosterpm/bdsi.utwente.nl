@@ -8,8 +8,6 @@ collections:
     output: true
     permalink: /services/:path/
   team:
-    output: true
-    permalink: /team/:path/
   testimonials:
     output: true
     permalink: /testimonials/:path/

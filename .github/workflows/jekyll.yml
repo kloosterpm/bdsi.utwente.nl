@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout updated source
+      - name: Checkout source
         uses: actions/checkout@v2
         with: 
           path: source
       
-      - name: Checkout compiled www
+      - name: Checkout www
         uses: actions/checkout@v2
         with:
           path: www
@@ -35,7 +35,7 @@ jobs:
           cd source
           bundle exec jekyll build
     
-      - name: Push to [www] branch
+      - name: Push to www
         run: |
           rm -rf www/*
           cp -rf source/_site/* www
