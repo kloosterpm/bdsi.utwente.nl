@@ -1,8 +1,8 @@
 ---
 title: 'Anna Machens'
-image: '/images/team/Anna.jpg'
+image: '/assets/images/team/Anna.jpg'
 jobtitle: 'Data Scientist'
-email: 'a.k.machens@utwente.nl '
+email: 'a.k.machens@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/anna-machens-5a82b180/'
 ---
 

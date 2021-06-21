@@ -1,6 +1,6 @@
 ---
 title: 'Abhishta Abhishta'
-image: '/images/team/abhishta.png'
+image: '/assets/images/team/Abhishta.png'
 jobtitle: 'Data Science Researcher'
 email: 's.abhishta@utwente.nl'
 linkedinurl: 'https://linkedin.com/in/aabhishta'

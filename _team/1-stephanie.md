@@ -1,6 +1,6 @@
 ---
 title: 'Stéphanie van den Berg'
-image: '/images/team/DSC4120-01.JPG'
+image: '/assets/images/team/Stephanie.jpg'
 jobtitle: 'Team Leader'
 email: 'stephanie.vandenberg@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/stéphanie-van-den-berg-3038765/'

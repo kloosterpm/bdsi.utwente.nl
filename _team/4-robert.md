@@ -1,6 +1,6 @@
 ---
 title: 'Robert Marinescu Muster'
-image: '/images/team/Robert.jpg'
+image: '/assets/images/team/Robert.jpg'
 jobtitle: 'Data Science Researcher'
 email: 'r.marinescu-muster@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/robertmuster/'

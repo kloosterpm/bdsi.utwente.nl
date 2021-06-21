@@ -23,20 +23,19 @@ bodyClass: page-team-list
     <div class="col-12 col-md-6 mb-1">
       <div class="team team-summary">
         {% if team.image %}
-        <div class="team-image">
-          <img
-            alt="{{ team.title }} logo"
-            class="img-fluid mb-2"
-            src="{{site.baseurl}}{{ team.image }}"
-          />
+        <div class="team-image" style="background-image: url({{team.image}}); width: 100px;" >
         </div>
         {% endif %}
         <div class="team-meta">
           <h2 class="team-name">{{ team.title }}</h2>
           <p class="team-description">{{ team.jobtitle }}</p>
-          {% if team.linkedinurl %}
-          <a target="_blank" href="{{ team.linkedinurl }}">LinkedIn</a> 
-          {% endif %}
+          <div class="socials">
+            {% if team.linkedinurl %}
+              <a target="_blank" href="{{ team.linkedinurl }}">
+                <span class="iconify" data-icon="mdi:linkedin"></span>
+              </a> 
+            {% endif %}
+          </div>
         </div>
         <div class="team-content">{{ team.content }}</div>
       </div>
