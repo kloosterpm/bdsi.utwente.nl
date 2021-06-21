@@ -17,20 +17,37 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  news:
+    output: true
+    permalink: /news/:path/
 
 defaults:
   - scope:
-      type: services
+      path: ''
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: '_news'
+      type: 'news'
+    values:
+      layout: news
+      bodyClass: page-news-single
+  - scope:
+      path: ''
+      type: 'services'
     values:
       layout: service
       bodyClass: page-services-single
   - scope:
+      path: ''
       type: blogs
     values:
       layout: blog
       bodyClass: page-blogs-single
   - scope:
-      type: projects
+      path: ''
+      type: 'projects'
     values:
       layout: project
       bodyClass: page-projects-single
@@ -40,9 +57,7 @@ defaults:
       image: true
 
 sass:
-  style: compact # possible values: nested expanded compact compressed
-
-google_analytics_id: null
+  style: expanded # possible values: nested expanded compact compressed
 
 plugins:
   - jekyll-environment-variables
