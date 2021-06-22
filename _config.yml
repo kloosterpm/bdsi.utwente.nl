@@ -8,9 +8,6 @@ collections:
     output: true
     permalink: /services/:path/
   team:
-  testimonials:
-    output: true
-    permalink: /testimonials/:path/
   blogs:
     output: true
     permalink: /blogs/:path/
@@ -28,14 +25,13 @@ defaults:
     values:
       layout: default
   - scope:
-      path: '_news'
-      type: 'news'
+      type: news
     values:
       layout: news
       bodyClass: page-news-single
   - scope:
       path: ''
-      type: 'services'
+      type: services
     values:
       layout: service
       bodyClass: page-services-single
@@ -47,12 +43,12 @@ defaults:
       bodyClass: page-blogs-single
   - scope:
       path: ''
-      type: 'projects'
+      type: projects
     values:
       layout: project
       bodyClass: page-projects-single
   - scope:
-      path: 'images'
+      path: images
     values:
       image: true
 

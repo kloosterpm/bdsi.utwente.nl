@@ -1,8 +1,9 @@
 ---
-title: 'Workshops'
-image: '/services/workshops.jpg'
-introduction: '<strong>We organise workshops and courses related to programming and statistics.</strong>'
+title: "Workshops"
+image: "/services/workshops.jpg"
+introduction: "We organise workshops and courses related to programming and statistics."
 ---
+
 We (can) provide workshops or courses on different topics in data science for scientists and/or students of BMS, University of Twente or for companies.
 
 1. Statistical software: e.g. the use of the open source statistical programming languages in your research (with RStudio or Python)

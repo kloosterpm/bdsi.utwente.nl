@@ -4,7 +4,7 @@ layout: default
 bodyClass: page-projects-list
 ---
 
-<div class="intro {{page.bodyClass}}">
+<div class="intro">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -26,8 +26,8 @@ bodyClass: page-projects-list
           <h2 class="project-title">
             <a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a>
           </h2>
-            <h4>{{project.author}}</h4>
-          {{ project.content | markdownify | strip_html | truncate: 500 }}
+          <h4>{{project.author}}</h4>
+          {{ project.content | truncate: 500 }}
         </div>
       </div>
     </div>

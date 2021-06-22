@@ -1,12 +1,21 @@
-<div class='header {{include.headerClass}}'>
+<div class="header {{include.headerClass}}">
   <div class="container">
     <div class="logo">
-      <a href="{{site.baseurl}}/"><img alt="Homepage" src="{{site.baseurl}}/assets/images/logo-bdsi.png" /></a>
+      <a href="{{site.baseurl}}/">
+        <img
+          alt="Homepage"
+          src="{{site.baseurl}}/assets/images/logo-utwente-bdsi.png"
+        />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="{{site.baseurl}}/"><img alt="Homepage" src="{{site.baseurl}}/assets/images/logo-bdsi.png" /></a>
+      <a href="{{site.baseurl}}/">
+        <img
+          alt="Homepage"
+          src="{{site.baseurl}}/assets/images/logo-bdsi.png"
+        />
+      </a>
     </div>
-    {% include main-menu.html %}
-    {% include hamburger.html %}
+    {% include main-menu.html %} {% include hamburger.html %}
   </div>
 </div>

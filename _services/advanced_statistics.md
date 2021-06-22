@@ -1,7 +1,7 @@
 ---
 title: "Advanced Statistics"
 image: "/services/stats.png"
-introduction: "<strong>We help you with the use of advanced statistical techniques, so that you can validate your results with the help of state of the art methods. </strong>"
+introduction: "We help you with the use of advanced statistical techniques, so that you can validate your results with the help of state of the art methods."
 ---
 
 A lot of modern research in the behavioural sciences involves time-intensive and/or multivariate data, think of sensor data, combined with wifi tracking, eye-tracking, and self-reports. Analysing such data sets requires knowledge and expertise in methods that are suitable for such complicated data sets. We can help you extract meaningful insights from your data sets using sophisticated methods.
