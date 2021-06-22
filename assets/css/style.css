@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400|Open+Sans:400,700");
+@import url(./railscast.css);
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8124,6 +8125,20 @@ ul.social li a span {
 .feature .feature-content p em {
   color: #1c3ed3;
   font-style: normal;
+}
+
+.highlighter-rouge {
+  margin-bottom: .5em;
+}
+
+.highlighter-rouge pre {
+  margin: 0;
+}
+
+.highlighter-rouge > .highlight {
+  padding: .5em;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.5);
 }
 
 .page-home {
