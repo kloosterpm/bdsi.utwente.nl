@@ -1,0 +1,13 @@
+.highlighter-rouge {
+    margin-bottom: .5em;
+
+    pre {
+        margin: 0;
+    }
+
+    > .highlight {
+        padding: .5em;
+        border-radius: 3px;
+        box-shadow: 1px 1px 3px 0 rgba(0,0,0,.5);
+    }
+}

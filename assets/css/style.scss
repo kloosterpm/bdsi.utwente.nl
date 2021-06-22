@@ -6,6 +6,9 @@
 // Font
 @import url('https://fonts.googleapis.com/css?family=Lora:400|Open+Sans:400,700');
 
+// code theme
+@import './railscast.css';
+
 // Bootstrap
 @import 'bootstrap/functions';
 @import 'bootstrap-variables';
@@ -64,6 +67,7 @@
 @import 'components/strip';
 @import 'components/whitebox';
 @import 'components/feature';
+@import 'components/code';
 
 // Pages
 @import 'pages/home';
