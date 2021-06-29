@@ -1,5 +1,6 @@
 // Type Styling for body content
 .content {
+  width: 100%;
   ul,
   ol {
     margin-top: 10px;
@@ -46,5 +47,15 @@
       letter-spacing: 1.8px;
       font-weight: $font-weight-thin;
     }
+  }
+  & > div, .figure, & > p {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 5px;
+  }
+  img {
+    padding: .5em;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px 0 rgba(0,0,0,.2);
   }
 }

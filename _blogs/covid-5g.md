@@ -1,9 +1,6 @@
 ---
 title: "Using RNA to show that Covid-19 and 5G are connected"
 author: "Stephanie van den Berg, Karel Kroeze, and Anna Machens"
-output:
-  html_document: 
-    keep_md: yes
 ---
 
 RNA is the DNA of viruses. So what does it tell us if the RNA of Covid-19 can be show to be related to 5G?
