@@ -7897,6 +7897,10 @@ ul.social li a span {
   display: block;
 }
 
+.content {
+  width: 100%;
+}
+
 .content ul,
 .content ol {
   margin-top: 10px;
@@ -7958,6 +7962,18 @@ ul.social li a span {
     letter-spacing: 1.8px;
     font-weight: 200;
   }
+}
+
+.content > div, .content .figure, .content > p {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 5px;
+}
+
+.content img {
+  padding: .5em;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 .intro {
