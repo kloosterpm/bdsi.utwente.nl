@@ -7970,7 +7970,7 @@ ul.social li a span {
   padding: 5px;
 }
 
-.content img {
+.content img, .content .figure {
   padding: .5em;
   border-radius: 3px;
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
