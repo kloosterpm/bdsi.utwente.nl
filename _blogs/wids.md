@@ -261,9 +261,11 @@ dftypes.sort_values(by='abs_corr', ascending=False)[['type','isnull','unique','c
 
 
 <style  type="text/css" >
-#T_ce4c2_row2_col1,#T_ce4c2_row3_col1,#T_ce4c2_row10_col1,#T_ce4c2_row11_col1{
-            background-color:  yellow;
-        }</style><table id="T_ce4c2_" ><caption>Tab.1</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >type</th>        <th class="col_heading level0 col1" >isnull</th>        <th class="col_heading level0 col2" >unique</th>        <th class="col_heading level0 col3" >corr</th>    </tr></thead><tbody>
+    #T_ce4c2_row2_col1,#T_ce4c2_row3_col1,#T_ce4c2_row10_col1,#T_ce4c2_row11_col1{
+        background-color:  yellow;
+    }
+</style>
+<div class="figure"><table id="T_ce4c2_" ><caption>Tab.1</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >type</th>        <th class="col_heading level0 col1" >isnull</th>        <th class="col_heading level0 col2" >unique</th>        <th class="col_heading level0 col3" >corr</th>    </tr></thead><tbody>
                 <tr>
                         <th id="T_ce4c2_level0_row0" class="row_heading level0 row0" >d1_glucose_max</th>
                         <td id="T_ce4c2_row0_col0" class="data row0 col0" >float64</td>
@@ -369,7 +371,7 @@ dftypes.sort_values(by='abs_corr', ascending=False)[['type','isnull','unique','c
                         <td id="T_ce4c2_row14_col2" class="data row14 col2" >1198</td>
                         <td id="T_ce4c2_row14_col3" class="data row14 col3" >0.124891</td>
             </tr>
-    </tbody></table>
+    </tbody></table></div>
 
 
 ```python
