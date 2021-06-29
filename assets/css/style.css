@@ -7289,6 +7289,10 @@ a.text-dark:hover, a.text-dark:focus {
   flex: 1;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .header {
   height: 50px;
   color: #1c3ed3;
@@ -7920,6 +7924,11 @@ ul.social li a span {
 .content p {
   color: #4e4e4e;
   font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif, -apple-system;
+  margin-bottom: .5em;
+}
+
+.content p + p {
+  margin-bottom: 1em;
 }
 
 .content h1 {
@@ -7964,10 +7973,14 @@ ul.social li a span {
   }
 }
 
-.content > div, .content .figure, .content > p {
+.content img, .content .figure, .content > p {
   max-width: 100%;
+}
+
+.content .figure {
   overflow-x: auto;
-  padding: 5px;
+  padding: .5em;
+  margin-bottom: .5em;
 }
 
 .content img, .content .figure {
