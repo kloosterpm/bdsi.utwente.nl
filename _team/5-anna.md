@@ -4,6 +4,17 @@ image: '/assets/images/team/Anna.jpg'
 jobtitle: 'Data Scientist'
 email: 'a.k.machens@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/anna-machens-5a82b180/'
+expertise: 
+    - text analysis
+    - deep learning
+    - market research
+    - network science
+    - explanable AI
+    - causal modelling
+    - machine learning
+    - big data analytics
+    - data scraping
+    - learning Python
 ---
 
 *WHO:* I am Anna. My current focus is text analysis with deep learning models.

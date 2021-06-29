@@ -5,6 +5,19 @@ jobtitle: 'Data Scientist'
 email: 'k.a.kroeze@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/karelkroeze'
 website: 'https://karel-kroeze.nl/'
+expertise:
+    - computational statistics
+    - adaptive testing
+    - large scale simulations
+    - natural language processing
+    - adaptive learner models
+    - learning R
+    - statistical learning
+    - machine learning
+    - data scraping
+    - data tidying / data wrangling
+    - interactive visualizations
+    - shiny apps
 ---
 
 *WHO:* I’m a computational statistician and data scientist at BDSI. I expect to obtain a PhD on adaptive learning environments in the coming months. I have experience with adaptive testing, large scale simulations, natural language processing and adaptive learner models. I’ve also authored several R packages, and have experience with Python, C# and JavaScript/TypeScript. I’m excited about the prospects of computational statistics, statistical learning and machine learning for BMS, and would love to help you leverage these technologies for your own research.

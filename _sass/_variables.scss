@@ -1,24 +1,8 @@
-// Grid breakpoints
-// $grid-breakpoints: (
-//         xs: 0,
-//         sm: 576px,
-//         md: 768px,
-//         lg: 992px,
-//         xl: 1200px
-// );
-
-// $container-max-widths: (
-//         sm: 768px,
-//         md: 992px,
-//         lg: 1000px,
-//         xl: 1220px
-// );
-
 $grid-gutter-width: 20px;
 
 $white: #ffffff;
-$black: #bbc9eb;
-$primary: #00abcd;
+$black: #000;
+$primary: #008eaa;
 $secondary: #1f2229;
 
 // Links
@@ -34,6 +18,7 @@ $font-family-heading: "Roboto Condensed", "Helvetica Neue", Arial, sans-serif,
   -apple-system;
 $headings-font-family: $font-family-heading; // template got bootstrap variable name wrong?
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$blockquote-font-size: ($font-size-base * 1.1);
 $font-weight-thin: 200;
 $font-weight-light: 300;
 $font-weight-normal: 400;

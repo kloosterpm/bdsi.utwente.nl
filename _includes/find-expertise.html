@@ -1,0 +1,30 @@
+<!-- prettier-ignore -->
+{% assign exp = %}
+{% for member in site.team %}
+{% assign exp = exp | concat: member.expertise | uniq | sort %}
+{% endfor %}
+
+<select>
+  {% for topic in exp %}
+  <option>{{topic}}</option>
+  {% endfor %}
+</select>
+
+<script>
+  const people = [
+      {% for member in site.team %}
+        {
+            name: "{{member.title}}",
+            image: "{{member.image }}",
+            role: "{{member.jobtitle }}",
+            email: "{{member.email}}",
+            expertise: [{% for topic in member.expertise %}
+              "{{topic}}",{% endfor %}
+            ]
+        },
+      {% endfor %}
+  ];
+  const expertise = [{% for topic in exp | uniq %}
+    {{topic}},{%endfor%}
+  ];
+</script>

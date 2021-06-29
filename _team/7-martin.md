@@ -4,6 +4,19 @@ image: '/assets/images/team/Martin.jpeg'
 jobtitle: 'Human Factors researcher'
 email: 'martin.schmettow@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/schmettow/'
+expertise:
+    - complex motor skills
+    - training simulators
+    - statistical modelling
+    - new statistics
+    - linear models
+    - learning R
+    - learning Python
+    - research methodology
+    - study design
+    - generalized linear models
+    - multi-level models
+    - GLMM
 ---
 
 *WHO:* My background is in Human Factors research, which is about fitting technology to the human mind. In my present research I look into how people learn complex motor skills, such as in surgery or driving, in training simulators. Powerful statistical models are essential for my research. My conviction is that what has been called New Statistics makes empirical research more valid, more interesting and much better to report. Much of what I have learned so far, can be read in my book [New Statistics for the Design Researcher](https://schmettow.github.io/New_Stats/index.html). In my courses around the year, around 101 Psychology students learn to program in Python or R.

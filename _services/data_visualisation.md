@@ -6,7 +6,7 @@ introduction: "We help you use abstract, non-representational pictures to illust
 
 > “When we reason about evidence, certain methods for displaying and analyzing data are better than others[...] Superior methods are more likely to produce truthful, credible, and precise findings”
 >
-> -- Edward Tufte
+> Edward Tufte
 
 Using abstract, non-representational pictures to illustrate data is a very complex task involving many skills: visual-artistic, empirical-statistical thinking and even logical-mathematical. We see evidence of visualisations every day, from news articles to social media shared infographics. However, most of these visual displays of data often fail to present a clear picture and to enable discovery, insights and analysis. Being able to tell compelling visual stories with your data is very important in todays’ data abundant environment. We can help you develop aesthetically pleasing and effective data visualisations for your projects, from the data structure to publication.
 
