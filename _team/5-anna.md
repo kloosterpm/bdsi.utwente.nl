@@ -24,5 +24,3 @@ In addition to natural language processing I’m also interested in explainable 
 *ROLE:* I’m a data scientist at BDSI.
 
 *NEED HELP:* I can help you with  Deep Learning, Machine Learning and Big Data Analysis in python and with data scraping. Just ask me anything and I’ll do my best to help.
-
-*HOW:* You can send me an e-mail:  [a.k.machens@utwente.nl](mailto:a.k.machens@utwente.nl)

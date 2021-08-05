@@ -2,13 +2,25 @@
 layout: default
 ---
 
+{% assign profile = site.team | find: "title", page.author %}
+
 <div class="strip strip-white strip-diagonal">
-    <div class="container pt-4 pt-md-10">
+    <div class="container pt-4">
         <div class="row justify-content-start">
             <div class="col-12 col-md-8">
                 <div class="blog blog-single">
                     <h1 class="title">{{page.title}}</h1>
+                    <h3 class="date">{{page.date | date: "%B %e, %Y"}}</h3>
                     <div class="content">{{page.content}}</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4" style="position: sticky;">
+                <div class="profile-card-small">
+                {% if profile %}
+                    {% include profile-widget.html %}
+                {% else %}
+                    <h2 class="author">{{page.author}}</h2>
+                {% endif %}
                 </div>
             </div>
         </div>

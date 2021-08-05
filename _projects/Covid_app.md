@@ -1,7 +1,13 @@
 ---
 title: "The Corona app – no, thanks? Citizens’ perspectives on individual freedom, governmental control and civic solidarity in times of a global pandemic"
 image: "/services/default.png"
-author: "Giedo Jansen, Peter de Vries, Dominika Proszowska, Stéphanie van den Berg, Anna Machens, and Robert Muster"
+authors: 
+  - "Giedo Jansen"
+  - "Peter de Vries"
+  - "Dominika Proszowska"
+  - "Stéphanie van den Berg"
+  - "Anna Machens"
+  - "Robert Marinescu Muster"
 ---
 
 The COVID-19 pandemic has affected the public health, business activity, and life of individuals on an unprecedented scale. In March 2020, the Dutch government introduced a number of measures in order to contain and control the virus spread. Their success relied to a great extent on citizens’ collective mindset and willingness to adhere to the new rules and standards. As the government currently explores new public health surveillance technology, such as through so-called “corona apps”, it is important to understand the limits of citizens’ willingness to accept governmental interference in their daily life for the reward of the common good. Solutions that require sharing sensitive health data touch upon not only the issues of political trust and trade-offs between individual freedom and governmental authority, but also upon people’s perceptions of technology (e.g., trust in technology, transparency of data usage, privacy considerations, effectiveness, etc.). This study maps people’s attitudes in all these key areas. This way it gives an insight into people’s willingness to share potentially sensitive data with the government and private companies for the sake of the health and wellbeing of vulnerable groups in society. In particular, it helps to understand which personal and background characteristics, which type of health data, and which conditions affect this willingness.

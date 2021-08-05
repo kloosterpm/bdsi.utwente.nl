@@ -20,5 +20,3 @@ _WHO:_ I am Abhishta. I make use of empirical data to help businesses understand
 _ROLE:_ I represent the high-tech business and entrepreneurship (HBE) cluster in BDSI.
 
 _NEED HELP:_ I can help you with implementation of montecarlo simulations, web-scraping, data collection from social media, bigdata (sensor data etc.) analysis and selection of data storage/processing facilities.
-
-_HOW:_ You can send me an e-mail: [s.abhishta@utwente.nl](mailto:s.abhishta@utwente.nl)

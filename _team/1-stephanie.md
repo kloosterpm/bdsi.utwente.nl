@@ -23,5 +23,3 @@ expertise:
 *ROLE:* I am the head of BDSI.
 
 *NEED HELP:* I can help you with statistical modelling, learning and using R, applying statistical/machine learning, power analysis, measuring behavioural traits, discussing the research methodology of your project and writing applications for research grants. I also have extensive experience with quantitative genetic models and Bayesian data analysis.
-
-*HOW:* You can send me an email: [stephanie.vandenberg@utwente.nl](mailto:stephanie.vandenberg@utwente.nl)

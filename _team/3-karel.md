@@ -26,5 +26,3 @@ expertise:
 
 *NEED HELP:* I can help you with data scraping, data tidying, interactive visualizations (e.g. d3.js, shiny), designing and performing simulations, natural language processing, statistical learning and machine learning.
 If you’re at all interested in big data or machine learning, but don’t know what they could add to your research, or how to implement them, please do contact me. I’d be happy to discuss with you how these techniques might be relevant for your research.
-
-*HOW:* [k.a.kroeze@utwente.nl](mailto:k.a.kroeze@utwente.nl) or find me on MS Teams.

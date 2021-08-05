@@ -28,5 +28,3 @@ expertise:
 *ROLE:* I represent the Technology, Human and Institutional Behaviour (HBI) group in BDSI.
 
 *NEED HELP:* I can help you with programming dashboards and monitors, web-apps, web-scraping, data cleaning and data collection strategies, text mining, statistical modelling, learning and using R and python, applying statistical/machine/deep learning, discussing the statistical methodology of your project.
-
-*HOW:* You can send me an e-mail: [r.marinescu-muster@utwente.nl](mailto:r.marinescu-muster@utwente.nl)

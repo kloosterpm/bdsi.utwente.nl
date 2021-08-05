@@ -1,20 +1,11 @@
 .page-home {
-  background-image: url("../images/background.gif");
+  .intro {
+  background-image: url("/assets//images/bdsi-hero.png");
   background-repeat: no-repeat;
-  background-size: 115%;
-  background-position: 49px -70px;
-  @include media-breakpoint-up(sm) {
-    background-size: 90%;
-    background-position: 159px -40px;
+  background-size: cover;
+  overflow: hidden;
   }
-  @include media-breakpoint-up(md) {
-    background-size: 70%;
-    background-position: 100% -50px;
-  }
-  @include media-breakpoint-up(lg) {
-    background-size: 60%;
-    background-position: 100% -70px;
-  }
+
   .call {
     position: relative;
     overflow: hidden;

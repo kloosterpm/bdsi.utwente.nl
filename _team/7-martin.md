@@ -24,5 +24,3 @@ expertise:
 *ROLE:* I am here to represent LDT (Learning, Data Analytics and Technology) group, which comprises the departments CPE, OMD, ELAN, IST and OWK.
 
 *NEED HELP:* The best moment to start asking me is before you plan your study. Together, we can look into your research problem and find a consistent and efficient research design and develop a statistical model upfront. Even if you ask me just to do the analysis for you, I will always make sure that you fully understand the process and the results. My favorite statistical approach is Generalized Linear Multi-level Models (GLMM), which is an extremely flexible family. Even if you have never heard of it, chances are good, that a GLMM can translate your precious data into real answers. If you, as a group, need a solution for a specific research situation (or you are just curious about New Statistics), we can organize a workshop or live demo, together.
-
-*HOW:* [martin.schmettow@utwente.nl](mailto:martin.schmettow@utwente.nl) or find me on MS Teams.

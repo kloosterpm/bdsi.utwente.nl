@@ -22,5 +22,3 @@ expertise:
 *ROLE:* I represent the technology, policy and society (TPS) group in BDSI.
 
 *NEED HELP:* I can help you with statistical modelling, learning and using R, applying statistical/machine learning, discussing the statistical methodology of your project.
-
-*HOW:* You can send me an e-mail: [c.g.m.oudshoorn@utwente.nl](mailto:c.g.m.oudshoorn@utwente.nl)

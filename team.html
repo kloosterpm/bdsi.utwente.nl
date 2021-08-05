@@ -24,95 +24,13 @@ iconSize: 28
 
 <div class="container pb-6">
   <div class="row">
-    {% for team in site.team %}
+    {% for profile in site.team %}
     <!-- prettier-ignore -->
-    {% assign givenName = team.title | split: " " | first %}
+    {% assign givenName = profile.title | split: " " | first %}
     <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        {% if team.image %}
-        <div
-          class="team-image"
-          style="background-image: url({{team.image}}); width: 100px;"
-        ></div>
-        {% endif %}
-        <div class="team-meta">
-          <h2 class="team-name">{{ team.title }}</h2>
-          <h4 class="team-description">{{ team.jobtitle }}</h4>
-          <div class="socials">
-            {% if team.email %}
-            <!-- prettier-ignore -->
-            {% assign userName = team.email | split: "@" | first %}
-            <a
-              class="icon icon-teams"
-              target="_blank"
-              href="https://teams.microsoft.com/l/chat/0/0?users={{team.email}}"
-              title="Chat with {{givenName}} on Teams"
-            >
-              <span
-                class="iconify"
-                data-icon="ph:chats-fill"
-                data-width="{{page.iconSize}}"
-                data-height="{{page.iconSize}}"
-              ></span>
-            </a>
-            <a
-              class="icon icon-email"
-              target="_blank"
-              href="mailto:{{team.email}}"
-              title="Send {{givenName}} an email"
-            >
-              <span
-                class="iconify"
-                data-icon="ph:envelope"
-                data-width="{{page.iconSize}}"
-                data-height="{{page.iconSize}}"
-              ></span>
-            </a>
-            <a
-              class="icon icon-people"
-              target="_blank"
-              href="https://people.utwente.nl/{{userName}}"
-              title="Check out {{givenName}}'s works"
-            >
-              <span
-                class="iconify"
-                data-icon="ph:newspaper-clipping"
-                data-width="{{page.iconSize}}"
-                data-height="{{page.iconSize}}"
-              ></span>
-            </a>
-            {% endif %} {% if team.linkedinurl %}
-            <a
-              class="icon icon-linkedin"
-              target="_blank"
-              href="{{team.linkedinurl}}"
-              title="Connect with {{givenName}} on LinkedIn"
-            >
-              <span
-                class="iconify"
-                data-icon="ph:linkedin-logo"
-                data-width="{{page.iconSize}}"
-                data-height="{{page.iconSize}}"
-              ></span>
-            </a>
-            {% endif %} {% if team.website %}
-            <a
-              class="icon icon-website"
-              target="_blank"
-              href="{{team.website}}"
-              title="{{givenName}} also has a website!"
-            >
-              <span
-                class="iconify"
-                data-icon="ph:desktop"
-                data-width="{{page.iconSize}}"
-                data-height="{{page.iconSize}}"
-              ></span>
-            </a>
-            {% endif %}
-          </div>
-        </div>
-        <div class="team-content">{{ team.content }}</div>
+      <div class="team team-summary" id="{{profile.title}}"">
+        {% include profile-widget.html %}
+        <div class="team-content">{{ profile.content }}</div>
       </div>
     </div>
     {% endfor %}

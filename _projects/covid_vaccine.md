@@ -1,7 +1,12 @@
 ---
 title: "Legitimacy and public sentiment regarding the Covid-19 vaccine(s)"
 image: "/services/default.png"
-author: "Sikke R. Jansma, Jordy F. Gosselt, Stéphanie van den Berg, Anna Machens and Robert Muster"
+authors: 
+  - "Sikke R. Jansma"
+  - "Jordy F. Gosselt"
+  - "Stéphanie van den Berg"
+  - "Anna Machens"
+  - "Robert Marinescu Muster"
 ---
 
 The proposed study is a large-scale quantitative sentiment analysis of the public discourse on the Covid-19 vaccination in the Netherlands based on big data, scraped from both social and traditional media. The sentiment analysis will provide insights in the legitimacy of a vaccination in terms of expectations (positive or negative), emotions behind these expectations (anger, fear, sadness, disgust, surplice, anticipation, trust, joy), and the prominence and contents of the different pillars of legitimacy (cognitive, normative, pragmatic, regulative).
