@@ -1,0 +1,34 @@
+<div class="profile-widget">{% assign givenName = profile.title |
+  split: " " | first %}
+  <div style="display: flex; flex-flow: row nowrap" class="mb-1">
+    <div
+      class="profile-image"
+      style="background-image: url({{profile.image}}); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"
+    ></div>
+    <div
+      style="
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1em;
+      "
+    >
+      <h5 class="mb-0">{{profile.title}}</h5>
+      <a href="/team/#{{profile.email | split: '@' | first | replace: '.', '-'}}">
+        <span
+          class="iconify-inline"
+          data-icon="mdi:badge-account-horizontal-outline"
+          title="profile"
+        ></span>
+        {{givenName}}'s profile
+      </a>
+      <a href="mailto:{{profile.email}}" target="_blank"
+        ><span
+          class="iconify-inline"
+          data-icon="mdi:email-outline"
+        ></span>
+        {{profile.email}}</a
+      >
+    </div>
+  </div>
+</div>
