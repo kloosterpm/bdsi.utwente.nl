@@ -12,12 +12,12 @@ layout: default
                     <div class="content">{{page.content}}</div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 mt-md-10">
             {% for author in page.authors %}
                 {% assign profile = site.team | find: "title", author %}
                 {% if profile %}
-                <div class="profile-card-small">
-                    {% include profile-widget.html %}
+                <div class="profile-small">
+                    {% include profile-widget-small.html %}
                 </div>
                 {% endif %}
             {% endfor %}

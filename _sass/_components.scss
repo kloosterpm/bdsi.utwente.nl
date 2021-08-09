@@ -52,6 +52,13 @@ body {
 
   transition: all 0.15s ease;
 
+  &.center {
+    display: block;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &.lg {
     font-size: 26px;
   }
@@ -664,13 +671,19 @@ ul.social {
     }
   }
 }
+@mixin shadow($color: rgba(0,0,0,0.2), $x: 0, $y: 1px, $blur: 18px) {
+  box-shadow: $x $y $blur $color;
+}
 @mixin whitebox($padding: 10px) {
   border: 1px solid #dcdcdc;
   border-radius: 3px;
-  box-shadow: 0 1px 18px rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: $padding;
+  @include shadow();
 }
 .whitebox {
   @include whitebox();
+}
+.shadow {
+  @include shadow();
 }

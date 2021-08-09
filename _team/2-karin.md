@@ -1,6 +1,6 @@
 ---
 title: 'Karin Groothuis-Oudshoorn'
-image: '/assets/images/team/Karin.png'
+image: '/assets/images/team/Karin-thumbnail.png'
 jobtitle: 'Data Science Researcher'
 email: 'c.g.m.oudshoorn@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/karin-groothuis-oudshoorn-37b7866/'

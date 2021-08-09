@@ -1,5 +1,6 @@
 ---
 title: BDSi call for proposals 2021
+frontpage: true
 ---
 Sparking Data Science Innovation across BMS
 
@@ -7,6 +8,7 @@ BDSi invites BMS researchers to apply for projects requiring data science and ma
 
 ## Purpose
 
+![](2021-08-09-11-47-14.png)
 This call for proposals aims to support data-driven research. The call supports and reflects BDSi’s strategy to advance the use of data science methods in BMS research.
 
 Projects receive an in-kind investment rather than funding. This means that a dedicated team of data scientists from BDSi will work together with the applicants to simulate, retrieve, analyze and/or visualize the data. This call offers support for projects that can be seen as a pilot study or proof of concept for a larger project, with an aim to be later funded by other sources.

@@ -1,6 +1,6 @@
 ---
 title: 'Martin Schmettow'
-image: '/assets/images/team/Martin.jpeg'
+image: '/assets/images/team/Martin-thumbnail.png'
 jobtitle: 'Human Factors researcher'
 email: 'martin.schmettow@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/schmettow/'

@@ -6,25 +6,35 @@ bodyClass: page-home
 
 <div class="intro pb-6" style="height: 20vw; box-shadow: 0px 1px 2px rgba(0,0,0,.3)"></div>
 
-<div class="container pt-2">
-  <div class="call">
-    <div class="call-box-top">
-      <div class="call-email"><h4>Email</h4>
-        <a href="mailto:{{ site.data.contact.email }}">
-          {{ site.data.contact.email }}
-        </a>
+
+<div class="container mt-4">
+  {% include find-expertise.html %}
+</div>
+
+<div class="container mt-4">
+  {% assign frontPageNews = site.news | sort: "date" | filter: "frontpage" | slice: 0, 2 %}
+  {% for newsItem in frontPageNews %}
+    <div class="card shadow">
+      <div class="card-body">
+        {% if newsItem.heroImage %}<img src="{{newsItem.heroImage}}" alt="{{newsItem.title}}" class="card-img-top">{% endif %}
+        <div class="card-title">
+          <h2>{{newsItem.title}}</h2>
+          <div class="small text-muted">{{newsItem.date | date: "%A %B %e, %Y"}}</div>
+        </div>
+        <div class="card-text">
+          <!-- introduction -->
+          {% if newsItem.intro %}{{newsItem.intro}}{% else %}{{newsItem.content | split: "<p>" | slice: 0, 2 | join: "<p>" | truncatewords: 50 }}{% endif %} 
+        </div>
+        <a class="ml-auto button" href={{newsItem.link}}>read more</a>
       </div>
     </div>
-    <div class="call-box-bottom">
-      <a href="{{site.baseurl}}/contact" class="button">Contact</a>
-    </div>
-  </div>
+  {% endfor %}
 </div>
 
 <div class="container pt-8 pt-md-10">
   <div class="row justify-content-start">
     <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">Our Services</h2>
+      <h2 class="text-dark mb-3">Our Services</h2>
     </div>
     {% for service in site.services %}
     <div class="col-12 col-md-6 mb-2">

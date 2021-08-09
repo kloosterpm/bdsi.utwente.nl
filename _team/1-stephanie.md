@@ -1,6 +1,6 @@
 ---
 title: 'Stéphanie van den Berg'
-image: '/assets/images/team/Stephanie.jpg'
+image: '/assets/images/team/Stephanie-thumbnail.png'
 jobtitle: 'Team Leader'
 email: 'stephanie.vandenberg@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/stéphanie-van-den-berg-3038765/'
@@ -10,7 +10,7 @@ expertise:
     - machine learning
     - psychometrics
     - bayesian statistics
-    - time-intesive data modeeling
+    - time-intensive data modelling
     - learning R
     - power analysis
     - measuring behavioural traits
