@@ -1,26 +1,33 @@
 .page-team-list {
-  background-image: url("../images/team-hero.svg");
-  background-repeat: no-repeat;
-  background-size: 115%;
-  background-position: 49px -40px;
-  @include media-breakpoint-up(sm) {
-    background-size: 90%;
-    background-position: 159px -40px;
-  }
-  @include media-breakpoint-up(md) {
-    background-size: 85%;
-    background-position: 199px -80px;
-  }
-  @include media-breakpoint-up(lg) {
-    background-size: 60%;
-    background-position: 100% -110px;
-  }
+  @extend .page-list;
 }
+
+.page-team-single {
+  @extend .page-single;
+}
+
+// .page-team-list {
+//   background-image: url("../images/team-hero.svg");
+//   background-repeat: no-repeat;
+//   background-size: 115%;
+//   background-position: 49px -40px;
+//   @include media-breakpoint-up(sm) {
+//     background-size: 90%;
+//     background-position: 159px -40px;
+//   }
+//   @include media-breakpoint-up(md) {
+//     background-size: 85%;
+//     background-position: 199px -80px;
+//   }
+//   @include media-breakpoint-up(lg) {
+//     background-size: 60%;
+//     background-position: 100% -110px;
+//   }
+// }
 .profile-summary, .profile-widget {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  @include content-backdrop();
 }
 .profile-image {
   flex: 0 0 100px;

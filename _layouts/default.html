@@ -27,11 +27,11 @@
 </head>
 <body class='page {{page.bodyClass}}'>
   {% include main-menu-mobile.html %}
-  <div id="wrapper" class="wrapper">
     {% include header.html %}
-    {{content}}
-  </div>
-  {% include footer.html %}
+    <div id="content">
+      {{content}}
+    </div>
+    {% include footer.html %}
   <script type="text/javascript" src="{{ site.baseurl }}/assets/js/scripts.js"></script>
 </body>
 </html>

@@ -4,35 +4,25 @@ layout: default
 bodyClass: page-services-list
 ---
 
-<div class="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>Services that we provide</h1>
-                <p>
-                    Our services are aimed at primarily helping researchers who
-                    are part of BMS faculty at University of Twente.
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="container py-6">
+  <h1 class="hero text-white">Our services</h1>
+  <p class="text-white">
+    Our services are aimed at primarily helping researchers who are part of BMS
+    faculty at University of Twente.
+  </p>
 </div>
 
-<div class="container pb-6">
-    <div class="row">
-        {% for service in site.services %}
-        <div class="col-12 col-md-6 mb-2">
-            <div class="service service-summary">
-                <div class="service-content">
-                    <h2 class="service-title">
-                        <a href="{{site.baseurl}}{{ service.url }}"
-                            >{{ service.title }}</a
-                        >
-                    </h2>
-                    {{ service.introduction | markdownify }}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
+<div class="strip strip-diagonal">
+  <div class="container">
+    {% for service in site.services %}
+    <div class="service service-summary mb-2">
+      <div class="service-content">
+        <h2 class="service-title">
+          <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+        </h2>
+        {{ service.introduction | markdownify }}
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </div>

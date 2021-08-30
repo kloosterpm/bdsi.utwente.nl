@@ -1,0 +1,9 @@
+{% assign profile = site.team | find: "title", author %}
+{% if profile %}
+    <a class="author-list-item" href="/team/#{{profile.email | split: '@' | first | replace: '.', '-'}}">
+        <img src="{{profile.image}}" alt="{{author}}" class="circle">
+        <h4>{{profile.title}}</h4>
+    </a>
+{% else %}
+    <h4 class="author-list-item">{{author}}</h4>
+{% endif %}

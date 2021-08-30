@@ -1,0 +1,18 @@
+<div class="author-list">
+    {% if page.author %}
+        {% assign author = page.author %}
+        {% include author-list-item.html %}
+    {% elsif page.authors %}
+        {% for author in page.authors %}
+            {%- if forloop.first != true -%}
+                <h4>,&MediumSpace;</h4>
+                {%- if forloop.last -%}
+                    <h4>and&MediumSpace;</h4>
+                {% endif %}
+            {% endif %}
+            {% include author-list-item.html %}
+        {% endfor %}
+    {% else %}
+        <!-- no authors -->
+    {% endif %}
+</div>

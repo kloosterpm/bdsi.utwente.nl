@@ -1,25 +1,29 @@
 ---
 title: BDSi call for proposals 2021
 frontpage: true
+subtitle: Sparking Data Science Innovation across BMS
+heroImage: /assets/images/content/call-for-proposals-2021/hero.png
+heroText: |
+  Do you have data lying around? Are you curious about what Data Science can mean for your research?\n
+  BDSi is making several grants available for research involving data science. The grant is meant for projects exploring new ideas, or as a first step to qualify for external funding.\n
+  A dedicated team of BDSi data scientists will help integrate data science into your project.
 ---
-Sparking Data Science Innovation across BMS
 
 BDSi invites BMS researchers to apply for projects requiring data science and machine learning or involving challenging data sets.
 
 ## Purpose
 
-![](2021-08-09-11-47-14.png)
 This call for proposals aims to support data-driven research. The call supports and reflects BDSi’s strategy to advance the use of data science methods in BMS research.
 
 Projects receive an in-kind investment rather than funding. This means that a dedicated team of data scientists from BDSi will work together with the applicants to simulate, retrieve, analyze and/or visualize the data. This call offers support for projects that can be seen as a pilot study or proof of concept for a larger project, with an aim to be later funded by other sources.
 
 ## Criteria - How to apply
 
-Applications can be submitted by sending a proposal to <BDSi@utwente.nl> with the subject “BDSI 2021”.  
+Applications can be submitted by sending a proposal to <BDSi@utwente.nl> with the subject “BDSI 2021”.
 
 A proposal should:
 
-- Make clear why data science is required to solve the stated research problem.  
+- Make clear why data science is required to solve the stated research problem.
 - Define clear work packages and tasks that will be executed by BDSi data scientists.
 - Provide rationale for the number of data scientist hours being applied for. Include a clear strategy for future development and continuation (preparation for a larger grant)
 
@@ -40,11 +44,11 @@ Proposals can be submitted by BMS researchers. In case the proposal is submitted
 
 ## What can be applied for?
 
-The call makes available in-kind support by allocating the time of BDSi’s Data Scientists to the project. BDSi’s in-kind contribution is calculated in “person hours”. Note that there is a limit in hours BDSI can provide across all projects.  
+The call makes available in-kind support by allocating the time of BDSi’s Data Scientists to the project. BDSi’s in-kind contribution is calculated in “person hours”. Note that there is a limit in hours BDSI can provide across all projects.
 
 ## When to apply
 
-The deadline for submission of full proposals is **Sunday, September 19th, 2021**. A decision on successful proposals can be expected beginning of October.  
+The deadline for submission of full proposals is **Sunday, September 19th, 2021**. A decision on successful proposals can be expected beginning of October.
 
 ## Information
 

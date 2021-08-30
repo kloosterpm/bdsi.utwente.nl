@@ -26,3 +26,6 @@ Thumbs.db
 
 .prettierrc
 .vscode
+vendor/
+.bundle/
+package*.json
