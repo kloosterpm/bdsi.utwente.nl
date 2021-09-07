@@ -1,7 +1,7 @@
 ---
 title: "Data Visualisation"
 image: "/services/noun_591323.png"
-introduction: "We help you use abstract, non-representational pictures to illustrate data to demonstrate your findings to a wider audience."
+introduction: "Communicate your findings with superior visualizations, giving information a truthful and credible visual context."
 ---
 
 > “When we reason about evidence, certain methods for displaying and analyzing data are better than others[...] Superior methods are more likely to produce truthful, credible, and precise findings”

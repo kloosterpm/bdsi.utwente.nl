@@ -7,13 +7,20 @@ collections:
   services:
     output: true
     permalink: /services/:path/
+  partners:
   team:
   blogs:
     output: true
-    permalink: /blogs/:path/
+    permalink: /blog/:path/
   projects:
     output: true
     permalink: /projects/:path/
+  workshops:
+    output: true
+    permalink: /events/workshops/:path/
+  seminars:
+    output: true
+    permalink: /events/seminars/:path/
   news:
     output: true
     permalink: /news/:path/

@@ -8,8 +8,14 @@ $text: $secondary; // darken($header, 30);
     font-weight: 300;
     color: $header;
 
-    a {
-      text-decoration: underline;
+    a &, a {
+      color: $link-color;
+      text-decoration: $link-decoration;
+
+      &:hover, &:active, &:focus-within {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+      }
     }
   }
 }
@@ -519,7 +525,7 @@ $button-width: 35px;
         }
       }
       > a.current {
-        background: lighten($secondary, 5);
+        background: lighten($secondary, 10);
       }
     }
     > li.current {
@@ -742,11 +748,10 @@ ul.social {
 
       
       img {
-        height: $h4-font-size * $headings-line-height;
+        height: 1.3em;
         width: auto;
         border-radius: 50%;
-
-        margin-right: .2rem;
+        margin-right: .2em;
       }
     }
 }

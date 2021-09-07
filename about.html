@@ -60,4 +60,21 @@ bodyClass: page-list
       {% endfor %}
     </div>
   </div>
+
+  <div class="container mt-4">
+    <h2>Partners</h2>
+    {% for partner in site.partners %}
+    <a href="{{ partner.website }}">
+      {% if partner.logo %}
+      <img
+        src="{{partner.logo}}"
+        alt="{{partner.title}} logo"
+        style="max-height: 8em; max-width: 12em; float: left"
+        class="mr-1"
+      />
+      {% endif %}
+      <h3>{{ partner.title }}</h3>
+    </a>
+    {{ partner.content | markdownify }} {% endfor %}
+  </div>
 </div>

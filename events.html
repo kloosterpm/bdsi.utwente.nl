@@ -1,0 +1,53 @@
+---
+title: Events
+layout: default
+bodyClass: page-list
+---
+
+<div class="container py-6">
+  <h1 class="hero text-white">Workshops</h1>
+  <h4 class="text-white">Workshops, Seminars, and other events</h4>
+</div>
+
+<div class="strip strip-diagonal">
+  <div class="container">
+    <h2>Workshops</h2>
+    {% assign workshops = site.workshops | sort: "title" %}
+    {% for workshop in workshops %}
+      <div class="workshop mb-3">
+        <h3>
+          <a href="{{site.baseurl}}{{ workshop.url }}">{{ workshop.title }}</a>
+        </h3>
+        {% if workshop.introduction %}
+          {{ workshop.introduction }}
+        {% else %}
+          {{ workshop.content | markdownify | strip_html | truncate: 250 }}
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    
+    <h2>Seminars</h2>
+    {% assign seminars = site.seminars | sort: "title" %}
+    {% for seminar in seminars %}
+      <div class="seminar mb-3">
+        <h3>
+          <a href="{{site.baseurl}}{{ seminar.url }}">{{ seminar.title }}</a>
+        </h3>
+        <div class="byline" style="display: flex;">
+          <div class="authors">
+            {% include author-list.html page=seminar header="h6" %}
+          </div>
+          <div class="date" style="margin-left: auto;">
+            <h6 class="date">{{seminar.date | date: "%B %e, %Y"}}</h6>
+          </div>
+        </div>
+        {% if seminar.introduction %}
+          {{ seminar.introduction }}
+        {% else %}
+          {{ seminar.content | markdownify | strip_html | truncate: 250 }}
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

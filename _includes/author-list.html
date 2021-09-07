@@ -1,13 +1,17 @@
 <div class="author-list">
+    {% if include.page %}
+    {% assign page = include.page %}
+    {% endif %}
+    {% assign header = include.header | default: "h4" %}
     {% if page.author %}
         {% assign author = page.author %}
-        {% include author-list-item.html %}
+        {% include author-list-item.html header=header %}
     {% elsif page.authors %}
         {% for author in page.authors %}
             {%- if forloop.first != true -%}
-                <h4>,&MediumSpace;</h4>
+                <{{header}}>,&MediumSpace;</{{header}}>
                 {%- if forloop.last -%}
-                    <h4>and&MediumSpace;</h4>
+                    <{{header}}>and&MediumSpace;</{{header}}>
                 {% endif %}
             {% endif %}
             {% include author-list-item.html %}

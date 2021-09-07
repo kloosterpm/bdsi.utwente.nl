@@ -1,6 +1,6 @@
-<div class="card shadow" style="height: 500px; overflow-y: hidden; display: flex; flex-flow: column nowrap;">
-  {% if item.heroImage %}<img
-    src="{{item.heroImage}}"
+<div class="card shadow mb-2" style="height: 500px; overflow-y: hidden; display: flex; flex-flow: column nowrap;">
+  {% if item.image %}<img
+    src="{{item.image}}"
     alt="{{item.title}}"
     class="card-img-top"
     style="height: 150px; width: 100%; object-fit: cover; flex: 0 0 auto;"
@@ -14,8 +14,8 @@
       </div>
     </div>
     <div class="card-text" style="flex: 1 1 auto; overflow-y: hidden; text-overflow: ellipsis;">
-      {% if item.heroText %} 
-        {% assign paragraphs = item.heroText | split: "\n" %} 
+      {% if item.introduction %} 
+        {% assign paragraphs = item.introduction | split: "\n" %} 
         {% for p in paragraphs %}
           <p class="{% if forloop.first %}font-weight-bold{% else %}text-muted{% endif %}">
             {{p}}
