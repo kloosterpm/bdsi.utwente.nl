@@ -69,7 +69,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  eventmachine (~> 1.2)
   jekyll (~> 4.1)
   jekyll-environment-variables
   wdm (>= 0.1.0)
