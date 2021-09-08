@@ -28,6 +28,7 @@ jobs:
         with:
           ruby-version: 2.7
           bundler-cache: true
+          cache-version: 24
           working-directory: source
 
       - name: Build static files
