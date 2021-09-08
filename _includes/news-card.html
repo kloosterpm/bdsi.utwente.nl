@@ -10,7 +10,7 @@
       <h2><a href="{{site.baseurl}}{{item.url}}">{{item.title}}</a></h2>
       <div class="small text-muted">
         {% if item.author %}<a href="/team">{{item.author}}</a>, {% endif %}
-        {{item.date | date: "%B %e, %Y"}}
+        {{item.date | date: "%B %e, %Y"}}{% if item.endDate %} — {{item.endDate | date: "%B %e, %Y"}}{% endif %}
       </div>
     </div>
     <div class="card-text" style="flex: 1 1 auto; overflow-y: hidden; text-overflow: ellipsis;">

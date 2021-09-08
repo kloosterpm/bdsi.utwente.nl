@@ -10,15 +10,14 @@ bodyClass: page-home
 
 <div class="container mt-4">
     <div class="row">
-        {% assign item = site.news | sort: "date" | where: "frontpage", true | first %}
+        {% assign workshops = site.workshops | where_exp: "workshop", "workshop.date > site.time" %}
+        {% assign items = workshops | concat: site.news | concat: site.blogs | where: "frontpage", true | sort: "date" | reverse | splice: 0, 6 %}
+        
+        {% for item in items %}
         <div class="col-12 col-md-6 col-xl-4">
             {% include news-card.html %}
         </div>
-
-        {% assign item = site.blogs | sort: "date" | where: "frontpage", true | first %}
-        <div class="col-12 col-md-6 col-xl-4">
-            {% include news-card.html %}
-        </div>
+        {% endfor %}
     </div>
 </div>
 <div class="container mt-6">

@@ -1,7 +1,7 @@
-vbaseurl: '/utwente-bdsi/'
 permalink: pretty
 title: 'Behavioural Data Science incubator'
 title_footer: 'BDSi'
+future: true
 
 collections:
   services:
@@ -32,6 +32,7 @@ defaults:
     values:
       layout: default
   - scope:
+      path: ''
       type: news
     values:
       layout: news
@@ -54,6 +55,18 @@ defaults:
     values:
       layout: project
       bodyClass: page-projects-single
+  - scope:
+      path: ''
+      type: seminars
+    values:
+      layout: event
+      bodyClass: page-single
+  - scope:
+      path: ''
+      type: workshops
+    values:
+      layout: event
+      bodyClass: page-single
   - scope:
       path: images
     values:
