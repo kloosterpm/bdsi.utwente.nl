@@ -19,13 +19,13 @@ date: 2021-09-20
 endDate: 2021-09-27
 ---
 
-<a class="button btn-lg btn-primary" href="sign-up">Sign up now!</a>
+<a class="button btn-lg btn-primary" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
 
 ## What is it?
 
 Over the course of one week, you will compete with other teams of behavioural data scientists to solve a real data science case. BDSi staff will organise several seminars and workshops throughout the week to introduce the various steps involved in data science, and coaches will be available to guide you when you run into problems.
 
-The goal of the Data Science week is to introduce students and staff interested in data science in a fun and cooperative way, and help create a community of data scientists at BMS. After one week, the best teams will be asked to present their solutions, and the winners will be presented with a suitable prize.
+The goal of the Data Science week is to introduce interested students and staff to data science in a fun and cooperative way, and help create a community of data scientists at BMS. After one week, the best teams will be asked to present their solutions, and the winners will be presented with a suitable prize.
 
 ## Who can join?
 
@@ -33,7 +33,9 @@ Everyone related to the faculty of Behavioural and Management Sciences and their
 
 ## What can I do to prepare?
 
-First off, get a team together, and [sign up](signup) now - or just [sign up](signup) on your own.
+First off, get a team together, and [sign up](https://forms.office.com/r/pM0qCQF5eH) now - or just [sign up](https://forms.office.com/r/pM0qCQF5eH) on your own.
+
+<a class="button" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
 
 The materials we will use are based on the freely available [Introduction to Statistical Learning][isl-book] book. If you're interested in data science, statistical learning or machine learning, this book would be a great place to start. BDSi also organizes a yearly [reading club][ws-asl] around this book.
 
@@ -54,7 +56,7 @@ We will also explain how to reach the coaches for help, and give a brief overvie
 
 ##### September 21st, 12:45 – 13:30
 
-A 45 minute guided introduction to data wrangling in _R_, using the 'tidy' data principles. [Karel Kroeze](/team/#k-a-kroeze) will show how to prepare a prepare a 'raw' dataset for analysis, by cleaning, reshaping and mutating the data.
+A 45 minute guided introduction to data wrangling in _R_, using the 'tidy' data principles. [Karel Kroeze](/team/#k-a-kroeze) will show how to prepare a 'raw' dataset for analysis, by cleaning, reshaping and mutating the data until it gives up all its secrets.
 
 This workshop is also open for those who do not want to participate in the Data Science Week. You can sign up for just the [Tidy Data Wrangling][ws-tdw] workshop [here][ws-tdw].
 
@@ -86,7 +88,7 @@ After spending all weekend with your team fine-tuning your solutions, you will h
 
 The teams that created the best and most creative solutions will give a short presentation about their approach, and there will be time to ask questions to the winning teams as well as BDSi staff and coaches.
 
-<a class="button" href="sign-up">Sign up now!</a>
+<a class="button" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
 
 ###### References
 
