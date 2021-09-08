@@ -1,114 +1,31 @@
 ---
 # this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
+# its beyond stupid that we need to do this
 ---
 
 // Font
-@import url('https://fonts.googleapis.com/css?family=Lora:400|Open+Sans:400,700');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
 // code theme
-@import './rouge-github.css';
+@import "./rouge-github.css";
 
-// Bootstrap
-@import 'bootstrap/functions';
-@import 'bootstrap-variables';
-@import 'bootstrap/variables';
-@import 'bootstrap/mixins';
-@import 'bootstrap/root';
-@import 'bootstrap/reboot';
-@import 'bootstrap/grid';
-@import 'bootstrap/type';
-@import 'bootstrap/tables';
-// @import "bootstrap/images";
-// @import "bootstrap/code";
-// @import "bootstrap/forms";
-// @import "bootstrap/buttons";
-// @import "bootstrap/transitions";
-// @import "bootstrap/dropdown";
-// @import "bootstrap/button-group";
-// @import "bootstrap/input-group";
-// @import "bootstrap/custom-forms";
-// @import "bootstrap/nav";
-// @import "bootstrap/navbar";
-// @import "bootstrap/card";
-// @import "bootstrap/breadcrumb";
-// @import "bootstrap/pagination";
-// @import "bootstrap/badge";
-// @import "bootstrap/jumbotron";
-// @import "bootstrap/alert";
-// @import "bootstrap/progress";
-// @import "bootstrap/media";
-// @import "bootstrap/list-group";
-// @import "bootstrap/close";
-// @import "bootstrap/modal";
-// @import "bootstrap/tooltip";
-// @import "bootstrap/popover";
-// @import "bootstrap/carousel";
-// @import "bootstrap/print";
-@import 'bootstrap/utilities';
+// themed variables
+@import "variables";
+
+// bootstrap
+@import "bootstrap/bootstrap";
 
 // Libraries
-@import 'libraries/hamburgers/hamburgers';
+@import "libraries/hamburgers/hamburgers";
 
 // Components
-@import 'components/page';
-@import 'components/header';
-@import 'components/footer';
-@import 'components/sub-footer';
-@import 'components/logo';
-@import 'components/main-menu';
-@import 'components/main-menu-mobile';
-@import 'components/social';
-@import 'components/hamburger';
-@import 'components/buttons';
-@import 'components/title';
-@import 'components/content';
-@import 'components/intro';
-@import 'components/strip';
-@import 'components/whitebox';
-@import 'components/feature';
-@import 'components/code';
+@import "components";
 
 // Pages
-@import 'pages/home';
-@import 'pages/team/team-list';
-@import 'pages/team/team-summary';
-@import 'pages/team/page-team-list';
-@import 'pages/testimonials/testimonials-list';
-@import 'pages/testimonials/testimonials-summary';
-@import 'pages/testimonials/page-testimonials-list';
-@import 'pages/projects/page-projects-list';
-@import 'pages/projects/page-projects-single';
-@import 'pages/projects/project-single';
-@import 'pages/projects/project-summary';
-@import 'pages/services/page-services-list';
-@import 'pages/services/page-services-single';
-@import 'pages/services/service-single';
-@import 'pages/services/service-summary';
-@import 'pages/blogs/page-blogs-list';
-@import 'pages/blogs/page-blogs-single';
-@import 'pages/blogs/blog-single';
-@import 'pages/blogs/blog-summary';
-@import 'pages/news/news-single';
-
-
-// Display breakpoints for DEV
-// body:after {
-//   color: #000000;
-//   font-size: 12px;
-//   padding: 5px;
-//   font-weight: bold;
-//   right: 10px;
-//   position: fixed;
-//   text-align: center;
-//   text-transform: uppercase;
-//   bottom: 10px;
-//   width: 200px;
-//   z-index: 9999;
-//   border: solid 1px #000000;
-//   @each $name, $value in $grid-breakpoints {
-//     @include media-breakpoint-up($name) {
-//       content: "#{$name} - min-width: #{$value}";
-//     }
-//   }
-// }
+@import "pages/home";
+@import "pages/team";
+@import "pages/projects";
+@import "pages/services";
+@import "pages/blogs";
+@import "pages/news";

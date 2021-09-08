@@ -22,4 +22,10 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+
 .prettierrc
+.vscode
+vendor/
+.bundle/
+package*.json

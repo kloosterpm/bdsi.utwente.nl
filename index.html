@@ -4,71 +4,41 @@ layout: default
 bodyClass: page-home
 ---
 
-<div class="intro pb-6 {{page.bodyClass}}">
-  <div class="container">
-    <h1>BDSI - Behavioural Data Science Incubator</h1>
-    <p>We spark innovation and collaboration in data science that involves human behaviour.</p>
-   </div>
-</div>
+<div class="intro pb-6" style="height: 20vw; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3)"></div>
 
-<div class="container pt-2">
-  <div class="call">
-    <div class="call-box-top">
-      <div class="call-email"><strong>Email: </strong>
-        <a href="mailto:{{ site.data.contact.email }}">
-          {{ site.data.contact.email }}
-        </a>
-      </div>
-    </div>
-    <div class="call-box-bottom">
-      <a href="{{site.baseurl}}/contact" class="button">Contact</a>
-    </div>
-  </div>
-</div>
+<div class="container mt-4">{% include find-expertise.html %}</div>
 
-<div class="container pt-8 pt-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">About us</h2>
-    </div>
-      <p>
-        The aim of BDSI is to spark innovation and collaboration in data science that involves human behaviour: to accelerate and inspire data-driven research within BMS that uses statistical models, machine learning or simulation techniques.
-      <br>BDSI will support researchers and promote good research practices in all steps of the research cycle:
-      <ul>
-          <li>data gathering and governance,</li>
-          <li>model building, training and validation,&nbsp;</li>
-          <li>visualisation and reporting.</li>
-      </ul>
-      We organise courses, workshops and networking events on these topics, and provide training in the R and Python programming languages
-      on all skill levels. We support the writing of research grants. By building a strong community, we aim to connect researchers in BMS with each
-      other, with other UT research groups and the outside world.
-      </p>
-      <p>
-      BDSI is run by representatives from all BMS clusters. To know more about us please
-      visit our <a href="https://utwente-bdsi.github.io/utwente-bdsi/team/">teams</a>&nbsp;page.
-      </p>
-  </div>
-</div>
-
-<div class="container pt-8 pt-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="title-3 text-dark mb-3">Our Services</h2>
-    </div>
-    {% for service in site.services %}
-    <div class="col-12 col-md-6 mb-2">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-          </h2>
-          {{ service.introduction | markdownify }}
+<div class="container mt-4">
+    <div class="row">
+        {% assign workshops = site.workshops | where_exp: "workshop", "workshop.date > site.time" %}
+        {% assign items = workshops | concat: site.news | concat: site.blogs | where: "frontpage", true | sort: "date" | reverse | splice: 0, 6 %}
+        
+        {% for item in items %}
+        <div class="col-12 col-md-6 col-xl-4">
+            {% include news-card.html %}
         </div>
-      </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    <div class="col-12 text-center">
-      <a class="button button-primary mt-2" href="{{site.baseurl}}/services">View All Services</a>
+</div>
+<div class="container mt-6">
+    <div class="row justify-content-start">
+        <div class="col-12">
+            <h2 class="text-dark mb-3">Our Services</h2>
+        </div>
+        {% for service in site.services %}
+            <div class="col-12 col-md-6 mb-2">
+                <div class="service service-summary">
+                    <div class="service-content">
+                        <h2 class="service-title">
+                            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+                        </h2>
+                        {{ service.introduction | markdownify }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="col-12 text-center pb-3">
+            <a class="button button-primary mt-2" href="{{site.baseurl}}/services">View All Services</a>
+        </div>
     </div>
-  </div>
 </div>

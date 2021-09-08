@@ -1,18 +1,36 @@
 ---
-layout: default_sub
+layout: default
 ---
 
-<div class="strip strip-white strip-diagonal">
-  <div class="container pt-4 pt-md-10">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-8">
-        <div class="news news-single">
-          <h1 class="title">{{page.title}}</h1>
-          {% if page.subtitle %}<h4 class="subtitle">{{page.subtitle}}</h4>{% endif %}
-          {% if page.author %}<h4 class="author">{{page.author}}</h4>{% endif %}
-          <div class="content">{{page.content}}</div>
-        </div>
-      </div>
+{% if page.heroImage %}
+    <div 
+      class="intro mb-0"
+      style="
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        height: 25vw !important;
+        background-image: url({{page.heroImage}});
+        background-size: cover;
+        background-position: center;"
+    ></div>
+    <div style="margin-top: -5vw;" class="strip strip-diagonal pt-4">
+        <div class="container">
+            <h1>{{page.title}}</h1>
+            {% if page.subtitle %}
+                <h4 class="subtitle">{{page.subtitle}}</h4>
+            {% endif %}
+{% else %}
+    <div class="container py-6">
+        <h1 class="hero text-white">{{page.title}}</h1>
+        {% if page.subtitle %}
+            <h4 class="subtitle text-white">{{page.subtitle}}</h4>
+        {% endif %}
     </div>
-  </div>
+    <div class="strip strip-diagonal">
+        <div class="container">
+{% endif %}
+
+        {% include author-list.html %}
+        <h5 class="date">{{page.date | date: "%B %e, %Y"}}</h5>
+        {{page.content}}
+    </div>
 </div>

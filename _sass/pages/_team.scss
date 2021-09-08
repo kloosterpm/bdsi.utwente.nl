@@ -1,0 +1,96 @@
+.page-team-list {
+  @extend .page-list;
+}
+
+.page-team-single {
+  @extend .page-single;
+}
+
+// .page-team-list {
+//   background-image: url("../images/team-hero.svg");
+//   background-repeat: no-repeat;
+//   background-size: 115%;
+//   background-position: 49px -40px;
+//   @include media-breakpoint-up(sm) {
+//     background-size: 90%;
+//     background-position: 159px -40px;
+//   }
+//   @include media-breakpoint-up(md) {
+//     background-size: 85%;
+//     background-position: 199px -80px;
+//   }
+//   @include media-breakpoint-up(lg) {
+//     background-size: 60%;
+//     background-position: 100% -110px;
+//   }
+// }
+.profile-summary, .profile-widget {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.profile-image {
+  flex: 0 0 100px;
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+.profile-meta {
+  flex: 1;
+  h2 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+  .profile-socials {
+    display: flex;
+    width: min-content;
+    padding: 1.3em .3em 0em; 
+    gap: .3em;
+    background-color: $primary;
+    border-radius: 3px;
+    position: relative;
+
+    &::after {
+      content: "Get in touch!";
+      position: absolute;
+      left: .6em;
+      top: .1em;
+      color: $white;
+      font-family: "Nothing You Could Do", cursive;
+    }
+
+    a.icon {
+      text-decoration: none;
+      position: relative;
+      transition: color ease-in-out 200ms;
+      color: $white;
+      
+      &:hover {
+        &.icon-teams {
+          color: #4b53bc;
+        }
+        &.icon-email {
+          color: #0078d4;
+        }
+        &.icon-people {
+          color: #ed007e;
+        }
+        &.icon-linkedin {
+          color: #0a66c2;
+        }
+        &.icon-website {
+          color: #005bf6;
+        }
+      }
+    }
+  }
+}
+.profile-content {
+  flex: 1 0 100%;
+  margin-top: 1rem;
+}

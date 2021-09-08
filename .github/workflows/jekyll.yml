@@ -44,5 +44,4 @@ jobs:
           git config --local user.email bdsi@utwente.nl
           git add .
           git commit -am "rebuild for $(echo $GITHUB_SHA | cut -c1-8)"
-          git remote -v
           git push origin www

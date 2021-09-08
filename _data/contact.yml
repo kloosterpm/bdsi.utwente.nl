@@ -1,10 +1,7 @@
 email: 'bdsi@utwente.nl'
-#phone: 'XXXX XXX XXX'
-businessName: 'BDSI@BMS'
-address: 'Behavioural Data Science Incubator,
-          University of Twente,
-          Faculty of BMS,
-          Department of OMD,
-          PO BOX 217,
-          7500 AE Enschede,
-          The Netherlands.'
+address: |-
+  Behavioural Data Science incubator
+  Faculty of Behavioural and Management Sciences
+  University of Twente
+  PO BOX 217
+  7500 AE Enschede, The Netherlands

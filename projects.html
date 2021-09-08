@@ -4,33 +4,25 @@ layout: default
 bodyClass: page-projects-list
 ---
 
-<div class="intro {{page.bodyClass}}">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>What are we up to?</h1>
-        <p>
-          This page provides an overview of all the ongoing and past activities.
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="container py-6">
+  <h1 class="hero text-white">projects</h1>
 </div>
 
-<div class="container pb-6">
-  <div class="row">
-    {% for project in site.projects %}
-    <div class="col-12 col-md-6 mb-2">
-      <div class="project project-summary">
-        <div class="project-content">
-          <h2 class="project-title">
-            <a href="{{site.baseurl}}{{ project.url }}">{{ project.title }}</a>
-          </h2>
+<div class="strip strip-diagonal">
+  <div class="container">
+      {% for project in site.projects %}
+        <div class="project project-summary pb-4">
+          <div class="project-content">
+            <h2 class="project-title">
+              <a href="{{site.baseurl}}{{ project.url }}"
+                >{{ project.title }}</a
+              >
+            </h2>
             <h4>{{project.author}}</h4>
-          {{ project.content | markdownify | strip_html | truncate: 500 }}
+            {{ project.content | truncate: 500 }}
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div>

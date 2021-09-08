@@ -1,9 +1,20 @@
 ---
 title: 'Anna Machens'
-image: '/images/team/Anna.jpg'
+image: '/assets/images/team/Anna-thumbnail.png'
 jobtitle: 'Data Scientist'
-email: 'a.k.machens@utwente.nl '
+email: 'a.k.machens@utwente.nl'
 linkedinurl: 'https://www.linkedin.com/in/anna-machens-5a82b180/'
+expertise: 
+    - text analysis
+    - deep learning
+    - market research
+    - network science
+    - explanable AI
+    - causal modelling
+    - machine learning
+    - big data analytics
+    - data scraping
+    - learning Python
 ---
 
 *WHO:* I am Anna. My current focus is text analysis with deep learning models.
@@ -13,5 +24,3 @@ In addition to natural language processing I’m also interested in explainable 
 *ROLE:* I’m a data scientist at BDSI.
 
 *NEED HELP:* I can help you with  Deep Learning, Machine Learning and Big Data Analysis in python and with data scraping. Just ask me anything and I’ll do my best to help.
-
-*HOW:* You can send me an e-mail:  [a.k.machens@utwente.nl](mailto:a.k.machens@utwente.nl)
