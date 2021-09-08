@@ -4,51 +4,67 @@
   <meta charset="utf-8">
   <title>Legitimacy and public sentiment regarding the Covid-19 vaccine(s)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/images/favicon.png">
+  <link rel="icon" href="/assets/images/favicon.png">
   <link href="/assets/css/style.css" rel="stylesheet">
-<style>
-.header-extra{height: 70px; background-color: #f8f9fa; box-shadow: none; padding-bottom: 5px;}
-.logo{width: 170px;padding: 5px;}
-</style>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js" integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" integrity="sha512-bkB9w//jjNUnYbUpATZQCJu2khobZXvLP5GZ8jhltg7P/dghIrTaSJ7B/zdlBUT0W/LXGZ7FfCIqNvXjWKqCYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" integrity="sha512-MMojOrCQrqLg4Iarid2YMYyZ7pzjPeXKRvhW9nZqLo6kPBBTuvNET9DBVWptAo/Q20Fy11EIHM5ig4WlIrJfQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- icons -->
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+  
+  <!-- mathjax -->
+  <script>MathJax={tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.min.js" integrity="sha512-lod3aTRkO5OUBZDRwWaaIGYAT6+2uSyrlwnj0sg1h9a1w5wJ7NnzkaiUWy4Jv5wdf1ixGX35HK6u7fP1pjYOQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</script>
+  
+  <style>
+  </style>
 </head>
 <body class='page page-projects-single'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="current">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+  <div class="main-menu-mobile" id="main-menu-mobile">
+    <ul>
+        <li><a href="/" class="">Home</a></li>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="current">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
 
-  <div id="wrapper" class="wrapper">
-    <div class='header header-extra'>
+    <div class="header ">
   <div class="container">
     <div class="logo">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
-    <div id="main-menu" class="main-menu">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="current">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    <li><a href="/blogs/" class="">Blogs</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+    <div class="main-menu" id="main-menu">
+    <ul>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="current">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
-
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+ <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -56,16 +72,72 @@
   </div>
 </div>
 
-    <div class="strip strip-white strip-diagonal">
-  <div class="container pt-4 pt-md-10">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-8">
-        <div class="project project-single">
-          <h1 class="title">Legitimacy and public sentiment regarding the Covid-19 vaccine(s)</h1>
-          <h4 class="author">Sikke R. Jansma, Jordy F. Gosselt, Stéphanie van den Berg, Anna Machens and Robert Muster</h4>
-          <div class="content"><h2 id="project-description">Project description</h2>
+    <div id="content">
+      
+    <div class="container py-6">
+        <h1 class="hero text-white">Legitimacy and public sentiment regarding the Covid-19 vaccine(s)</h1>
+        
+    </div>
+    <div class="strip strip-diagonal">
+        <div class="container">
 
-<p>The proposed study is a large-scale quantitative sentiment analysis of the public discourse on the Covid-19 vaccination in the Netherlands based on big data, scraped from both social and traditional media. The sentiment analysis will provide insights in the legitimacy of a vaccination in terms of expectations (positive or negative), emotions behind these expectations (anger, fear, sadness, disgust, surplice, anticipation, trust, joy), and the prominence and contents of the different pillars of legitimacy (cognitive, normative, pragmatic, regulative). 
+
+        <div class="author-list">
+    
+    
+    
+        
+            
+
+
+    <h4 class="author-list-item">Sikke R. Jansma</h4>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <h4 class="author-list-item">Jordy F. Gosselt</h4>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <a class="author-list-item" href="/team/#stephanie-vandenberg">
+        <h4><img src="/assets/images/team/Stephanie-thumbnail.png" alt="Stéphanie van den Berg">Stéphanie van den Berg</h4>
+    </a>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <a class="author-list-item" href="/team/#a-k-machens">
+        <h4><img src="/assets/images/team/Anna-thumbnail.png" alt="Anna Machens">Anna Machens</h4>
+    </a>
+
+
+        <h4>,&MediumSpace;</h4><h4>and&MediumSpace;</h4>
+                
+            
+            
+
+
+    <a class="author-list-item" href="/team/#r-marinescu-muster">
+        <h4><img src="/assets/images/team/Robert-thumbnail.png" alt="Robert Marinescu Muster">Robert Marinescu Muster</h4>
+    </a>
+
+
+        
+    
+</div>
+
+        <h5 class="date">September  8, 2021</h5>
+        <p>The proposed study is a large-scale quantitative sentiment analysis of the public discourse on the Covid-19 vaccination in the Netherlands based on big data, scraped from both social and traditional media. The sentiment analysis will provide insights in the legitimacy of a vaccination in terms of expectations (positive or negative), emotions behind these expectations (anger, fear, sadness, disgust, surplice, anticipation, trust, joy), and the prominence and contents of the different pillars of legitimacy (cognitive, normative, pragmatic, regulative).
 As Covid-19 has a great influence on society and vaccines seem to be the only solution for ending the pandemic, it is important to study the prominence and strength of negative or positive feelings regarding a potential vaccine at an early stage, whether they are included in the mainstream debate, and how the public discourse is developing in this regard. This study provides crucial information to policymakers about how to inform the general public about vaccinations for Covid-19. By insights in how the public discourse is shaped along the pillars of legitimacy, the most prominent sentiment and underlying emotions, policy makers can proactively shape their communication and information campaigns for gaining public support for a vaccine.</p>
 
 <h2 id="references">References</h2>
@@ -95,15 +167,12 @@ As Covid-19 has a great influence on society and vaccines seem to be the only so
 <p>Tempelman, O. (2020, 8 May). Dit zijn de zeven zondebokken van de coronacrisis. Retrieved from De Volkskrant: https://www.volkskrant.nl/nieuws-achtergrond/dit-zijn-de-zeven zondebokken-van-de-coronacrisis~bc609ea5/</p>
 
 <p>Yaqub, A., Castle-Clarke, S., Sevdalis, N., &amp; Chataway, J. (2014). Attitudes to vaccination: A critical review. Social Science &amp; Medicine, 112, 1-11.</p>
-</div>
-        </div>
-      </div>
+
     </div>
-  </div>
 </div>
 
-  </div>
-  <div class="footer-strip">
+    </div>
+    <div class="footer-strip">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -114,27 +183,6 @@ As Covid-19 has a great influence on society and vaccines seem to be the only so
             <li><a href="/contact">Contact</a></li>
             <li class="copyright">© Behavioural Data Science incubator 2021</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="sub-footer-strip">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer">
-          <ul>
-            <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
-                bdsi@utwente.nl</a></li>
-          </ul>
-          <!--
-          <ul>
-            <li><strong>Phone: </strong></li>
-            <li><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
-          </ul>
-          -->
         </div>
       </div>
     </div>

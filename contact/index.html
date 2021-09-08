@@ -4,59 +4,67 @@
   <meta charset="utf-8">
   <title>Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/images/favicon.png">
+  <link rel="icon" href="/assets/images/favicon.png">
   <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js" integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" integrity="sha512-bkB9w//jjNUnYbUpATZQCJu2khobZXvLP5GZ8jhltg7P/dghIrTaSJ7B/zdlBUT0W/LXGZ7FfCIqNvXjWKqCYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" integrity="sha512-MMojOrCQrqLg4Iarid2YMYyZ7pzjPeXKRvhW9nZqLo6kPBBTuvNET9DBVWptAo/Q20Fy11EIHM5ig4WlIrJfQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- icons -->
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   
   <!-- mathjax -->
   <script>MathJax={tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.min.js" integrity="sha512-lod3aTRkO5OUBZDRwWaaIGYAT6+2uSyrlwnj0sg1h9a1w5wJ7NnzkaiUWy4Jv5wdf1ixGX35HK6u7fP1pjYOQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </script>
-
-
   
   <style>
-  .header-extra{height: 70px; background-color: #f8f9fa; box-shadow: none; padding-bottom: 5px;}
-  .logo{width: 170px;padding: 5px;}
   </style>
 </head>
-<body class='page page-contact'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    -->
-    <li><a href="/contact/" class="current">Contact</a></li>
-  </ul>
+<body class='page page-list'>
+  <div class="main-menu-mobile" id="main-menu-mobile">
+    <ul>
+        <li><a href="/" class="">Home</a></li>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
 
-  <div id="wrapper" class="wrapper">
-    <div class='header header-extra'>
+    <div class="header ">
   <div class="container">
     <div class="logo">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
-    <div id="main-menu" class="main-menu">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    <li><a href="/blogs/" class="">Blogs</a></li>
-    -->
-    <li><a href="/contact/" class="current">Contact</a></li>
-  </ul>
+    <div class="main-menu" id="main-menu">
+    <ul>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
-
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+ <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -64,34 +72,231 @@
   </div>
 </div>
 
-    <div class="intro intro-small">
+    <div id="content">
+      <div class="container py-6">
+  <h1 class="text-white hero">Contact</h1>
+</div>
+
+<div class="strip strip-diagonal">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Contact</h1>
+    <h1>Data Science Community</h1>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">
+          <span class="iconify-inline" data-icon="ph:chats-fill"></span>Teams
+          Channel
+        </h3>
+        <p>
+          Part of supporting data science in the long term is building a
+          community of data scientists and researchers interested in data
+          science. Within the community we can share ideas, questions, and
+          expertise with eachother.
+        </p>
+        <p>
+          The BDSi Data Science Community is free to join for anyone affiliated
+          with the University of Twente, or involved in a research project of
+          the University of Twente.
+        </p>
+        <h4 class="mt-3">Do you have a University of Twente account?</h4>
+        <div class="row">
+          <div class="col-md-6 panel">
+            <blockquote>Yes</blockquote>
+            You can instantly join the BDSi Data Science Community team by
+            following these steps:
+            <ol>
+              <li>Open Teams</li>
+              <li>Go to the "Teams" tab</li>
+              <li>Make sure you're on the "all teams" page</li>
+              <li>Click "Join or create team"</li>
+              <li>Use the code <code>t1p0d1d</code></li>
+            </ol>
+          </div>
+          <div class="col-md-6">
+            <blockquote class="mt-4 mt-md-0">No</blockquote>
+            You can apply to join the BDSi Data Science Community team using the
+            link below. We'll let you in as soon as possible.
+            <br />
+            <a
+              href="https://teams.microsoft.com/l/channel/19%3aByywZOzEom4TD269aMiOnryoyS6qxlP9qHo8PONi5Y01%40thread.tacv2/General?groupId=9e63c81f-f953-4d91-8826-385bb1ddb2f8&tenantId=723246a1-c3f5-43c5-acdc-43adb404ac4d"
+              class="button mt-2 large"
+              style="
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                white-space: normal;
+                word-wrap: normal;
+                height: unset;
+                max-width: 80%;
+              "
+            >
+              Join the BDSi Data Science Community
+            </a>
+          </div>
+        </div>
+        <h4 class="mt-3">Welcome to the community!</h4>
+        Don't forget to introduce yourself.
+      </div>
+    </div>
+
+    <div class="row mt-2">
+      <div class="col-12 col-md-6">
+        <h1>Team Members</h1>
+        <div class="card">
+          <div class="card-body">
+            <div class="card-text">
+                <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Abhishta-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Abhishta Abhishta</h5>
+            <a href="/team/#s-abhishta">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Abhishta's profile
+            </a>
+            <a href="mailto:s.abhishta@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                s.abhishta@utwente.nl</a>
+        </div>
+    </div>
+</div>
+  <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Anna-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Anna Machens</h5>
+            <a href="/team/#a-k-machens">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Anna's profile
+            </a>
+            <a href="mailto:a.k.machens@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                a.k.machens@utwente.nl</a>
+        </div>
+    </div>
+</div>
+  <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Karel-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Karel Kroeze</h5>
+            <a href="/team/#k-a-kroeze">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Karel's profile
+            </a>
+            <a href="mailto:k.a.kroeze@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                k.a.kroeze@utwente.nl</a>
+        </div>
+    </div>
+</div>
+  <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Karin-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Karin Groothuis-Oudshoorn</h5>
+            <a href="/team/#c-g-m-oudshoorn">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Karin's profile
+            </a>
+            <a href="mailto:c.g.m.oudshoorn@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                c.g.m.oudshoorn@utwente.nl</a>
+        </div>
+    </div>
+</div>
+  <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Martin-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Martin Schmettow</h5>
+            <a href="/team/#martin-schmettow">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Martin's profile
+            </a>
+            <a href="mailto:martin.schmettow@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                martin.schmettow@utwente.nl</a>
+        </div>
+    </div>
+</div>
+  <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Robert-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Robert Marinescu Muster</h5>
+            <a href="/team/#r-marinescu-muster">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Robert's profile
+            </a>
+            <a href="mailto:r.marinescu-muster@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                r.marinescu-muster@utwente.nl</a>
+        </div>
+    </div>
+</div>
+  <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Stephanie-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Stéphanie van den Berg</h5>
+            <a href="/team/#stephanie-vandenberg">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Stéphanie's profile
+            </a>
+            <a href="mailto:stephanie.vandenberg@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                stephanie.vandenberg@utwente.nl</a>
+        </div>
+    </div>
+</div>
+ 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mt-0 mt-md-0">
+        <h1>BDSi</h1>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">
+              <span class="iconify-inline" data-icon="ph:envelope"></span>
+              Email address
+            </h3>
+            <a href="mailto:bdsi@utwente.nl">bdsi@utwente.nl</a>
+          </div>
+        </div>
+        <div class="card mt-2">
+          <div class="card-body">
+            <h3 class="card-title">
+              <span class="iconify-inline" data-icon="ph:package"></span>
+              Postal address
+            </h3>
+            <pre
+              class="card-text"
+              style="font-family: unset; white-space: pre-line"
+            >
+          Behavioural Data Science Incubator
+                Faculty of Behavioural, Management and Social Sciences
+                University of Twente, PO BOX 217
+                7500 AE Enschede, The Netherlands
+        </pre
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-8">
-      <ul>
-        <!--
-        <li><strong>Phone: </strong></li>
-        -->
-        <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
-            bdsi@utwente.nl</a></li>
-        
-        <li><strong>Address: </strong>Behavioural Data Science Incubator, University of Twente, Faculty of BMS, Department of OMD, PO BOX 217, 7500 AE Enschede, The Netherlands.</li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
 
-  </div>
-  <div class="footer-strip">
+    </div>
+    <div class="footer-strip">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -102,27 +307,6 @@
             <li><a href="/contact">Contact</a></li>
             <li class="copyright">© Behavioural Data Science incubator 2021</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="sub-footer-strip">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer">
-          <ul>
-            <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
-                bdsi@utwente.nl</a></li>
-          </ul>
-          <!--
-          <ul>
-            <li><strong>Phone: </strong></li>
-            <li><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
-          </ul>
-          -->
         </div>
       </div>
     </div>

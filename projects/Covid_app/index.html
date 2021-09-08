@@ -2,53 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>The Corona app – no, thanks? Citizens’ perspectives on individual freedom, governmental control and civic solidarity in times of a global pandemic</title>
+  <title>The Corona app – no, thanks?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/images/favicon.png">
+  <link rel="icon" href="/assets/images/favicon.png">
   <link href="/assets/css/style.css" rel="stylesheet">
-<style>
-.header-extra{height: 70px; background-color: #f8f9fa; box-shadow: none; padding-bottom: 5px;}
-.logo{width: 170px;padding: 5px;}
-</style>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js" integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" integrity="sha512-bkB9w//jjNUnYbUpATZQCJu2khobZXvLP5GZ8jhltg7P/dghIrTaSJ7B/zdlBUT0W/LXGZ7FfCIqNvXjWKqCYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" integrity="sha512-MMojOrCQrqLg4Iarid2YMYyZ7pzjPeXKRvhW9nZqLo6kPBBTuvNET9DBVWptAo/Q20Fy11EIHM5ig4WlIrJfQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- icons -->
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+  
+  <!-- mathjax -->
+  <script>MathJax={tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.min.js" integrity="sha512-lod3aTRkO5OUBZDRwWaaIGYAT6+2uSyrlwnj0sg1h9a1w5wJ7NnzkaiUWy4Jv5wdf1ixGX35HK6u7fP1pjYOQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</script>
+  
+  <style>
+  </style>
 </head>
 <body class='page page-projects-single'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="current">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+  <div class="main-menu-mobile" id="main-menu-mobile">
+    <ul>
+        <li><a href="/" class="">Home</a></li>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="current">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
 
-  <div id="wrapper" class="wrapper">
-    <div class='header header-extra'>
+    <div class="header ">
   <div class="container">
     <div class="logo">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
-    <div id="main-menu" class="main-menu">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="current">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    <li><a href="/blogs/" class="">Blogs</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+    <div class="main-menu" id="main-menu">
+    <ul>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="current">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
-
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+ <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -56,30 +72,93 @@
   </div>
 </div>
 
-    <div class="strip strip-white strip-diagonal">
-  <div class="container pt-4 pt-md-10">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-8">
-        <div class="project project-single">
-          <h1 class="title">The Corona app – no, thanks? Citizens’ perspectives on individual freedom, governmental control and civic solidarity in times of a global pandemic</h1>
-          <h4 class="author">Giedo Jansen, Peter de Vries, Dominika Proszowska, Stéphanie van den Berg, Anna Machens, and Robert Muster</h4>
-          <div class="content"><h2 id="project-description">Project description</h2>
+    <div id="content">
+      
+    <div class="container py-6">
+        <h1 class="hero text-white">The Corona app – no, thanks?</h1>
+        
+            <h4 class="subtitle text-white">Citizens’ perspectives on individual freedom, governmental control and civic solidarity in times of a global pandemic</h4>
+        
+    </div>
+    <div class="strip strip-diagonal">
+        <div class="container">
 
-<p>The COVID-19 pandemic has affected the public health, business activity, and life of individuals on an unprecedented scale. In March 2020, the Dutch government introduced a number of measures in order to contain and control the virus spread. Their success relied to a great extent on citizens’ collective mindset and willingness to adhere to the new rules and standards. As the government currently explores new public health surveillance technology, such as through so-called “corona apps”, it is important to understand the limits of citizens’ willingness to accept governmental interference in their daily life for the reward of the common good. Solutions that require sharing sensitive health data touch upon not only the issues of political trust and trade-offs between individual freedom and governmental authority, but also upon people’s perceptions of technology (e.g., trust in technology, transparency of data usage, privacy considerations, effectiveness, etc.). This study maps people’s attitudes in all these key areas. This way it gives an insight into people’s willingness to share potentially sensitive data with the government and private companies for the sake of the health and wellbeing of vulnerable groups in society. In particular, it helps to understand which personal and background characteristics, which type of health data, and which conditions affect this willingness. 
+
+        <div class="author-list">
+    
+    
+    
+        
+            
+
+
+    <h4 class="author-list-item">Giedo Jansen</h4>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <h4 class="author-list-item">Peter de Vries</h4>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <h4 class="author-list-item">Dominika Proszowska</h4>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <a class="author-list-item" href="/team/#stephanie-vandenberg">
+        <h4><img src="/assets/images/team/Stephanie-thumbnail.png" alt="Stéphanie van den Berg">Stéphanie van den Berg</h4>
+    </a>
+
+
+        <h4>,&MediumSpace;</h4>
+            
+            
+
+
+    <a class="author-list-item" href="/team/#a-k-machens">
+        <h4><img src="/assets/images/team/Anna-thumbnail.png" alt="Anna Machens">Anna Machens</h4>
+    </a>
+
+
+        <h4>,&MediumSpace;</h4><h4>and&MediumSpace;</h4>
+                
+            
+            
+
+
+    <a class="author-list-item" href="/team/#r-marinescu-muster">
+        <h4><img src="/assets/images/team/Robert-thumbnail.png" alt="Robert Marinescu Muster">Robert Marinescu Muster</h4>
+    </a>
+
+
+        
+    
+</div>
+
+        <h5 class="date">September  8, 2021</h5>
+        <p>The COVID-19 pandemic has affected the public health, business activity, and life of individuals on an unprecedented scale. In March 2020, the Dutch government introduced a number of measures in order to contain and control the virus spread. Their success relied to a great extent on citizens’ collective mindset and willingness to adhere to the new rules and standards. As the government currently explores new public health surveillance technology, such as through so-called “corona apps”, it is important to understand the limits of citizens’ willingness to accept governmental interference in their daily life for the reward of the common good. Solutions that require sharing sensitive health data touch upon not only the issues of political trust and trade-offs between individual freedom and governmental authority, but also upon people’s perceptions of technology (e.g., trust in technology, transparency of data usage, privacy considerations, effectiveness, etc.). This study maps people’s attitudes in all these key areas. This way it gives an insight into people’s willingness to share potentially sensitive data with the government and private companies for the sake of the health and wellbeing of vulnerable groups in society. In particular, it helps to understand which personal and background characteristics, which type of health data, and which conditions affect this willingness.
 Extending the previous survey, we suggest to identify factors that determine whether people are willing to share personal information with the government for the benefit of collective public health using a Big Data approach. With an eye on policy makers considering ideas for new health surveillance technology, we aim to explore people’s perceptions of data sharing, in relation to their perceptions (e.g., trust) of relevant factors, such as the government, politicians, experts, technology, and the media.</p>
 
-<p>We expect that the decision to share personal information depends on a number of factors. One of these is the perception towards the technology used: will it be able to safeguard users’ privacy? Will it be resilient against hackers? An additionionaladditional factor may be people’s trust in the government, pertaining to questions as: Will personal information be handled correctly? Will it be used for the specified purposes only? Etc. These perceptions are to a large extent based on what people learn from various sources, such as newspaper articles, public figures, and experts, but also “important others”, e.g., friends, neighbours, and vocal lay persons. The impact of information from most of these sources on individuals and groups within society, in turn, greatly depends on their perceptions of the channels through which this information became available to them – the media. Interestingly, for some “the media” represent merely a range of information channels, whereas for others they form an institution in and of itself that often warrants distrust (MSM; “main-stream media”).</p>
+<p>We expect that the decision to share personal information depends on a number of factors. One of these is the perception towards the technology used: will it be able to safeguard users’ privacy? Will it be resilient against hackers? An additional factor may be people’s trust in the government, pertaining to questions as: Will personal information be handled correctly? Will it be used for the specified purposes only? Etc. These perceptions are to a large extent based on what people learn from various sources, such as newspaper articles, public figures, and experts, but also “important others”, e.g., friends, neighbours, and vocal lay persons. The impact of information from most of these sources on individuals and groups within society, in turn, greatly depends on their perceptions of the channels through which this information became available to them – the media. Interestingly, for some “the media” represent merely a range of information channels, whereas for others they form an institution in and of itself that often warrants distrust (MSM; “main-stream media”).</p>
 
 <p>With the help of the BMS’ Behavioural Data Science Incubator (BDSI), we will develop a big-data approach to analyse the influence of these and other factors on the willingness to share personal information. Publicly available responses of people on Internet forums or social media such as Twitter will be mined, categorized, and labeled. Subsequently, each labeled response will be subjected to valence analyses (i.e., to assess how postivepositive or negative these responses are) and sentiment analyses (to what extent these responses reveal emotions such as anger).</p>
-</div>
-        </div>
-      </div>
+
     </div>
-  </div>
 </div>
 
-  </div>
-  <div class="footer-strip">
+    </div>
+    <div class="footer-strip">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -90,27 +169,6 @@ Extending the previous survey, we suggest to identify factors that determine whe
             <li><a href="/contact">Contact</a></li>
             <li class="copyright">© Behavioural Data Science incubator 2021</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="sub-footer-strip">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer">
-          <ul>
-            <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
-                bdsi@utwente.nl</a></li>
-          </ul>
-          <!--
-          <ul>
-            <li><strong>Phone: </strong></li>
-            <li><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
-          </ul>
-          -->
         </div>
       </div>
     </div>

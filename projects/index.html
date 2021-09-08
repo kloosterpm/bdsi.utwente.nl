@@ -4,59 +4,67 @@
   <meta charset="utf-8">
   <title>projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/images/favicon.png">
+  <link rel="icon" href="/assets/images/favicon.png">
   <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js" integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" integrity="sha512-bkB9w//jjNUnYbUpATZQCJu2khobZXvLP5GZ8jhltg7P/dghIrTaSJ7B/zdlBUT0W/LXGZ7FfCIqNvXjWKqCYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" integrity="sha512-MMojOrCQrqLg4Iarid2YMYyZ7pzjPeXKRvhW9nZqLo6kPBBTuvNET9DBVWptAo/Q20Fy11EIHM5ig4WlIrJfQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- icons -->
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   
   <!-- mathjax -->
   <script>MathJax={tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.min.js" integrity="sha512-lod3aTRkO5OUBZDRwWaaIGYAT6+2uSyrlwnj0sg1h9a1w5wJ7NnzkaiUWy4Jv5wdf1ixGX35HK6u7fP1pjYOQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </script>
-
-
   
   <style>
-  .header-extra{height: 70px; background-color: #f8f9fa; box-shadow: none; padding-bottom: 5px;}
-  .logo{width: 170px;padding: 5px;}
   </style>
 </head>
 <body class='page page-projects-list'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="current">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+  <div class="main-menu-mobile" id="main-menu-mobile">
+    <ul>
+        <li><a href="/" class="">Home</a></li>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="current">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
 
-  <div id="wrapper" class="wrapper">
-    <div class='header header-extra'>
+    <div class="header ">
   <div class="container">
     <div class="logo">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
-    <div id="main-menu" class="main-menu">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="current">Projects</a></li>
-    <li><a href="/team/" class="">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    <li><a href="/blogs/" class="">Blogs</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+    <div class="main-menu" id="main-menu">
+    <ul>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="current">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
-
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+ <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -64,69 +72,56 @@
   </div>
 </div>
 
-    <div class="intro page-projects-list">
+    <div id="content">
+      <div class="container py-6">
+  <h1 class="hero text-white">projects</h1>
+</div>
+
+<div class="strip strip-diagonal">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>What are we up to?</h1>
-        <p>
-          This page provides an overview of all the ongoing and past activities.
-        </p>
-      </div>
+      
+        <div class="project project-summary pb-4">
+          <div class="project-content">
+            <h2 class="project-title">
+              <a href="/projects/Covid_app/"
+                >The Corona app – no, thanks?</a
+              >
+            </h2>
+            <h4></h4>
+            <p>The COVID-19 pandemic has affected the public health, business activity, and life of individuals on an unprecedented scale. In March 2020, the Dutch government introduced a number of measures in order to contain and control the virus spread. Their success relied to a great extent on citizens’ collective mindset and willingness to adhere to the new rules and standards. As the government currently explores new public health surveillance technology, such as through so-called “corona apps”, it...
+          </div>
+        </div>
+      
+        <div class="project project-summary pb-4">
+          <div class="project-content">
+            <h2 class="project-title">
+              <a href="/projects/covid_vaccine/"
+                >Legitimacy and public sentiment regarding the Covid-19 vaccine(s)</a
+              >
+            </h2>
+            <h4></h4>
+            <p>The proposed study is a large-scale quantitative sentiment analysis of the public discourse on the Covid-19 vaccination in the Netherlands based on big data, scraped from both social and traditional media. The sentiment analysis will provide insights in the legitimacy of a vaccination in terms of expectations (positive or negative), emotions behind these expectations (anger, fear, sadness, disgust, surplice, anticipation, trust, joy), and the prominence and contents of the different pillar...
+          </div>
+        </div>
+      
+        <div class="project project-summary pb-4">
+          <div class="project-content">
+            <h2 class="project-title">
+              <a href="/projects/september/"
+                >SEPTEMBER</a
+              >
+            </h2>
+            <h4></h4>
+            <p>Covid-19 antibody tests used to identify whether an individual has been infected with SARS-CoV-2, can be employed to estimate the prevalence of this disease on a more aggregate or population level. If, for instance, such a test is taken among a number of Health Care Workers (HCW) in a well-specified region, then a sufficiently large sample suffices for a reasonably accurate estimation of the infection rate (proportion) among all HCWs in that region. The central ideas are that investigating...
+          </div>
+        </div>
+      
     </div>
   </div>
 </div>
 
-<div class="container pb-6">
-  <div class="row">
-    
-    <div class="col-12 col-md-6 mb-2">
-      <div class="project project-summary">
-        <div class="project-content">
-          <h2 class="project-title">
-            <a href="/projects/Covid_app/">The Corona app – no, thanks? Citizens’ perspectives on individual freedom, governmental control and civic solidarity in times of a global pandemic</a>
-          </h2>
-            <h4>Giedo Jansen, Peter de Vries, Dominika Proszowska, Stéphanie van den Berg, Anna Machens, and Robert Muster</h4>
-          Project description
-
-The COVID-19 pandemic has affected the public health, business activity, and life of individuals on an unprecedented scale. In March 2020, the Dutch government introduced a number of measures in order to contain and control the virus spread. Their success relied to a great extent on citizens’ collective mindset and willingness to adhere to the new rules and standards. As the government currently explores new public health surveillance technology, such as through so-called...
-        </div>
-      </div>
     </div>
-    
-    <div class="col-12 col-md-6 mb-2">
-      <div class="project project-summary">
-        <div class="project-content">
-          <h2 class="project-title">
-            <a href="/projects/covid_vaccine/">Legitimacy and public sentiment regarding the Covid-19 vaccine(s)</a>
-          </h2>
-            <h4>Sikke R. Jansma, Jordy F. Gosselt, Stéphanie van den Berg, Anna Machens and Robert Muster</h4>
-          Project description
-
-The proposed study is a large-scale quantitative sentiment analysis of the public discourse on the Covid-19 vaccination in the Netherlands based on big data, scraped from both social and traditional media. The sentiment analysis will provide insights in the legitimacy of a vaccination in terms of expectations (positive or negative), emotions behind these expectations (anger, fear, sadness, disgust, surplice, anticipation, trust, joy), and the prominence and contents of th...
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-2">
-      <div class="project project-summary">
-        <div class="project-content">
-          <h2 class="project-title">
-            <a href="/projects/september/">SEPTEMBER: Simulation-basEd Procedures To EstiMate BasE Rates</a>
-          </h2>
-            <h4>Reinoud Joosten and Abhishta Abhishta</h4>
-          Project description
-
-Covid-19 antibody tests used to identify whether an individual has been infected with SARS-CoV-2, can be employed to estimate the prevalence of this disease on a more aggregate or population level. If, for instance, such a test is taken among a number of Health Care Workers (HCW) in a well-specified region, then a sufficiently large sample suffices for a reasonably accurate estimation of the infection rate (proportion) among all HCWs in that region. The central ideas are ...
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</div>
-
-  </div>
-  <div class="footer-strip">
+    <div class="footer-strip">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -137,27 +132,6 @@ Covid-19 antibody tests used to identify whether an individual has been infected
             <li><a href="/contact">Contact</a></li>
             <li class="copyright">© Behavioural Data Science incubator 2021</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="sub-footer-strip">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer">
-          <ul>
-            <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
-                bdsi@utwente.nl</a></li>
-          </ul>
-          <!--
-          <ul>
-            <li><strong>Phone: </strong></li>
-            <li><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
-          </ul>
-          -->
         </div>
       </div>
     </div>

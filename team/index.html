@@ -4,59 +4,67 @@
   <meta charset="utf-8">
   <title>Team</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/images/favicon.png">
+  <link rel="icon" href="/assets/images/favicon.png">
   <link href="/assets/css/style.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js" integrity="sha512-pF+DNRwavWMukUv/LyzDyDMn8U2uvqYQdJN0Zvilr6DDo/56xPDZdDoyPDYZRSL4aOKO/FGKXTpzDyQJ8je8Qw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css" integrity="sha512-bkB9w//jjNUnYbUpATZQCJu2khobZXvLP5GZ8jhltg7P/dghIrTaSJ7B/zdlBUT0W/LXGZ7FfCIqNvXjWKqCYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.bootstrap4.min.css" integrity="sha512-MMojOrCQrqLg4Iarid2YMYyZ7pzjPeXKRvhW9nZqLo6kPBBTuvNET9DBVWptAo/Q20Fy11EIHM5ig4WlIrJfQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- icons -->
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   
   <!-- mathjax -->
   <script>MathJax={tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}};</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-svg.min.js" integrity="sha512-lod3aTRkO5OUBZDRwWaaIGYAT6+2uSyrlwnj0sg1h9a1w5wJ7NnzkaiUWy4Jv5wdf1ixGX35HK6u7fP1pjYOQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </script>
-
-
   
   <style>
-  .header-extra{height: 70px; background-color: #f8f9fa; box-shadow: none; padding-bottom: 5px;}
-  .logo{width: 170px;padding: 5px;}
   </style>
 </head>
 <body class='page page-team-list'>
-  <div id="main-menu-mobile" class="main-menu-mobile">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="">Projects</a></li>
-    <li><a href="/team/" class="current">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+  <div class="main-menu-mobile" id="main-menu-mobile">
+    <ul>
+        <li><a href="/" class="">Home</a></li>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="current">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
 
-  <div id="wrapper" class="wrapper">
-    <div class='header header-extra'>
+    <div class="header ">
   <div class="container">
     <div class="logo">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
     <div class="logo-mobile">
-      <a href="/"><img alt="Homepage" src="/assets/images/logo-bdsi.png" /></a>
+      <a href="/">
+        <img
+          alt="Homepage"
+          src="/assets/images/logo-bdsi-light.svg"
+        />
+      </a>
     </div>
-    <div id="main-menu" class="main-menu">
-  <ul>
-    <li><a href="/" class="">Home</a></li>
-    <li><a href="/services/" class="">Services</a></li>
-    <li><a href="/projects/" class="">Projects</a></li>
-    <li><a href="/team/" class="current">Team</a></li>
-    <!--
-    <li><a href="/testimonials/" class="">Testimonials</a></li>
-    <li><a href="/blogs/" class="">Blogs</a></li>
-    -->
-    <li><a href="/contact/" class="">Contact</a></li>
-  </ul>
+    <div class="main-menu" id="main-menu">
+    <ul>
+        <li><a href="/about" class="">About</a></li>
+        <li><a href="/projects/" class="">Projects</a></li>
+        <li><a href="/events/" class="">Workshops</a></li>
+        <li><a href="/team/" class="current">Team</a></li>
+        <li><a href="/blogs/" class="">Blog</a></li>
+    </ul>
 </div>
-
-    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+ <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -64,233 +72,1232 @@
   </div>
 </div>
 
-    <div class="intro page-team-list">
+    <div id="content">
+      <div class="container py-6">
+  <h1 class="hero text-white">Meet The Team</h1>
+</div>
+
+<div class="strip strip-diagonal">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Meet The Team</h1>
-        <p>
-          Our team consists of one representative from each research cluster at BMS faculty at University of Twente. Each of us have multiple years of experience in developing data driven methods to solve social science problems.
-        </p>
+    <p>
+      Our team consists of one representative from each research cluster at BMS
+      faculty at University of Twente. Each of us have multiple years of
+      experience in developing data driven methods to solve social science
+      problems.
+    </p>
+
+    <div class="mb-4"><!-- prettier-ignore -->
+
+
+
+
+<div class="card shadow">
+  <div class="card-body">
+    <div class="card-title">
+      <h2>What can we help you with?</h2>
+    </div>
+    <div class="card-text">
+      <select id="expertise-selectize">
+        <option></option>
+        
+        <option>GLMM</option>
+        
+        <option>adaptive learner models</option>
+        
+        <option>adaptive learning</option>
+        
+        <option>adaptive testing</option>
+        
+        <option>anonymization</option>
+        
+        <option>artificial intelligence</option>
+        
+        <option>bayesian statistics</option>
+        
+        <option>big data analytics</option>
+        
+        <option>big data collection</option>
+        
+        <option>biostatistics</option>
+        
+        <option>causal modelling</option>
+        
+        <option>complex motor skills</option>
+        
+        <option>computational statistics</option>
+        
+        <option>consumer behaviour analytics</option>
+        
+        <option>consumer decision making</option>
+        
+        <option>cyber security</option>
+        
+        <option>data analytics</option>
+        
+        <option>data collection</option>
+        
+        <option>data processing facilities</option>
+        
+        <option>data scraping</option>
+        
+        <option>data storage facilities</option>
+        
+        <option>data tidying / data wrangling</option>
+        
+        <option>data visualization</option>
+        
+        <option>data visualizations</option>
+        
+        <option>deep learning</option>
+        
+        <option>explanable AI</option>
+        
+        <option>generalized linear models</option>
+        
+        <option>interactive visualizations</option>
+        
+        <option>large scale simulations</option>
+        
+        <option>learning Python</option>
+        
+        <option>learning R</option>
+        
+        <option>linear models</option>
+        
+        <option>machine learning</option>
+        
+        <option>market research</option>
+        
+        <option>mathematical statistics</option>
+        
+        <option>measuring behavioural traits</option>
+        
+        <option>measuring preferences</option>
+        
+        <option>missing data imputation</option>
+        
+        <option>monte carlo simulations</option>
+        
+        <option>multi-level models</option>
+        
+        <option>natural language processing</option>
+        
+        <option>network science</option>
+        
+        <option>neural networks</option>
+        
+        <option>new statistics</option>
+        
+        <option>power analysis</option>
+        
+        <option>prediction models</option>
+        
+        <option>psychometrics</option>
+        
+        <option>quantitative genetic models</option>
+        
+        <option>real-time monitoring</option>
+        
+        <option>research grant applications</option>
+        
+        <option>research methodology</option>
+        
+        <option>shiny apps</option>
+        
+        <option>social media data</option>
+        
+        <option>statistical learning</option>
+        
+        <option>statistical methodology</option>
+        
+        <option>statistical modelling</option>
+        
+        <option>study design</option>
+        
+        <option>text analysis</option>
+        
+        <option>text extraction</option>
+        
+        <option>text mining</option>
+        
+        <option>time-intensive data modelling</option>
+        
+        <option>training simulators</option>
+        
+        <option>web scraping</option>
+        
+      </select>
+      <div id="expertise-known">
+        <h4 class="pt-2 pb-1">We know something about <span class="expertise-topic font-weight-bold">xxx</span>...</h4>
+      </div>
+      <div id="expertise-unknown">
+        <h4 class="pt-2">We haven't listed <span class="expertise-topic font-weight-bold">xxx</span> as an expertise...</h4>
+        <p>It's possible <span class="expertise-topic font-weight-bold">xxx</span> is something we have no experience with, or we just didn't think about listing <span class="expertise-topic font-weight-bold">xxx</span> as an expertise.</p>
+        <h4>Don't worry though, we can still help you!</h4>
+        <div class="row flex-align-items-stretch text-justify">
+          <div class="col-md-4 d-flex flex-column">
+            <p>We have members from all departments in BMS, with a wide range of experience. Chances are at least on of us can help you with your problem.</p>
+            <p>You can browse our profiles and contact us on Teams, email, or just send us an old fashioned love letter.</p>
+            <a class="button center mt-auto mb-1" href="/team/#profiles">Browse our profiles</a>
+          </div>
+          <div class="col-md-4 d-flex flex-column">
+            <p>Many BMS colleagues are already using data science in their research, or are interested in learning how to apply it to their field.</p>
+            <p>Experts, novices and everyone in between can join the BDSi Data Science Community and share their experiences.</p>
+            <a href="/contact/#community" class="button center mt-auto mb-1">Join the community</a>
+          </div>
+          <div class="col-md-4 d-flex flex-column">
+            <p>If all else fails, you can always send an email to our group email: <a href="mailto:bdsi@utwente.nl">bdsi@utwente.nl</a>.</p>
+            <p>One of us will get back to you within a couple of days with an answer to your question, some followup questions, or an invitation to discuss things over a hot beverage.</p>
+            <a href="mailto:bdsi@utwente.nl" class="button center mt-auto mb-1">send us an email</a>
+          </div>
+        </div>
+      </div>
+      <div id="expertise-profiles">
+          
+        <div id="expertise-profile-s-abhishta" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Abhishta-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Abhishta Abhishta</h5>
+            <a href="/team/#s-abhishta">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Abhishta's profile
+            </a>
+            <a href="mailto:s.abhishta@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                s.abhishta@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+         
+        <div id="expertise-profile-a-k-machens" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Anna-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Anna Machens</h5>
+            <a href="/team/#a-k-machens">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Anna's profile
+            </a>
+            <a href="mailto:a.k.machens@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                a.k.machens@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+         
+        <div id="expertise-profile-k-a-kroeze" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Karel-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Karel Kroeze</h5>
+            <a href="/team/#k-a-kroeze">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Karel's profile
+            </a>
+            <a href="mailto:k.a.kroeze@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                k.a.kroeze@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+         
+        <div id="expertise-profile-c-g-m-oudshoorn" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Karin-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Karin Groothuis-Oudshoorn</h5>
+            <a href="/team/#c-g-m-oudshoorn">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Karin's profile
+            </a>
+            <a href="mailto:c.g.m.oudshoorn@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                c.g.m.oudshoorn@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+         
+        <div id="expertise-profile-martin-schmettow" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Martin-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Martin Schmettow</h5>
+            <a href="/team/#martin-schmettow">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Martin's profile
+            </a>
+            <a href="mailto:martin.schmettow@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                martin.schmettow@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+         
+        <div id="expertise-profile-r-marinescu-muster" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Robert-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Robert Marinescu Muster</h5>
+            <a href="/team/#r-marinescu-muster">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Robert's profile
+            </a>
+            <a href="mailto:r.marinescu-muster@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                r.marinescu-muster@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+         
+        <div id="expertise-profile-stephanie-vandenberg" class="profile">
+          <div class="profile-widget">
+    
+    <div class="mb-1" style="display: flex; flex-flow: row nowrap">
+        <div class="profile-image" style="background-image: url(/assets/images/team/Stephanie-thumbnail.png); width: 48px; height: 48px; max-width: 48px; flex-grow: 0"></div>
+        <div style="flex-grow: 1; display: flex; flex-direction: column; line-height: 1.1em; ">
+            <h5 class="mb-0">Stéphanie van den Berg</h5>
+            <a href="/team/#stephanie-vandenberg">
+                <span class="iconify-inline" data-icon="mdi:badge-account-horizontal-outline" title="profile"></span>
+                Stéphanie's profile
+            </a>
+            <a href="mailto:stephanie.vandenberg@utwente.nl" target="_blank">
+                <span class="iconify-inline" data-icon="mdi:email-outline"></span>
+                stephanie.vandenberg@utwente.nl</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+        
       </div>
     </div>
   </div>
 </div>
 
-<div class="container pb-6">
-  <div class="row">
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Stéphanie van den Berg logo"
-            class="img-fluid mb-2"
-            src="/images/team/DSC4120-01.JPG"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Stéphanie van den Berg</h2>
-          <p class="team-description">Team Leader</p>
-          
-          <a target="_blank" href="https://www.linkedin.com/in/stéphanie-van-den-berg-3038765/">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> I am Stéphanie van den Berg and I am an associate professor in the area of research methodology and data analytics. I have a PhD in psychology. My research interests are in the field of machine learning, psychometrics, Bayesian statistics and modelling time-intensive data. I teach courses in data science and statistics at the University of Twente.</p>
+
+<script>
+  const team = [
+      
+        {
+            id: "stephanie-vandenberg",
+            content: `<p><em>WHO:</em> I am Stéphanie van den Berg and I am an associate professor in the area of research methodology and data analytics. I have a PhD in psychology. My research interests are in the field of machine learning, psychometrics, Bayesian statistics and modelling time-intensive data. I teach courses in data science and statistics at the University of Twente.</p>
 
 <p><em>ROLE:</em> I am the head of BDSI.</p>
 
 <p><em>NEED HELP:</em> I can help you with statistical modelling, learning and using R, applying statistical/machine learning, power analysis, measuring behavioural traits, discussing the research methodology of your project and writing applications for research grants. I also have extensive experience with quantitative genetic models and Bayesian data analysis.</p>
-
-<p><em>HOW:</em> You can send me an email: <a href="mailto:stephanie.vandenberg@utwente.nl">stephanie.vandenberg@utwente.nl</a></p>
-</div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Karin Groothuis-Oudshoorn logo"
-            class="img-fluid mb-2"
-            src="/images/team/Karin.png"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Karin Groothuis-Oudshoorn</h2>
-          <p class="team-description">Data Science Researcher</p>
-          
-          <a target="_blank" href="https://www.linkedin.com/in/karin-groothuis-oudshoorn-37b7866/">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> I am Karin Groothuis-Oudshoorn and I am a (bio)statistician, researcher, data scientist. My background is from mathematical statistics. My research interests are in the field of statistical learning, prediction models, missing data and measuring / analyzing preferences. I teach courses in data science and statistical learning at the University of Twente.</p>
+`,
+            name: "Stéphanie van den Berg",
+            image: "/assets/images/team/Stephanie-thumbnail.png",
+            role: "Team Leader",
+            email: "stephanie.vandenberg@utwente.nl",
+            expertise: [
+              "research methodology",
+              "data analytics",
+              "machine learning",
+              "psychometrics",
+              "bayesian statistics",
+              "time-intensive data modelling",
+              "learning R",
+              "power analysis",
+              "measuring behavioural traits",
+              "research grant applications",
+              "quantitative genetic models",
+            ]
+        },
+      
+        {
+            id: "c-g-m-oudshoorn",
+            content: `<p><em>WHO:</em> I am Karin Groothuis-Oudshoorn and I am a (bio)statistician, researcher, data scientist. My background is from mathematical statistics. My research interests are in the field of statistical learning, prediction models, missing data and measuring / analyzing preferences. I teach courses in data science and statistical learning at the University of Twente.</p>
 
 <p><em>ROLE:</em> I represent the technology, policy and society (TPS) group in BDSI.</p>
 
 <p><em>NEED HELP:</em> I can help you with statistical modelling, learning and using R, applying statistical/machine learning, discussing the statistical methodology of your project.</p>
-
-<p><em>HOW:</em> You can send me an e-mail: <a href="mailto:c.g.m.oudshoorn@utwente.nl">c.g.m.oudshoorn@utwente.nl</a></p>
-</div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Karel Kroeze logo"
-            class="img-fluid mb-2"
-            src="/images/team/Karel.jpg"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Karel Kroeze</h2>
-          <p class="team-description">Data Scientist</p>
-          
-          <a target="_blank" href="https://www.linkedin.com/in/karelkroeze">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> I’m a computational statistician and data scientist at BDSI. I expect to obtain a PhD on adaptive learning environments in the coming months. I have experience with adaptive testing, large scale simulations, natural language processing and adaptive learner models. I’ve also authored several R packages, and have experience with Python, C# and JavaScript/TypeScript. I’m excited about the prospects of computational statistics, statistical learning and machine learning for BMS, and would love to help you leverage these technologies for your own research.</p>
+`,
+            name: "Karin Groothuis-Oudshoorn",
+            image: "/assets/images/team/Karin-thumbnail.png",
+            role: "Data Science Researcher",
+            email: "c.g.m.oudshoorn@utwente.nl",
+            expertise: [
+              "biostatistics",
+              "mathematical statistics",
+              "statistical learning",
+              "prediction models",
+              "missing data imputation",
+              "measuring preferences",
+              "statistical modelling",
+              "learning R",
+              "machine learning",
+              "statistical methodology",
+            ]
+        },
+      
+        {
+            id: "k-a-kroeze",
+            content: `<p><em>WHO:</em> I’m a computational statistician and data scientist at BDSI. I expect to obtain a PhD on adaptive learning environments in the coming months. I have experience with adaptive testing, large scale simulations, natural language processing and adaptive learner models. I’ve also authored several R packages, and have experience with Python, C# and JavaScript/TypeScript. I’m excited about the prospects of computational statistics, statistical learning and machine learning for BMS, and would love to help you leverage these technologies for your own research.</p>
 
 <p><em>ROLE:</em> I am a data scientist at BDSI.</p>
 
 <p><em>NEED HELP:</em> I can help you with data scraping, data tidying, interactive visualizations (e.g. d3.js, shiny), designing and performing simulations, natural language processing, statistical learning and machine learning.
 If you’re at all interested in big data or machine learning, but don’t know what they could add to your research, or how to implement them, please do contact me. I’d be happy to discuss with you how these techniques might be relevant for your research.</p>
-
-<p><em>HOW:</em> <a href="mailto:k.a.kroeze@utwente.nl">k.a.kroeze@utwente.nl</a> or find me on MS Teams.</p>
-</div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Robert Marinescu Muster logo"
-            class="img-fluid mb-2"
-            src="/images/team/Robert.jpg"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Robert Marinescu Muster</h2>
-          <p class="team-description">Data Science Researcher</p>
-          
-          <a target="_blank" href="https://www.linkedin.com/in/robertmuster/">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> I am Robert and I am a researcher and data scientist. My background is from consumer decision making, communication science, programming and data science. My research interests are in the field of adaptive learning, consumer behavior analytics, big data analytics, network science, communicating data with visualizations, real-time monitoring tools (sensors), artificial intelligence with a focus on deep learning and neural networks. I also teach courses in digital marketing, data science, network science and big data analytics at the University of Twente. I also hold some workshops in using R and python for data science.</p>
+`,
+            name: "Karel Kroeze",
+            image: "/assets/images/team/Karel-thumbnail.png",
+            role: "Data Scientist",
+            email: "k.a.kroeze@utwente.nl",
+            expertise: [
+              "computational statistics",
+              "adaptive testing",
+              "large scale simulations",
+              "natural language processing",
+              "adaptive learner models",
+              "learning R",
+              "statistical learning",
+              "machine learning",
+              "data scraping",
+              "data tidying / data wrangling",
+              "interactive visualizations",
+              "shiny apps",
+              "text extraction",
+              "research methodology",
+              "data visualizations",
+              "anonymization",
+            ]
+        },
+      
+        {
+            id: "r-marinescu-muster",
+            content: `<p><em>WHO:</em> I am Robert and I am a researcher and data scientist. My background is from consumer decision making, communication science, programming and data science. My research interests are in the field of adaptive learning, consumer behavior analytics, big data analytics, network science, communicating data with visualizations, real-time monitoring tools (sensors), artificial intelligence with a focus on deep learning and neural networks. I also teach courses in digital marketing, data science, network science and big data analytics at the University of Twente. I also hold some workshops in using R and python for data science.</p>
 
 <p><em>ROLE:</em> I represent the Technology, Human and Institutional Behaviour (HBI) group in BDSI.</p>
 
 <p><em>NEED HELP:</em> I can help you with programming dashboards and monitors, web-apps, web-scraping, data cleaning and data collection strategies, text mining, statistical modelling, learning and using R and python, applying statistical/machine/deep learning, discussing the statistical methodology of your project.</p>
-
-<p><em>HOW:</em> You can send me an e-mail: <a href="mailto:r.marinescu-muster@utwente.nl">r.marinescu-muster@utwente.nl</a></p>
-</div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Anna Machens logo"
-            class="img-fluid mb-2"
-            src="/images/team/Anna.jpg"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Anna Machens</h2>
-          <p class="team-description">Data Scientist</p>
-          
-          <a target="_blank" href="https://www.linkedin.com/in/anna-machens-5a82b180/">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> I am Anna. My current focus is text analysis with deep learning models.
+`,
+            name: "Robert Marinescu Muster",
+            image: "/assets/images/team/Robert-thumbnail.png",
+            role: "Data Science Researcher",
+            email: "r.marinescu-muster@utwente.nl",
+            expertise: [
+              "consumer decision making",
+              "adaptive learning",
+              "consumer behaviour analytics",
+              "big data analytics",
+              "network science",
+              "data visualization",
+              "real-time monitoring",
+              "artificial intelligence",
+              "deep learning",
+              "neural networks",
+              "web scraping",
+              "data collection",
+              "text mining",
+              "statistical modelling",
+              "learning R",
+              "learning Python",
+            ]
+        },
+      
+        {
+            id: "a-k-machens",
+            content: `<p><em>WHO:</em> I am Anna. My current focus is text analysis with deep learning models.
 I have worked for several years as data scientist in market research,  but my background is in physics, where I got a PhD in statistical physics/network science.
 In addition to natural language processing I’m also interested in explainable AI and causal modeling.</p>
 
 <p><em>ROLE:</em> I’m a data scientist at BDSI.</p>
 
 <p><em>NEED HELP:</em> I can help you with  Deep Learning, Machine Learning and Big Data Analysis in python and with data scraping. Just ask me anything and I’ll do my best to help.</p>
-
-<p><em>HOW:</em> You can send me an e-mail:  <a href="mailto:a.k.machens@utwente.nl">a.k.machens@utwente.nl</a></p>
-</div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Abhishta Abhishta logo"
-            class="img-fluid mb-2"
-            src="/images/team/abhishta.png"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Abhishta Abhishta</h2>
-          <p class="team-description">Data Science Researcher</p>
-          
-          <a target="_blank" href="https://linkedin.com/in/aabhishta">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> I am Abhishta. I make use of empirical data to help businesses understand the need for investment in cyber security. I have developed methods to measure the economic impact of cyber attacks. This helps me to get a more straight forward view of how cyber attacks may damage the current and future revenues of an organisation.</p>
+`,
+            name: "Anna Machens",
+            image: "/assets/images/team/Anna-thumbnail.png",
+            role: "Data Scientist",
+            email: "a.k.machens@utwente.nl",
+            expertise: [
+              "text analysis",
+              "deep learning",
+              "market research",
+              "network science",
+              "explanable AI",
+              "causal modelling",
+              "machine learning",
+              "big data analytics",
+              "data scraping",
+              "learning Python",
+            ]
+        },
+      
+        {
+            id: "s-abhishta",
+            content: `<p><em>WHO:</em> I am Abhishta. I make use of empirical data to help businesses understand the need for investment in cyber security. I have developed methods to measure the economic impact of cyber attacks. This helps me to get a more straight forward view of how cyber attacks may damage the current and future revenues of an organisation.</p>
 
 <p><em>ROLE:</em> I represent the high-tech business and entrepreneurship (HBE) cluster in BDSI.</p>
 
 <p><em>NEED HELP:</em> I can help you with implementation of montecarlo simulations, web-scraping, data collection from social media, bigdata (sensor data etc.) analysis and selection of data storage/processing facilities.</p>
-
-<p><em>HOW:</em> You can send me an e-mail: <a href="mailto:s.abhishta@utwente.nl">s.abhishta@utwente.nl</a></p>
-</div>
-      </div>
-    </div>
-    
-    <div class="col-12 col-md-6 mb-1">
-      <div class="team team-summary">
-        
-        <div class="team-image">
-          <img
-            alt="Martin Schmettow logo"
-            class="img-fluid mb-2"
-            src="/images/team/Martin.jpeg"
-          />
-        </div>
-        
-        <div class="team-meta">
-          <h2 class="team-name">Martin Schmettow</h2>
-          <p class="team-description">Human Factors researcher</p>
-          
-          <a target="_blank" href="https://www.linkedin.com/in/schmettow/">LinkedIn</a> 
-          
-        </div>
-        <div class="team-content"><p><em>WHO:</em> My background is in Human Factors research, which is about fitting technology to the human mind. In my present research I look into how people learn complex motor skills, such as in surgery or driving, in training simulators. Powerful statistical models are essential for my research. My conviction is that what has been called New Statistics makes empirical research more valid, more interesting and much better to report. Much of what I have learned so far, can be read in my book <a href="https://schmettow.github.io/New_Stats/index.html">New Statistics for the Design Researcher</a>. In my courses around the year, around 101 Psychology students learn to program in Python or R.</p>
+`,
+            name: "Abhishta Abhishta",
+            image: "/assets/images/team/Abhishta-thumbnail.png",
+            role: "Data Science Researcher",
+            email: "s.abhishta@utwente.nl",
+            expertise: [
+              "cyber security",
+              "monte carlo simulations",
+              "web scraping",
+              "social media data",
+              "big data collection",
+              "big data analytics",
+              "data storage facilities",
+              "data processing facilities",
+            ]
+        },
+      
+        {
+            id: "martin-schmettow",
+            content: `<p><em>WHO:</em> My background is in Human Factors research, which is about fitting technology to the human mind. In my present research I look into how people learn complex motor skills, such as in surgery or driving, in training simulators. Powerful statistical models are essential for my research. My conviction is that what has been called New Statistics makes empirical research more valid, more interesting and much better to report. Much of what I have learned so far, can be read in my book <a href=https://schmettow.github.io/New_Stats/index.html>New Statistics for the Design Researcher</a>. In my courses around the year, around 101 Psychology students learn to program in Python or R.</p>
 
 <p><em>ROLE:</em> I am here to represent LDT (Learning, Data Analytics and Technology) group, which comprises the departments CPE, OMD, ELAN, IST and OWK.</p>
 
 <p><em>NEED HELP:</em> The best moment to start asking me is before you plan your study. Together, we can look into your research problem and find a consistent and efficient research design and develop a statistical model upfront. Even if you ask me just to do the analysis for you, I will always make sure that you fully understand the process and the results. My favorite statistical approach is Generalized Linear Multi-level Models (GLMM), which is an extremely flexible family. Even if you have never heard of it, chances are good, that a GLMM can translate your precious data into real answers. If you, as a group, need a solution for a specific research situation (or you are just curious about New Statistics), we can organize a workshop or live demo, together.</p>
+`,
+            name: "Martin Schmettow",
+            image: "/assets/images/team/Martin-thumbnail.png",
+            role: "Human Factors researcher",
+            email: "martin.schmettow@utwente.nl",
+            expertise: [
+              "complex motor skills",
+              "training simulators",
+              "statistical modelling",
+              "new statistics",
+              "linear models",
+              "learning R",
+              "learning Python",
+              "research methodology",
+              "study design",
+              "generalized linear models",
+              "multi-level models",
+              "GLMM",
+            ]
+        },
+      
+  ];
 
-<p><em>HOW:</em> <a href="mailto:martin.schmettow@utwente.nl">martin.schmettow@utwente.nl</a> or find me on MS Teams.</p>
+  function hideAll() {
+    $("#expertise-profiles .profile").hide();
+    $("#expertise-known").hide();
+    $("#expertise-unknown").hide();
+  }
+
+  function toggleExpertise(exp){
+    let any = false;
+    for (const member of team){
+      if(member.expertise.some( 
+        _exp => _exp.toLowerCase().includes(exp.toLowerCase())) || 
+        exp.length >= 4 && member.content.toLowerCase().includes( exp.toLowerCase() )
+      ){
+        $(`#expertise-profile-${member.id}`).show();
+        any = true;
+      } else {
+        $(`#expertise-profile-${member.id}`).hide();
+      }
+    }
+    $(`span.expertise-topic`).text(exp);
+    $(`#expertise-known`).toggle(any);
+    $(`#expertise-unknown`).toggle(!any);
+  }
+
+  $(() => {
+    $("#expertise-selectize").selectize({
+      openOnFocus: false,
+      placeholder: "Find a topic...",
+      create: true,
+      showAddOptionOnCreate: false,
+      selected: [],
+      onChange: (topic) => {
+        if(!topic) {
+          hideAll()
+        } else {
+          toggleExpertise(topic);
+        }
+      },
+      onType: (topic) => {
+        if(!!topic){
+          // hack to change selectize's default "Add x" label
+          $(".selectize-dropdown-content .create").html(`Search for <span class="font-weight-bold">${topic}</span>...`)
+        }
+      }
+    });
+
+    // hide stuff on init
+    hideAll();
+  });
+</script>
 </div>
+
+    <div id="profiles" class="container mb-6">
+      <div class="row">
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="stephanie-vandenberg"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Stephanie-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Stéphanie van den Berg</h2>
+    <h4 class="profile-description">Team Leader</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:stephanie.vandenberg@utwente.nl"
+        title="Send Stéphanie an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=stephanie.vandenberg@utwente.nl"
+        title="Chat with Stéphanie on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/stephanie.vandenberg"
+        title="Check out Stéphanie's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/stéphanie-van-den-berg-3038765/"
+        title="Connect with Stéphanie on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> I am Stéphanie van den Berg and I am an associate professor in the area of research methodology and data analytics. I have a PhD in psychology. My research interests are in the field of machine learning, psychometrics, Bayesian statistics and modelling time-intensive data. I teach courses in data science and statistics at the University of Twente.</p>
+
+<p><em>ROLE:</em> I am the head of BDSI.</p>
+
+<p><em>NEED HELP:</em> I can help you with statistical modelling, learning and using R, applying statistical/machine learning, power analysis, measuring behavioural traits, discussing the research methodology of your project and writing applications for research grants. I also have extensive experience with quantitative genetic models and Bayesian data analysis.</p>
+</div>
+          </div>
+        </div>
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="c-g-m-oudshoorn"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Karin-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Karin Groothuis-Oudshoorn</h2>
+    <h4 class="profile-description">Data Science Researcher</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:c.g.m.oudshoorn@utwente.nl"
+        title="Send Karin an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=c.g.m.oudshoorn@utwente.nl"
+        title="Chat with Karin on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/c.g.m.oudshoorn"
+        title="Check out Karin's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/karin-groothuis-oudshoorn-37b7866/"
+        title="Connect with Karin on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> I am Karin Groothuis-Oudshoorn and I am a (bio)statistician, researcher, data scientist. My background is from mathematical statistics. My research interests are in the field of statistical learning, prediction models, missing data and measuring / analyzing preferences. I teach courses in data science and statistical learning at the University of Twente.</p>
+
+<p><em>ROLE:</em> I represent the technology, policy and society (TPS) group in BDSI.</p>
+
+<p><em>NEED HELP:</em> I can help you with statistical modelling, learning and using R, applying statistical/machine learning, discussing the statistical methodology of your project.</p>
+</div>
+          </div>
+        </div>
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="k-a-kroeze"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Karel-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Karel Kroeze</h2>
+    <h4 class="profile-description">Data Scientist</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:k.a.kroeze@utwente.nl"
+        title="Send Karel an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=k.a.kroeze@utwente.nl"
+        title="Chat with Karel on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/k.a.kroeze"
+        title="Check out Karel's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/karelkroeze"
+        title="Connect with Karel on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-website"
+        target="_blank"
+        href="https://karel-kroeze.nl/"
+        title="Karel also has a website!"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:desktop"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> I’m a computational statistician and data scientist at BDSI. I expect to obtain a PhD on adaptive learning environments in the coming months. I have experience with adaptive testing, large scale simulations, natural language processing and adaptive learner models. I’ve also authored several R packages, and have experience with Python, C# and JavaScript/TypeScript. I’m excited about the prospects of computational statistics, statistical learning and machine learning for BMS, and would love to help you leverage these technologies for your own research.</p>
+
+<p><em>ROLE:</em> I am a data scientist at BDSI.</p>
+
+<p><em>NEED HELP:</em> I can help you with data scraping, data tidying, interactive visualizations (e.g. d3.js, shiny), designing and performing simulations, natural language processing, statistical learning and machine learning.
+If you’re at all interested in big data or machine learning, but don’t know what they could add to your research, or how to implement them, please do contact me. I’d be happy to discuss with you how these techniques might be relevant for your research.</p>
+</div>
+          </div>
+        </div>
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="r-marinescu-muster"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Robert-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Robert Marinescu Muster</h2>
+    <h4 class="profile-description">Data Science Researcher</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:r.marinescu-muster@utwente.nl"
+        title="Send Robert an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=r.marinescu-muster@utwente.nl"
+        title="Chat with Robert on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/r.marinescu-muster"
+        title="Check out Robert's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/robertmuster/"
+        title="Connect with Robert on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> I am Robert and I am a researcher and data scientist. My background is from consumer decision making, communication science, programming and data science. My research interests are in the field of adaptive learning, consumer behavior analytics, big data analytics, network science, communicating data with visualizations, real-time monitoring tools (sensors), artificial intelligence with a focus on deep learning and neural networks. I also teach courses in digital marketing, data science, network science and big data analytics at the University of Twente. I also hold some workshops in using R and python for data science.</p>
+
+<p><em>ROLE:</em> I represent the Technology, Human and Institutional Behaviour (HBI) group in BDSI.</p>
+
+<p><em>NEED HELP:</em> I can help you with programming dashboards and monitors, web-apps, web-scraping, data cleaning and data collection strategies, text mining, statistical modelling, learning and using R and python, applying statistical/machine/deep learning, discussing the statistical methodology of your project.</p>
+</div>
+          </div>
+        </div>
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="a-k-machens"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Anna-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Anna Machens</h2>
+    <h4 class="profile-description">Data Scientist</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:a.k.machens@utwente.nl"
+        title="Send Anna an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=a.k.machens@utwente.nl"
+        title="Chat with Anna on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/a.k.machens"
+        title="Check out Anna's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/anna-machens-5a82b180/"
+        title="Connect with Anna on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> I am Anna. My current focus is text analysis with deep learning models.
+I have worked for several years as data scientist in market research,  but my background is in physics, where I got a PhD in statistical physics/network science.
+In addition to natural language processing I’m also interested in explainable AI and causal modeling.</p>
+
+<p><em>ROLE:</em> I’m a data scientist at BDSI.</p>
+
+<p><em>NEED HELP:</em> I can help you with  Deep Learning, Machine Learning and Big Data Analysis in python and with data scraping. Just ask me anything and I’ll do my best to help.</p>
+</div>
+          </div>
+        </div>
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="s-abhishta"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Abhishta-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Abhishta Abhishta</h2>
+    <h4 class="profile-description">Data Science Researcher</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:s.abhishta@utwente.nl"
+        title="Send Abhishta an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=s.abhishta@utwente.nl"
+        title="Chat with Abhishta on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/s.abhishta"
+        title="Check out Abhishta's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://linkedin.com/in/aabhishta"
+        title="Connect with Abhishta on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> I am Abhishta. I make use of empirical data to help businesses understand the need for investment in cyber security. I have developed methods to measure the economic impact of cyber attacks. This helps me to get a more straight forward view of how cyber attacks may damage the current and future revenues of an organisation.</p>
+
+<p><em>ROLE:</em> I represent the high-tech business and entrepreneurship (HBE) cluster in BDSI.</p>
+
+<p><em>NEED HELP:</em> I can help you with implementation of montecarlo simulations, web-scraping, data collection from social media, bigdata (sensor data etc.) analysis and selection of data storage/processing facilities.</p>
+</div>
+          </div>
+        </div>
+        
+        <!-- prettier-ignore -->
+        
+        <div class="col-12 col-lg-6 mb-2">
+          <div
+            class="team team-summary"
+            id="martin-schmettow"
+          >
+            
+<div class="profile-widget">
+  <div
+    class="profile-image"
+    style="background-image: url(/assets/images/team/Martin-thumbnail.png); width: 100px; height: 100px;"
+  ></div>
+  
+  <div class="profile-meta">
+    <h2 class="profile-name">Martin Schmettow</h2>
+    <h4 class="profile-description">Human Factors researcher</h4>
+    <div class="profile-socials">
+      
+      <!-- prettier-ignore -->
+      
+      <a
+        class="icon icon-email"
+        target="_blank"
+        href="mailto:martin.schmettow@utwente.nl"
+        title="Send Martin an email"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:envelope"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-teams"
+        target="_blank"
+        href="https://teams.microsoft.com/l/chat/0/0?users=martin.schmettow@utwente.nl"
+        title="Chat with Martin on Teams"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:chats-fill"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+      <a
+        class="icon icon-people"
+        target="_blank"
+        href="https://people.utwente.nl/martin.schmettow"
+        title="Check out Martin's works"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:newspaper-clipping"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+      <a
+        class="icon icon-linkedin"
+        target="_blank"
+        href="https://www.linkedin.com/in/schmettow/"
+        title="Connect with Martin on LinkedIn"
+      >
+        <span
+          class="iconify"
+          data-icon="ph:linkedin-logo"
+          data-width="28"
+          data-height="28"
+        ></span>
+      </a>
+       
+    </div>
+  </div>
+</div>
+
+            <div class="team-content mt-1"><p><em>WHO:</em> My background is in Human Factors research, which is about fitting technology to the human mind. In my present research I look into how people learn complex motor skills, such as in surgery or driving, in training simulators. Powerful statistical models are essential for my research. My conviction is that what has been called New Statistics makes empirical research more valid, more interesting and much better to report. Much of what I have learned so far, can be read in my book <a href="https://schmettow.github.io/New_Stats/index.html">New Statistics for the Design Researcher</a>. In my courses around the year, around 101 Psychology students learn to program in Python or R.</p>
+
+<p><em>ROLE:</em> I am here to represent LDT (Learning, Data Analytics and Technology) group, which comprises the departments CPE, OMD, ELAN, IST and OWK.</p>
+
+<p><em>NEED HELP:</em> The best moment to start asking me is before you plan your study. Together, we can look into your research problem and find a consistent and efficient research design and develop a statistical model upfront. Even if you ask me just to do the analysis for you, I will always make sure that you fully understand the process and the results. My favorite statistical approach is Generalized Linear Multi-level Models (GLMM), which is an extremely flexible family. Even if you have never heard of it, chances are good, that a GLMM can translate your precious data into real answers. If you, as a group, need a solution for a specific research situation (or you are just curious about New Statistics), we can organize a workshop or live demo, together.</p>
+</div>
+          </div>
+        </div>
+        
       </div>
     </div>
-    
   </div>
 </div>
 
-  </div>
-  <div class="footer-strip">
+    </div>
+    <div class="footer-strip">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -301,27 +1308,6 @@ In addition to natural language processing I’m also interested in explainable 
             <li><a href="/contact">Contact</a></li>
             <li class="copyright">© Behavioural Data Science incubator 2021</li>
           </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div class="sub-footer-strip">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="sub-footer">
-          <ul>
-            <li><strong>Email: </strong><a href="mailto:bdsi@utwente.nl">
-                bdsi@utwente.nl</a></li>
-          </ul>
-          <!--
-          <ul>
-            <li><strong>Phone: </strong></li>
-            <li><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
-          </ul>
-          -->
         </div>
       </div>
     </div>
