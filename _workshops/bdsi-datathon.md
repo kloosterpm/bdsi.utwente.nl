@@ -15,7 +15,7 @@ tags:
   - Machine Learning
 image: /assets/images/content/bdsi-datathon/datathon-header.svg
 frontpage: true
-date: 2021-09-20
+startDate: 2021-09-20
 endDate: 2021-09-27
 ---
 

@@ -5,49 +5,85 @@ bodyClass: page-list
 ---
 
 <div class="container py-6">
-  <h1 class="hero text-white">Workshops</h1>
-  <h4 class="text-white">Workshops, Seminars, and other events</h4>
+    <h1 class="hero text-white">Workshops</h1>
+    <h4 class="text-white">Workshops, Seminars, and other events</h4>
 </div>
 
 <div class="strip strip-diagonal">
-  <div class="container">
-    <h2>Workshops</h2>
-    {% assign workshops = site.workshops | sort: "title" %}
-    {% for workshop in workshops %}
-      <div class="workshop mb-3">
-        <h3>
-          <a href="{{site.baseurl}}{{ workshop.url }}">{{ workshop.title }}</a>
-        </h3>
-        {% if workshop.introduction %}
-          {{ workshop.introduction }}
-        {% else %}
-          {{ workshop.content | markdownify | strip_html | truncate: 250 }}
-        {% endif %}
-      </div>
-    {% endfor %}
+    <div class="container">
+        <h2>Workshops</h2>
+        {% assign workshops = site.workshops | sort: "title" | sort: "startDate", "last" %}
+        {% for workshop in workshops %}
+            <div class="workshop mb-3">
 
-    
-    <h2>Seminars</h2>
-    {% assign seminars = site.seminars | sort: "title" %}
-    {% for seminar in seminars %}
-      <div class="seminar mb-3">
-        <h3>
-          <a href="{{site.baseurl}}{{ seminar.url }}">{{ seminar.title }}</a>
-        </h3>
-        <div class="byline" style="display: flex;">
-          <div class="authors">
-            {% include author-list.html page=seminar header="h6" %}
-          </div>
-          <div class="date" style="margin-left: auto;">
-            <h6 class="date">{{seminar.date | date: "%B %e, %Y"}}</h6>
-          </div>
-        </div>
-        {% if seminar.introduction %}
-          {{ seminar.introduction }}
-        {% else %}
-          {{ seminar.content | markdownify | strip_html | truncate: 250 }}
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h3>
+                            <a href="{{site.baseurl}}{{ workshop.url }}">{{ workshop.title }}</a>
+                        </h3>
+                        {% if workshop.introduction %}
+                            {{ workshop.introduction }}
+                        {% else %}
+                            {{ workshop.content | markdownify | strip_html | truncate: 250 }}
+                        {% endif %}
+                    </div>
+                    <div class="col-4">
+                        {%- if workshop.startDate -%}
+                            <h6 class="date">
+                                {%- if workshop.endDate -%}
+                                    {%- capture startMonth  -%}
+                                        {{- workshop.startDate | date: "%B" -}}
+                                    {%- endcapture  -%}
+                                    {%- capture endMonth  -%}
+                                        {{- workshop.endDate | date: "%B" -}}
+                                    {%- endcapture  -%}
+                                    {%- if startMonth == endMonth  -%}
+                                        {{- workshop.startDate | date: "%B %e"}}
+                                        —
+                                        {{workshop.endDate | date: "%e" -}}
+                                    {%- else  -%}
+                                        {{- workshop.startDate | date: "%B %e"}}
+                                        —
+                                        {{workshop.endDate | date: "%B %e" -}}
+                                    {%- endif  -%}
+                                {%- else  -%}
+                                    {{- workshop.startDate | date: "%B %e" -}}
+                                {%- endif  -%}
+                                {%- if workshop.time -%}
+                                    ,&nbsp;
+                                    {{- workshop.time -}}
+                                {%- endif  -%}
+                            </h6>
+                        {%- else -%}
+                            <h6>no date scheduled</h6>
+                        {% endif %}
+                        {% include tags-list.html page=workshop %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+        <h2>Seminars</h2>
+        {% assign seminars = site.seminars | sort: "title" %}
+        {% for seminar in seminars %}
+            <div class="seminar mb-3">
+                <h3>
+                    <a href="{{site.baseurl}}{{ seminar.url }}">{{ seminar.title }}</a>
+                </h3>
+                <div class="byline" style="display: flex;">
+                    <div class="authors">
+                        {% include author-list.html page=seminar header="h6" %}
+                    </div>
+                    <div class="date" style="margin-left: auto;">
+                        <h6 class="date">{{seminar.date | date: "%B %e, %Y"}}</h6>
+                    </div>
+                </div>
+                {% if seminar.introduction %}
+                    {{ seminar.introduction }}
+                {% else %}
+                    {{ seminar.content | markdownify | strip_html | truncate: 250 }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
 </div>

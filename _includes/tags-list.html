@@ -1,0 +1,46 @@
+{% if include.page %}
+    {% assign page = include.page %}
+{% endif %}
+{% assign element = include.element | default: "span" %}
+{% assign class = include.class | default: "tag" %}
+{% if page.tags %}
+    <!-- get list of all tags -->
+    {% assign tags = '' | split: '' %}
+    {% for event in site.workshops | concat: site.seminars %}
+        {% assign tags = tags | concat: event.tags | join: ", " | downcase | split: ", " %}
+    {% endfor %}
+    {% assign tags = tags | uniq | sort %}
+
+    <!-- map into predictable tag/color combos -->
+    {% assign colours = '' | split: '' %}
+    {% assign count = tags.size %}
+    {% assign step = 360 | divided_by: count %}
+    {% assign index = 0 %}
+    {% for tag in tags %}
+        {%- capture colour -%}
+            {{tag}}|hsl({{ step | times: index }}, 60%, 50%)
+        {%- endcapture -%}
+        {% assign colours = colours | push: colour %}
+        {% assign index = index | plus: 1 %}
+    {% endfor %}
+
+    <!-- print our tags -->
+    <div style="margin-top: -.3em; margin-left: .3em; line-height: .9;">
+        {% for tag_raw in page.tags %}
+            {%- capture tag -%}
+                {{ tag_raw | downcase | strip }}
+            {%- endcapture -%}
+            {{label}}
+            {% for colour in colours %}
+                {% assign label_colour = colour | split: "|" %}
+                {% if tag == label_colour[0] %}
+                    <h6 style="display: inline-block; font-size: smaller; margin-right: .4em; margin-bottom: -.4em;">#{{tag}}
+                    </h6>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+{% else %}
+    <!-- no tags -->
+{% endif %}
