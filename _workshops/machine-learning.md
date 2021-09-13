@@ -11,6 +11,9 @@ tags:
   - Machine Learning
 startDate: 2021-09-23
 time: 12:45 – 13:30
+image: /assets/images/workshops/machine-learning.jpg
+imageNarrow: true
+imageBackground: white
 ---
 
 A 45 minute guided overview of basic machine learning techniques. [Anna Machens](/team/#a-k-machens) will take you through the basics of model fitting, paramater selection and hyperparameter tuning, ending up with a simple but effective predictive model.

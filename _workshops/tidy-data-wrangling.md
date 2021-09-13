@@ -10,6 +10,9 @@ tags:
   - data wrangling
 startDate: 2021-09-21
 time: 12:45 – 13:30
+image: /assets/images/workshops/data-wrangling.jpg
+imageNarrow: true
+imageBackground: white
 ---
 
 A 45 minute guided introduction to data wrangling in _R_, using the 'tidy' data principles. [Karel Kroeze](/team/#k-a-kroeze) will show how to prepare a 'raw' dataset for analysis, by cleaning, reshaping and mutating the data until it has shown us all its secrets.

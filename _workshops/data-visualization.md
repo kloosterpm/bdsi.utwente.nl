@@ -11,6 +11,8 @@ tags:
   - Visualization
 startDate: 2021-09-24
 time: 12:45 – 13:30
+image: /assets/images/workshops/data-viz.png
+imageBackground: "#FFBE2E"
 ---
 
 A 45 minute guided overview of data visualization using the grammar of graphics. [Karel Kroeze](/team/#k-a-kroeze) will explain the principles of creating and layering visualizations with _ggplot_ in _R_, and give a quick introduction to interactive visualizations with plotly, shiny and beyond.

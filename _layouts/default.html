@@ -25,7 +25,11 @@
   <style>
   </style>
 </head>
-<body class='page {{page.bodyClass}}'>
+{% if page.imageBackground %}
+  <body class='page {{page.bodyClass}}' style="background-color: {{page.imageBackground}}; background-image: unset;">
+{% else %}
+  <body class='page {{page.bodyClass}}'>
+{% endif %}
   {% include main-menu-mobile.html %}
     {% include header.html %}
     <div id="content">
