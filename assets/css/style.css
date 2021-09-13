@@ -11721,6 +11721,7 @@ ul.social li a span {
 
 .strip {
   background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 28px 22px;
 }
 
 .strip-diagonal {
