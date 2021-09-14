@@ -21,21 +21,17 @@ iconSize: 28
     <div class="mb-4">{% include find-expertise.html %}</div>
 
     <div id="profiles" class="container mb-6">
-      <div class="row">
-        {% for profile in site.team %}
-        <!-- prettier-ignore -->
-        {% assign givenName = profile.title | split: " " | first %}
-        <div class="col-12 col-lg-6 mb-2">
-          <div
-            class="team team-summary"
-            id="{{profile.email | split: '@' | first | replace: '.', '-'}}"
-          >
-            {% include profile-widget.html %}
-            <div class="team-content mt-1">{{ profile.content }}</div>
-          </div>
-        </div>
-        {% endfor %}
+      {% for profile in site.team %}
+      <!-- prettier-ignore -->
+      {% assign givenName = profile.title | split: " " | first %}
+      <div
+        class="team team-summary mb-4"
+        id="{{profile.email | split: '@' | first | replace: '.', '-'}}"
+      >
+        {% include profile-widget.html %}
+        <div class="team-content mt-1">{{ profile.content }}</div>
       </div>
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,16 +1,119 @@
-<div class="footer-strip">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="footer">
-          <h3 class="footer-title">{{site.title_footer}}</h3>
-          <ul class="footer-menu">
-            <li><a href="{{site.baseurl}}/">Home</a></li>
-            <li><a href="{{site.baseurl}}/contact">Contact</a></li>
-            <li class="copyright">© {{site.title}} {{site.time | date:'%Y'}}</li>
-          </ul>
-        </div>
+<div id="footer">
+  <div class="footer-content">
+    <div class="footer-block">
+      <h5 class="mt-2">
+        <span class="iconify-inline" data-icon="ph:users-three"></span>
+        Join the community
+      </h5>
+      <a class="inset" href="/newsletter" title="subscribe to our newsletter">
+        <span
+          class="iconify-inline icon"
+          data-icon="fluent:news-24-regular"
+        ></span>
+        subscribe to our newsletter
+      </a>
+      <a
+        class="inset"
+        href="https://twitter.com/BdsiUt"
+        target="_blank"
+        title="follow us on twitter"
+      >
+        <span class="iconify-inline icon" data-icon="ph:twitter-logo"></span>
+        follow us on twitter
+      </a>
+      <a
+        class="inset"
+        href="https://www.linkedin.com/company/behavioural-data-science-incubator/about/"
+        target="_blank"
+        title="connect with us on linkedin"
+      >
+        <span class="iconify-inline icon" data-icon="ph:linkedin-logo"></span>
+        connect with us on linkedin
+      </a>
+      <a class="inset" href="/services/community" title="join the team (chat)"
+        ><span
+          class="iconify-inline icon"
+          data-icon="mdi:microsoft-teams"
+        ></span>
+        join the team (chat)
+      </a>
+      <a
+        class="inset"
+        href="mailto:bdsi@utwente.nl?subject=Dear BDSi&body=Dear BDSi,"
+        title="write us a letter"
+        ><span class="iconify-inline icon" data-icon="ph:envelope"></span>
+        write us a letter
+      </a>
+      <h5 class="mt-2">Proud partners with</h5>
+      {% assign partners = site.partners | sort: "title" %}
+      <div class="inset" id="partners-slider">
+        {% for partner in partners %}
+        <a href="{{partner.website}}" target="_blank">
+          <img
+            src="{{partner.logoLight | default: partner.logo}}"
+            alt="{{partner.title}} logo"
+            class="logo"
+          />
+        </a>
+        {% endfor %}
       </div>
     </div>
+    <div class="footer-block">
+      <h5 class="mt-2">
+        <span class="iconify-inline" data-icon="ph:rainbow-cloud"></span>
+        Meet the team
+      </h5>
+      {% assign members = site.team | sort: "title" %} {% for profile in members
+      %}
+      <a
+        href="/team/#{{profile.email | split: '@' | first | replace: '.', '-'}}"
+        class="inset"
+        ><img
+          src="{{profile.image}}"
+          alt="{{author}}"
+          class="profile-image"
+        />{{profile.title}}</a
+      >
+      {% endfor %}
+    </div>
+    <div class="footer-block">
+      <h5 class="mt-2">
+        <span class="iconify-inline" data-icon="ph:package"></span>
+        Postal address
+      </h5>
+      <pre class="address-block inset">
+          Behavioural Data Science incubator
+          Faculty of Behavioural and Management Sciences
+          University of Twente
+          PO BOX 217
+          7500 AE Enschede, The Netherlands
+      </pre>
+      <h5 class="mt-2">
+        <span class="iconify-inline" data-icon="ph:hand-waving"></span>
+        Visiting address
+      </h5>
+      <pre class="address-block inset">
+          Cubicus B202
+          De Zul 10
+          7522 NJ Enschede, The Netherlands
+        </pre
+      >
+    </div>
+  </div>
+  <div class="sub-footer">
+    <div class="title">
+      BDSi - Behavioural Data Science incubator, {{site.time | date: "%Y" }}
+    </div>
+    <a
+      class="ml-auto"
+      target="_blank"
+      href="https://www.utwente.nl/en/about-our-website/"
+      >Privacy & Cookies</a
+    >
+    <a
+      target="_blank"
+      href="https://www.utwente.nl/en/about-our-website/disclaimer/"
+      >Disclaimer & Copyright</a
+    >
   </div>
 </div>
