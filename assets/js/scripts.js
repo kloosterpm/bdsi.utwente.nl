@@ -7,3 +7,13 @@ menuTrigger.onclick = function() {
     menuTrigger.classList.toggle('is-active')
     body.classList.toggle('lock-scroll')
 }
+
+$(document).ready(function(){
+  $("#partners-slider").slick({
+    autoplay: true,
+    dots: true,
+    arrows: false
+  });
+  console.log("he!");
+});
+
