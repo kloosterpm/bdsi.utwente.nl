@@ -19,6 +19,23 @@ startDate: 2021-09-20
 endDate: 2021-09-27
 ---
 
+## Quick links
+
+- [Quick links](#quick-links)
+- [What is it?](#what-is-it)
+- [Who can join?](#who-can-join)
+- [What can I do to prepare?](#what-can-i-do-to-prepare)
+  - [Get a team](#get-a-team)
+  - [Read the book (or at least pretend to)](#read-the-book-or-at-least-pretend-to)
+  - [Install R, RStudio, and tidyverse](#install-r-rstudio-and-tidyverse)
+- [Schedule](#schedule)
+  - [Kickoff](#kickoff)
+  - [Workshop Data Wrangling](#workshop-data-wrangling)
+  - [Workshop Machine Learning](#workshop-machine-learning)
+  - [Workshop Data Visualization](#workshop-data-visualization)
+  - [Submission Deadline](#submission-deadline)
+  - [Closing Session](#closing-session)
+
 <a class="button btn-lg btn-primary" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
 
 ## What is it?
@@ -33,17 +50,25 @@ Everyone related to the faculty of Behavioural and Management Sciences and their
 
 ## What can I do to prepare?
 
+### Get a team
+
 First off, get a team together, and [sign up](https://forms.office.com/r/pM0qCQF5eH) now - or just [sign up](https://forms.office.com/r/pM0qCQF5eH) on your own.
 
 <a class="button" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
 
+### Read the book (or at least pretend to)
+
 The materials we will use are based on the freely available [Introduction to Statistical Learning][isl-book] book. If you're interested in data science, statistical learning or machine learning, this book would be a great place to start. BDSi also organizes a yearly [reading club][ws-asl] around this book.
+
+### Install R, RStudio, and tidyverse
 
 As a faculty, BMS has decided to use _R_ for statistical education. We will follow this example, and use _R_ and the _tidyverse_ packages in the workshops and seminars. If you do not already have a preferred programming language, you may want to install _R_ and _RStudio_. ModernDive has published a good [primer on installing _R_ and _RStudio_][r-primer], that also covers the basics of working in R. If you'd like to go further, we recommend the free [_R_ for Data Science][r4ds] book by Hadley Wickham - a name you'll encounter often in the _R_ community.
 
 ## Schedule
 
 The Data Science Week will start and end with a group session on monday the 20th and 27th. You will be free to work on the case on your own schedule, and coaches will be available for questions and feedback throughout.
+
+![data science week](/assets/images/data-science-week-2021-schedule.png)
 
 ### Kickoff
 

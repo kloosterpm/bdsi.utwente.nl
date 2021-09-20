@@ -1,0 +1,40 @@
+---
+title: BDSi Data Science week
+layout: default
+bodyClass: page-single
+image: /assets/images/content/bdsi-datathon/datathon-header.svg
+imageNarrow: true
+imageBackground: "#009CC3"
+---
+
+<div
+  class="intro mb-0"
+  style="
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+        height: 25vw !important;
+        background-image: url({{page.image}});
+        background-size: {% if page.imageNarrow %}contain{% else %}cover{% endif %};
+        {% if page.imageBackground %}background-color: {{page.imageBackground}};{% endif %}
+        background-position: center;
+        background-repeat: no-repeat;"
+></div>
+
+<div style="margin-top: -5vw" class="strip strip-diagonal pt-4">
+  <div class="container">
+    <h2 id="schedule">Schedule</h2>
+    <img src="/assets/images/data-science-week-2021-schedule.png" />
+
+    <h2>Data</h2>
+    <a href="/assets/files/datathon/housing/data.zip" title="bundled data"
+      ><h4>data.zip</h4>
+    </a>
+    ZIP file with testing and training datasets and data description.
+    <a href="/assets/files/datathon/housing/data_description.txt"
+      ><h4>description.txt</h4></a
+    >description of the data
+    <a href="/assets/files/datathon/housing/train.csv"><h4>train.csv</h4></a
+    >labelled training data
+    <a href="/assets/files/datathon/housing/test.csv"><h4>test.csv</h4></a
+    >unlabelled testing data
+  </div>
+</div>
