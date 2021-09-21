@@ -30,7 +30,6 @@ endDate: 2021-09-27
 - [Are you already signed up?](#are-you-already-signed-up)
 - [What is it?](#what-is-it)
 - [Who can join?](#who-can-join)
-- [How does it work?](#how-does-it-work)
 - [What can I do to prepare?](#what-can-i-do-to-prepare)
   - [Get a team](#get-a-team)
   - [Read the book (or at least pretend to)](#read-the-book-or-at-least-pretend-to)
@@ -56,8 +55,6 @@ The goal of the Data Science week is to introduce interested students and staff 
 ## Who can join?
 
 Everyone related to the faculty of Behavioural and Management Sciences and their friends and family can join (although at least one member of your team needs to have a University of Twente account in order to sign up). You can join with friends, colleagues or even family. The event is open to both novices and experts, and everyone in between. Three (virtual) lunch workshops will introduce the main steps in all data science projects. You can join as a team, or alone. If you do join alone you can choose to be assigned to a team with other data science enthusiasts.
-
-## How does it work?
 
 ## What can I do to prepare?
 
