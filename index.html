@@ -26,14 +26,13 @@ bodyClass: page-home
   </div>
 </div>
 <div class="container mt-4">
+  <!-- prettier-ignore -->
   <div class="row">
-    {% capture currentDate %} {{- site.time | date: "%B %e, %Y" -}} {%
-    endcapture %}
+    {% capture currentDate %}{{- site.time | date: "%B %e, %Y" -}}{% endcapture %}
     <br />
-    {% assign items = site.workshops | concat: site.seminars | concat: site.news
-    | concat: site.blogs | where: "frontpage", true | sort: "date" | reverse |
-    splice: 0, 6 %} {% for item in items %}
-    <div class="col-12 col-md-6 col-xl-4">{% include news-card.html %}</div>
+    {% assign items = site.events | concat: site.news | concat: site.blogs | where: "frontpage", true | sort: "date" | reverse | splice: 0, 6 %} 
+    {% for item in items %}
+      <div class="col-12 col-md-6 col-xl-4">{% include news-card.html %}</div>
     {% endfor %}
   </div>
 </div>
