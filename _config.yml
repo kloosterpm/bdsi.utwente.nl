@@ -15,12 +15,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-  workshops:
+  events:
     output: true
-    permalink: /events/workshops/:path/
-  seminars:
-    output: true
-    permalink: /events/seminars/:path/
+    permalink: /events/:path/
   news:
     output: true
     permalink: /news/:path/
@@ -57,13 +54,7 @@ defaults:
       bodyClass: page-projects-single
   - scope:
       path: ''
-      type: seminars
-    values:
-      layout: event
-      bodyClass: page-single
-  - scope:
-      path: ''
-      type: workshops
+      type: events
     values:
       layout: event
       bodyClass: page-single

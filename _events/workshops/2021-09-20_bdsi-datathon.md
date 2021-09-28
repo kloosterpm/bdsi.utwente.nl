@@ -1,46 +1,54 @@
 ---
 title: BDSi Data Science Week
 authors:
-  - Anna Machens
-  - Karel Kroeze
-  - Karin Groothuis-Oudshoorn
-  - Stéphanie van den Berg
+    - Anna Machens
+    - Karel Kroeze
+    - Karin Groothuis-Oudshoorn
+    - Stéphanie van den Berg
 introduction: An interactive, educational and fun week of data crunching, modelling, (virtual) lunch workshops, and team work open to all BMS students and staff.
 tags:
-  - Beginner
-  - R
-  - Python
-  - Visualization
-  - Statistical Learning
-  - Machine Learning
+    - Beginner
+    - R
+    - Python
+    - Visualization
+    - Statistical Learning
+    - Machine Learning
 image: /assets/images/content/bdsi-datathon/datathon-header.svg
-frontpage: true
+imageNarrow: true
+imageBackground: "#009CC3"
+layout: "event"
+date: 2021-09-20
 startDate: 2021-09-20
 endDate: 2021-09-27
+frontpage: true
 ---
 
-<div class="my-3">
-  <a class="button mr-2" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
-  <a class="button bg-secondary" href="/data-science-week/">Info for participants</a>
-</div>
+{% include card.html title="Signups have closed" title_element="h3" content="
+
+<p>The Data Science week has finished, and signups are now closed. A new Data Science week will be announced in the coming months.</p>
+<p>If you <a href='mailto:bdsi@utwente.nl?subject=subscribe%20to%20the%20newsletter&body=please%20subscribe%20me%20to%20the%20newsletter' target='_blank'>subscribe to the newsletter</a>, you'll be the first to know!</p>
+<!--<a class='button mr-2 btn disabled' href='https://forms.office.com/r/pM0qCQF5eH' title='signups have closed'>Sign up now!</a>-->
+<p>Recordings, slides, and scripts for the workshops are available through the 'Info for participants' page.</p>
+
+<a class='button bg-secondary' href='/data-science-week/'>Info for participants</a>" %}
 
 ## Contents
 
-- [Contents](#contents)
-- [Are you already signed up?](#are-you-already-signed-up)
-- [What is it?](#what-is-it)
-- [Who can join?](#who-can-join)
-- [What can I do to prepare?](#what-can-i-do-to-prepare)
-  - [Get a team](#get-a-team)
-  - [Read the book (or at least pretend to)](#read-the-book-or-at-least-pretend-to)
-  - [Install R, RStudio, and tidyverse](#install-r-rstudio-and-tidyverse)
-- [Schedule](#schedule)
-  - [Kickoff](#kickoff)
-  - [Workshop Data Wrangling](#workshop-data-wrangling)
-  - [Workshop Machine Learning](#workshop-machine-learning)
-  - [Workshop Data Visualization](#workshop-data-visualization)
-  - [Submission Deadline](#submission-deadline)
-  - [Closing Session](#closing-session)
+-   [Contents](#contents)
+-   [Are you already signed up?](#are-you-already-signed-up)
+-   [What is it?](#what-is-it)
+-   [Who can join?](#who-can-join)
+-   [What can I do to prepare?](#what-can-i-do-to-prepare)
+    -   [Get a team](#get-a-team)
+    -   [Read the book (or at least pretend to)](#read-the-book-or-at-least-pretend-to)
+    -   [Install R, RStudio, and tidyverse](#install-r-rstudio-and-tidyverse)
+-   [Schedule](#schedule)
+    -   [Kickoff](#kickoff)
+    -   [Workshop Data Wrangling](#workshop-data-wrangling)
+    -   [Workshop Machine Learning](#workshop-machine-learning)
+    -   [Workshop Data Visualization](#workshop-data-visualization)
+    -   [Submission Deadline](#submission-deadline)
+    -   [Closing Session](#closing-session)
 
 ## Are you already signed up?
 
@@ -120,8 +128,6 @@ After spending all weekend with your team fine-tuning your solutions, you will h
 ##### September 27th, 15:30 – 17:00
 
 The teams that created the best and most creative solutions will give a short presentation about their approach, and there will be time to ask questions to the winning teams as well as BDSi staff and coaches.
-
-<a class="button" href="https://forms.office.com/r/pM0qCQF5eH">Sign up now!</a>
 
 ###### References
 
