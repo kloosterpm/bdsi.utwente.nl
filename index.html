@@ -5,58 +5,51 @@ bodyClass: page-home
 ---
 
 <div
-  class="intro pb-6"
-  style="height: 20vw; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3)"
+    class="intro pb-6"
+    style="height: 20vw; box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3)"
 ></div>
 <div class="container mt-4">
-  <div class="row" style="place-items: stretch">
-    <div class="col-12">{% include find-expertise.html %}</div>
-    <!-- <div class="col-lg-6 col-12">
-      <a href="/data-science-week">
-        <div class="card shadow mt-lg-0 mt-2 mb-2" style="height: 100%">
-          <div class="card-body bg-primary text-white">
-            <div class="card-title">
-              <h2 class="text-white">Datathon</h2>
-              <h4 class="text-white">Goals, schedule, data, etc.</h4>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div> -->
-  </div>
+    <div class="row" style="place-items: stretch">
+        <div class="col-12">{% include find-expertise.html %}</div>
+    </div>
 </div>
 <div class="container mt-4">
-  <!-- prettier-ignore -->
-  <div class="row">
+    <!-- prettier-ignore -->
+    <div class="row">
     {% capture currentDate %}{{- site.time | date: "%B %e, %Y" -}}{% endcapture %}
     <br />
-    {% assign items = site.events | concat: site.news | concat: site.blogs | where: "frontpage", true | sort: "date" | reverse | splice: 0, 6 %} 
-    {% for item in items %}
+    {% assign items = site.events | concat: site.news | concat: site.blogs %} 
+    {% assign items = items | where: "frontpage", true | sort: "date" | reverse %}
+    {% for item in items limit:3 %}
       <div class="col-12 col-md-6 col-xl-4">{% include news-card.html %}</div>
     {% endfor %}
   </div>
 </div>
 <div class="container mt-6">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="text-dark mb-3">Our Services</h2>
-    </div>
-    {% for service in site.services %}
-    <div class="col-12 col-md-6 mb-2">
-      <div class="service service-summary">
-        <div class="service-content">
-          <h2 class="service-title">
-            <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-          </h2>
-          {{ service.introduction | markdownify }}
+    <div class="row justify-content-start">
+        <div class="col-12">
+            <h2 class="text-dark mb-3">Our Services</h2>
         </div>
-      </div>
+        {% for service in site.services %}
+        <div class="col-12 col-md-6 mb-2">
+            <div class="service service-summary">
+                <div class="service-content">
+                    <h3 class="service-title">
+                        <a href="{{site.baseurl}}{{ service.url }}"
+                            >{{ service.title }}</a
+                        >
+                    </h3>
+                    {{ service.introduction | markdownify }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div class="col-12 text-center pb-3">
+            <a
+                class="button button-primary mt-2"
+                href="{{site.baseurl}}/services"
+                >View All Services</a
+            >
+        </div>
     </div>
-    {% endfor %}
-    <div class="col-12 text-center pb-3">
-      <a class="button button-primary mt-2" href="{{site.baseurl}}/services"
-        >View All Services</a
-      >
-    </div>
-  </div>
 </div>
