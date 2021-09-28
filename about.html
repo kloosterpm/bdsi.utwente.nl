@@ -5,76 +5,78 @@ bodyClass: page-list
 ---
 
 <div class="container py-6">
-  <h1 class="text-white hero">About us</h1>
+    <h1 class="text-white hero">About us</h1>
 </div>
 
 <div class="strip strip-diagonal">
-  <div class="container">
-    <h2>Mission</h2>
-    <p>
-      The aim of BDSI is to spark innovation and collaboration in data science
-      that involves human behaviour: to accelerate and inspire data-driven
-      research within BMS that uses statistical models, machine learning or
-      simulation techniques.
-    </p>
-    <p>
-      BDSI will support researchers and promote good research practices in all
-      steps of the research cycle:
-    </p>
-    <ul>
-      <li>data gathering and governance,</li>
-      <li>model building, training and validation,</li>
-      <li>visualisation and reporting.</li>
-    </ul>
-    <p>
-      We organise courses, workshops and networking events on these topics, and
-      provide training in the R and Python programming languages on all skill
-      levels. We support the writing of research grants. By building a strong
-      community, we aim to connect researchers in BMS with each other, with
-      other UT research groups and the outside world.
-    </p>
-    <p>
-      BDSI is run by representatives from all BMS clusters. To know more about
-      us please visit our
-      <a href="https://utwente-bdsi.github.io/utwente-bdsi/team/">teams</a
-      >&nbsp;page.
-    </p>
-  </div>
-
-  <div class="container mt-4">
-    <h2>Services</h2>
-    <div class="row">
-      {% for service in site.services %}
-      <div class="col-12 col-md-6 mb-2">
-        <div class="service service-summary">
-          <div class="service-content">
-            <h3 class="service-title">
-              <a href="{{site.baseurl}}{{ service.url }}"
-                >{{ service.title }}</a
-              >
-            </h3>
-            {{ service.introduction | markdownify }}
-          </div>
-        </div>
-      </div>
-      {% endfor %}
+    <div class="container">
+        <h2>Mission</h2>
+        <p>
+            The aim of BDSI is to spark innovation and collaboration in data
+            science that involves human behaviour: to accelerate and inspire
+            data-driven research within BMS that uses statistical models,
+            machine learning or simulation techniques.
+        </p>
+        <p>
+            BDSI will support researchers and promote good research practices in
+            all steps of the research cycle:
+        </p>
+        <ul>
+            <li>data gathering and governance,</li>
+            <li>model building, training and validation,</li>
+            <li>visualisation and reporting.</li>
+        </ul>
+        <p>
+            We organise courses, workshops and networking events on these
+            topics, and provide training in the R and Python programming
+            languages on all skill levels. We support the writing of research
+            grants. By building a strong community, we aim to connect
+            researchers in BMS with each other, with other UT research groups
+            and the outside world.
+        </p>
+        <p>
+            BDSI is run by representatives from all BMS clusters. To know more
+            about us please visit our
+            <a href="https://utwente-bdsi.github.io/utwente-bdsi/team/">teams</a
+            >&nbsp;page.
+        </p>
     </div>
-  </div>
 
-  <div class="container mt-4">
-    <h2>Partners</h2>
-    {% for partner in site.partners %}
-    <a href="{{ partner.website }}">
-      {% if partner.logo %}
-      <img
-        src="{{partner.logo}}"
-        alt="{{partner.title}} logo"
-        style="max-height: 8em; max-width: 12em; float: left"
-        class="mr-1"
-      />
-      {% endif %}
-      <h3>{{ partner.title }}</h3>
-    </a>
-    {{ partner.content | markdownify }} {% endfor %}
-  </div>
+    <div class="container mt-4">
+        <h2>Services</h2>
+        <div class="row">
+            {% for service in site.services %}
+            <div class="col-12 col-md-6 mb-2">
+                <div class="service service-summary">
+                    <div class="service-content">
+                        <h3 class="service-title">
+                            <a href="{{site.baseurl}}{{ service.url }}"
+                                >{{ service.title }}</a
+                            >
+                        </h3>
+                        {{ service.introduction | markdownify }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Partners</h2>
+        {% for partner in site.partners %}
+        <a href="{{ partner.website }}">
+            {% if partner.logo %}
+            <img
+                src="{{partner.logo}}"
+                alt="{{partner.title}} logo"
+                style="max-height: 8em; max-width: 12em; float: left"
+                class="mr-1"
+            />
+            {% else %}
+            <h3>{{ partner.title }}</h3>
+            {% endif %}
+        </a>
+        {{ partner.content | markdownify }} {% endfor %}
+    </div>
 </div>
