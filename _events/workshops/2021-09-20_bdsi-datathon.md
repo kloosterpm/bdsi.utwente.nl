@@ -34,21 +34,21 @@ frontpage: true
 
 ## Contents
 
--   [Contents](#contents)
--   [Are you already signed up?](#are-you-already-signed-up)
--   [What is it?](#what-is-it)
--   [Who can join?](#who-can-join)
--   [What can I do to prepare?](#what-can-i-do-to-prepare)
-    -   [Get a team](#get-a-team)
-    -   [Read the book (or at least pretend to)](#read-the-book-or-at-least-pretend-to)
-    -   [Install R, RStudio, and tidyverse](#install-r-rstudio-and-tidyverse)
--   [Schedule](#schedule)
-    -   [Kickoff](#kickoff)
-    -   [Workshop Data Wrangling](#workshop-data-wrangling)
-    -   [Workshop Machine Learning](#workshop-machine-learning)
-    -   [Workshop Data Visualization](#workshop-data-visualization)
-    -   [Submission Deadline](#submission-deadline)
-    -   [Closing Session](#closing-session)
+- [Contents](#contents)
+- [Are you already signed up?](#are-you-already-signed-up)
+- [What is it?](#what-is-it)
+- [Who can join?](#who-can-join)
+- [What can I do to prepare?](#what-can-i-do-to-prepare)
+  - [Get a team](#get-a-team)
+  - [Read the book (or at least pretend to)](#read-the-book-or-at-least-pretend-to)
+  - [Install R, RStudio, and tidyverse](#install-r-rstudio-and-tidyverse)
+- [Schedule](#schedule)
+  - [Kickoff](#kickoff)
+  - [Workshop Data Wrangling](#workshop-data-wrangling)
+  - [Workshop Machine Learning](#workshop-machine-learning)
+  - [Workshop Data Visualization](#workshop-data-visualization)
+  - [Submission Deadline](#submission-deadline)
+  - [Closing Session](#closing-session)
 
 ## Are you already signed up?
 
