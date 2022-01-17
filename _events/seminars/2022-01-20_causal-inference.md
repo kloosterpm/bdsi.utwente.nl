@@ -20,3 +20,5 @@ In the first part of this webinar, we will have a look at causal relationships, 
 <a class="button mr-2" href="mailto:bdsi@utwente.nl?subject=seminar causal inference&body=please sign me up!">
   Sign up now!
 </a>
+
+{% include card.html title="Signup button not working?" title_element="h6" content="<span class='small'>Please send an email with the subject <em style='color: grey;'>webinar causal inference</em> to <a href='bdsi@utwente.nl'>bdsi@utwente.nl</a>, and we'll add you to the list!</span>" %}
