@@ -7,6 +7,23 @@ $text: $secondary; // darken($header, 30);
     text-transform: uppercase;
     font-weight: 300;
     color: $header;
+    margin-top: 1.2em;
+
+    div > &:first-child, a > &:first-child {
+      margin-top: 0;
+    }
+
+    .author-list > &, .author-list + & {
+      margin-top: 0;
+    }
+
+    @if $i < 6 {
+      @for $j from $i + 1 through 6 {
+        & + h#{$j} {
+          margin-top: 0;
+        }
+      }
+    }
 
     a &, a {
       color: $link-color;
