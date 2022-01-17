@@ -43,9 +43,13 @@ function handleEvent(event) {
 function compareEvents(a, b) {
     const startA = a.dataset["start"];
     const startB = b.dataset["start"];
+    const future = isFuture(startA) && isFuture(startB) ? -1 : 1;
 
     if (startA && startB) {
-        return dayjs(startA).isBefore(dayjs(startB)) ? 1 : -1;
+        if (isToBeAnnounced(startA) != isToBeAnnounced(startB)) {
+            return isToBeAnnounced(startA) ? 1 : -1;
+        }
+        return future * (dayjs(startA).isBefore(dayjs(startB)) ? 1 : -1);
     }
     if (startA || startB) {
         return startA ? -1 : 1;
@@ -54,7 +58,11 @@ function compareEvents(a, b) {
 }
 
 function isFuture(date) {
-    return date && dayjs(date).isAfter(now, "day");
+    return isToBeAnnounced(date) || (date && dayjs(date).isAfter(now, "day"));
+}
+
+function isToBeAnnounced(date) {
+    return date && date.match(/(to be announced)|(\wtba\w)/im);
 }
 
 /**
@@ -67,6 +75,10 @@ function isFuture(date) {
 function formatDate(start, end, time) {
     if (!start) {
         return "";
+    }
+
+    if (isToBeAnnounced(start)) {
+        return "To be announced";
     }
 
     if (start) {
