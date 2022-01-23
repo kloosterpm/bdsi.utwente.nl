@@ -1,5 +1,3 @@
-# Website for behavioural data science incubator which is part of BMS faculty at University of Twente in the Netherlands.
+# BDSi Website
 
-## We use Jekyll Serif Theme
-
-Serif is a beautiful small business theme for Jekyll. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated.
+This is the source for the Behavioural Data Science incubator (BDSi) website. BDSi is part of the BMS faculty of the University of Twente.
