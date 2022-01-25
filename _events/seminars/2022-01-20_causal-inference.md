@@ -17,8 +17,10 @@ Science is concerned with uncovering causal relationships. This can be done with
 
 In the first part of this webinar, we will have a look at causal relationships, how they can be expressed in causal networks, and under which conditions direct causal effects can be calculated from observational data. In the second half, we will see mechanisms that are used in practice, such as instrumental variables.
 
-<a class="button mr-2" href="mailto:bdsi@utwente.nl?subject=seminar causal inference&body=please sign me up!">
-  Sign up now!
-</a>
+<div style='max-width: 853px'>
+  <div style='position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;'>
+    <iframe width="853" height="480" src="" allowfullscreen style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe>
+  </div>
+</div>
 
-{% include card.html title="Signup button not working?" title_element="h6" content="<span class='small'>Please send an email with the subject <em style='color: grey;'>webinar causal inference</em> to <a href='bdsi@utwente.nl'>bdsi@utwente.nl</a>, and we'll add you to the list!</span>" %}
+{% include card.html title="Stream not working?" title_element="h4" content="Make sure you are signed in with a University of Twente account" shadow="false" %}
