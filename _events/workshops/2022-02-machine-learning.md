@@ -12,7 +12,6 @@ tags:
 image: /assets/images/workshops/machine-learning.jpg
 imageNarrow: true
 imageBackground: white
-startDate: "Date: To be announced"
 startDate: 2022-02-17
 time: "12:45 - 13:30"
 ---

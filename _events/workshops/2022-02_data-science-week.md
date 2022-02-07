@@ -34,8 +34,8 @@ frontpage: true
 - [Schedule](#schedule)
   - [Kickoff](#kickoff)
   - [Workshop Data Wrangling](#workshop-data-wrangling)
-  - [Workshop Machine Learning](#workshop-machine-learning)
   - [Workshop Data Visualization](#workshop-data-visualization)
+  - [Workshop Machine Learning](#workshop-machine-learning)
   - [Submission Deadline](#submission-deadline)
   - [Closing Session](#closing-session)
 
@@ -120,7 +120,7 @@ Scheduling of the individual workshops and seminars will be updated in the comin
 
 ### Kickoff
 
-##### February 14th, 15:30 – 17:00
+##### February 14th, 12:45 – 13:30
 
 After a quick introduction about BDSi, we will introduce the topic, and give a description of the dataset, and the problem you will solve.
 We will also explain how to reach the coaches for help, and give a brief overview of the schedule.
@@ -133,6 +133,14 @@ A 45 minute guided introduction to data wrangling in _R_, using the 'tidy' data 
 
 This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-tdw], or sign up directly [here][sign-up-tdw].
 
+### Workshop Data Visualization
+
+##### February 16th, 12:45 – 13:30
+
+A 45 minute guided overview of data visualization using the grammar of graphics. [Karel Kroeze](/team/#k-a-kroeze) will explain the principles of creating and layering visualizations with _ggplot_ in _R_, and give a quick introduction to interactive visualizations with plotly, shiny and beyond.
+
+This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-viz], or sign up directly [here][sign-up-viz].
+
 ### Workshop Machine Learning
 
 ##### February 17th, 12:45 - 13:30
@@ -141,23 +149,15 @@ A 45 minute guided overview of basic machine learning techniques. [Anna Machens]
 
 This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-ml], or sign up directly [here][sign-up-ml].
 
-### Workshop Data Visualization
-
-##### February 18th, 12:45 – 13:30
-
-A 45 minute guided overview of data visualization using the grammar of graphics. [Karel Kroeze](/team/#k-a-kroeze) will explain the principles of creating and layering visualizations with _ggplot_ in _R_, and give a quick introduction to interactive visualizations with plotly, shiny and beyond.
-
-This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-viz], or sign up directly [here][sign-up-viz].
-
 ### Submission Deadline
 
-##### February 26th, 23:59
+##### February 27th, 12:00
 
 After spending all weekend with your team fine-tuning your solutions, you will have to submit them before midnight on Sunday. That gives us a bit of time to check your models and pick a winner. In the mean time, you can practice your victory speech - or suddenly have a brilliant idea that it's too late to implement before submission.
 
 ### Closing Session
 
-##### February 28th, 15:30 – 17:00
+##### February 28th, 12:45 – 13:30
 
 The teams that created the best and most creative solutions will give a short presentation about their approach, and there will be time to ask questions to the winning teams as well as BDSi staff and coaches.
 
