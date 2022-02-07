@@ -9,8 +9,8 @@ tags:
     - Beginner
     - R
     - Visualization
-startDate: "Date: To be announced"
-# time: "12:45 - 13:30"
+startDate: 2022-02-18
+time: "12:45 - 13:30"
 image: /assets/images/workshops/data-viz.png
 imageBackground: "#FFBE2E"
 ---
