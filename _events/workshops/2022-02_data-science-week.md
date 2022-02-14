@@ -39,7 +39,7 @@ frontpage: true
   - [Submission Deadline](#submission-deadline)
   - [Closing Session](#closing-session)
 
-<!-- {% include card.html title="Are you already signed up?" title_element="h4" content="More information about the dataset, goal and structure of the datathon, slides, and so forth will be available <a href='/data-science-week-2.html'>here</a>." %} -->
+{% include card.html title="Are you already signed up?" title_element="h4" content="More information about the dataset, goal and structure of the datathon, slides, and so forth is available <a href='/data-science-week-2022-02'>here</a>." %}
 
 ## What is it?
 
