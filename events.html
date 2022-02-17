@@ -16,14 +16,14 @@ bodyClass: page-list
         </div>
 
         <div id="completed">
-            <h2>Past events</h2>
+            <h2 class="mt-8">Past events</h2>
         </div>
 
         <h2 style="display: none">debug</h2>
         {% for event in site.events %}
         <!-- prettier-ignore -->
         <div
-      class="event mb-3"
+      class="event mb-5"
       {% if event.startDate %}data-start="{{event.startDate}}" {% endif %}
       {% if event.endDate %}data-end="{{event.endDate}}" {% endif %}
       {% if event.time %}data-time="{{event.time}}" {% endif %}
@@ -32,9 +32,9 @@ bodyClass: page-list
     >
       <div class="row">
         <div class="col-8">
-          <h3>
+          <h4>
             <a href="{{site.baseurl}}{{ event.url }}">{{ event.title }}</a>
-          </h3>
+          </h4>
           <div class="authors">
             {% include author-list.html authors=event.authors page=event
             header="h6" %}
@@ -44,7 +44,7 @@ bodyClass: page-list
           %}
         </div>
         <div class="col-4">
-          <h6 class="date"></h6>
+          <h6 class="date mt-1"></h6>
           {% include tags-list.html page=event %}
         </div>
       </div>

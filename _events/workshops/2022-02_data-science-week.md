@@ -34,12 +34,12 @@ frontpage: true
 - [Schedule](#schedule)
   - [Kickoff](#kickoff)
   - [Workshop Data Wrangling](#workshop-data-wrangling)
-  - [Workshop Machine Learning](#workshop-machine-learning)
   - [Workshop Data Visualization](#workshop-data-visualization)
+  - [Workshop Machine Learning](#workshop-machine-learning)
   - [Submission Deadline](#submission-deadline)
   - [Closing Session](#closing-session)
 
-<!-- {% include card.html title="Are you already signed up?" title_element="h4" content="More information about the dataset, goal and structure of the datathon, slides, and so forth will be available <a href='/data-science-week-2.html'>here</a>." %} -->
+{% include card.html title="Are you already signed up?" title_element="h4" content="More information about the dataset, goal and structure of the datathon, slides, and so forth is available <a href='/data-science-week-2022-02'>here</a>." %}
 
 ## What is it?
 
@@ -48,7 +48,7 @@ Over the course of two weeks, you will compete with other teams of behavioural d
 The goal of the Data Science week is to introduce interested students and staff to data science in a fun and cooperative way, and help create a community of data scientists at BMS. After one week, the best teams will be asked to present their solutions, and the winners will be presented with a suitable prize.
 
 <a class="button" href="https://forms.office.com/r/HyBXA6PJyS">Sign up now!</a>
-{% include card.html title="This is a retake" title_element="h4" content="Note that this is a retake of the first Data Science week, using the same data and asking the same questions.
+{% include card.html title="This is a retake" title_element="h5" subtitle="Note that this is a retake of the first Data Science week, using the same data and asking the same questions.
 
 <p>We received a lot of feedback stating that the timing for the first Data Science Week could have been better. There was not a lot of time to prepare, and the event coincided with the start of the academic year. We've since also learned a thing or two about holding online events, and have made some updates to both the materials and schedules of the seminars.</p>
 <p>To give everyone a chance to participate in the best possible Data Science Week, we decided to re-use the same materials and questions. Wether or not you participated in the first Data Science Week, you are more than welcome to join us in this second - even better - iteration!</p>" %}
@@ -64,6 +64,8 @@ Everyone related to the faculty of Behavioural and Management Sciences and their
 First off, get a team together, and [sign up][sign-up] now - or just [sign up][sign-up] on your own.
 
 <a class="button" href="https://forms.office.com/r/HyBXA6PJyS">Sign up now!</a>
+
+{% include card.html title="Signup button not working?" subtitle='You can also sign up by sending an email to <a href="mailto:bdsi@utwente.nl">bdsi@utwente.nl</a>. Please mention your name, any team members, and an indication of your experience with data science.' title_element="h5" %}
 
 ### Read the book (or at least pretend to)
 
@@ -114,48 +116,48 @@ The Data Science Week will start and end with a group session on monday the 14th
 
 Scheduling of the individual workshops and seminars will be updated in the coming weeks.
 
-<!-- ![data science week](/assets/images/data-science-week-2022-02-schedule.png) -->
+![data science week schedule](/assets/images/data-science-week-2022-2-schedule.png)
 
 ### Kickoff
 
-##### February 14th, 15:30 – 17:00
+##### February 14th, 12:45 – 13:30
 
 After a quick introduction about BDSi, we will introduce the topic, and give a description of the dataset, and the problem you will solve.
 We will also explain how to reach the coaches for help, and give a brief overview of the schedule.
 
 ### Workshop Data Wrangling
 
-<!-- ##### February 15th, 12:45 – 13:30 -->
+##### February 15th, 12:45 - 13:30
 
 A 45 minute guided introduction to data wrangling in _R_, using the 'tidy' data principles. [Karel Kroeze](/team/#k-a-kroeze) will show how to prepare a 'raw' dataset for analysis, by cleaning, reshaping and mutating the data until it gives up all its secrets.
 
 This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-tdw], or sign up directly [here][sign-up-tdw].
 
-### Workshop Machine Learning
-
-<!-- ##### February 17th, 12:45 – 13:30 -->
-
-A 45 minute guided overview of basic machine learning techniques. [Anna Machens](/team/#a-k-machens) will take you through the basics of model fitting, paramater selection and hyperparameter tuning, ending up with a simple but effective predictive model.
-
-This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-ml], or sign up directly [here][sign-up-ml].
-
 ### Workshop Data Visualization
 
-<!-- ##### February 18th, 12:45 – 13:30 -->
+##### February 16th, 12:45 – 13:30
 
 A 45 minute guided overview of data visualization using the grammar of graphics. [Karel Kroeze](/team/#k-a-kroeze) will explain the principles of creating and layering visualizations with _ggplot_ in _R_, and give a quick introduction to interactive visualizations with plotly, shiny and beyond.
 
 This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-viz], or sign up directly [here][sign-up-viz].
 
+### Workshop Machine Learning
+
+##### February 17th, 12:45 - 13:30
+
+A 45 minute guided overview of basic machine learning techniques. [Anna Machens](/team/#a-k-machens) will take you through the basics of model fitting, paramater selection and hyperparameter tuning, ending up with a simple but effective predictive model.
+
+This workshop is also open for those who do not want to participate in the Data Science Week. You can find more information about the workshop [here][ws-ml], or sign up directly [here][sign-up-ml].
+
 ### Submission Deadline
 
-##### February 26th, 23:59
+##### February 27th, 12:00
 
 After spending all weekend with your team fine-tuning your solutions, you will have to submit them before midnight on Sunday. That gives us a bit of time to check your models and pick a winner. In the mean time, you can practice your victory speech - or suddenly have a brilliant idea that it's too late to implement before submission.
 
 ### Closing Session
 
-##### February 28th, 15:30 – 17:00
+##### February 28th, 12:45 – 13:30
 
 The teams that created the best and most creative solutions will give a short presentation about their approach, and there will be time to ask questions to the winning teams as well as BDSi staff and coaches.
 
